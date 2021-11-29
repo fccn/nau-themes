@@ -4,5 +4,3 @@ markupsafe==1.1.1
 pytz==2020.1
 enmerkar-underscore==2.0.0
 enmerkar==0.7.1
-transifex-client==0.13.4
-edx-i18n-tools==0.5.3
