@@ -4,13 +4,11 @@ This repository contains the NAU themes.
 
 ## How to update translations
 
+To extract the strings to be translated, add them to .po files and to compile the translation .mo
+files, run the Makefile target `update_translations`.
+
 ```bash
-virtualenv venv
-source venv/bin/activate
-pip install -r requirements.txt
-make update_translations # this will extract the chains and add them to the .po files
-# add/update the translations in the .po files, (text editor, POEdit, ...)
-make compile_translations # this will generate the .mo files
+make update_translations
 ```
 
 ### Devstack
