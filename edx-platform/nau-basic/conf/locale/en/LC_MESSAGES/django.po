@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2021-11-29 17:54+0000\n"
+"POT-Creation-Date: 2021-11-29 18:00+0000\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -1415,18 +1415,8 @@ msgstr ""
 #: edx-platform/nau-basic/lms/templates/static_templates/contact.html:14
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:14
 msgid ""
-"The NAU team is always available to help you. Search through our "
-"{link_start} knoledge base{link_end} or contact us through:"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/contact.html:16
-#: edx-platform/nau-basic/lms/templates/static_templates/help.html:16
-msgid "E-mail"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/contact.html:17
-#: edx-platform/nau-basic/lms/templates/static_templates/help.html:17
-msgid "Telephone"
+"The NAU team is always available to help you. Use our "
+"{link_start}knowledge base{link_end} if you need help."
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/static_templates/faq.html:5

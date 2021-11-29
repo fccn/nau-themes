@@ -11,11 +11,6 @@ from openedx.core.djangolib.markup import HTML, Text
         <h1>
             <%block name="pageheader">${page_header or _("Help")}</%block>
         </h1>
-        <p>${Text(_("The NAU team is always available to help you. Search through our {link_start} knoledge base{link_end} or contact us through:")).format(link_start=HTML('<a href="https://ajuda.nau.edu.pt">'), link_end=HTML('</a>'))}</p>
-        <ul>
-          <li>${_("E-mail")}: <a href="mailto:ajuda@nau.edu.pt">ajuda@nau.edu.pt</a></li>
-          <li>${_("Telephone")}: 300012000</li>
-        </ul>
-        </p>
+        <p>${Text(_("The NAU team is always available to help you. Use our {link_start}knowledge base{link_end} if you need help.")).format(link_start=HTML('<a href="https://ajuda.nau.edu.pt">'), link_end=HTML('</a>'))}</p>
     </section>
 </main>
