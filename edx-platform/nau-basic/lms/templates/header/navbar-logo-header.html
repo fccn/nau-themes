@@ -24,9 +24,6 @@ from branding import api as branding_api
   # in future when using different URLs on marketing per language
   nau_marketing_base_href_current_lang = static.get_value('NAU_MARKETING_BASE_HREF', {}).get(LANGUAGE_CODE, "/")
 
-  nau_lang_menu = static.get_value('NAU_NAVBAR_LANGUAGE_SELECTOR')
-  header_menu = static.get_value('NAU_HEADER_MENU', {}).get(LANGUAGE_CODE, {})
-
   logo_image_url = static.get_value('NAU_LOGO_IMAGE_URL', static.get_value('logo_image_url', {}))
   if isinstance(logo_image_url, str) and (logo_image_url is None or not (logo_image_url.startswith('http://') or logo_image_url.startswith('https://') or logo_image_url.startswith('//') ) ):
     logo_image_url = branding_api.get_logo_url(is_secure)
@@ -67,8 +64,6 @@ from branding import api as branding_api
 </%doc>
 
 <div class="branding-top-nav">
-
-    <a id="open-menu-arrow" href="javascript:void(0)" onclick="openNav(0)" title="Abrir">&#9776;</a>
     <a class="nau-header-logo-link" href="${nau_marketing_base_href_current_lang}">
       <picture>
         % if isinstance(logo_image_url, dict):
@@ -105,6 +100,8 @@ from branding import api as branding_api
           style="${logo_image_style_value}" />
       </picture>
     </a>
+
+    <a id="open-menu-arrow" href="javascript:void(0)" onclick="openNav(0)" title="Abrir">&#9776;</a>
 
     % if course:
       <% 
@@ -156,63 +153,31 @@ from branding import api as branding_api
     <div class="menu-container">
       <!-- starts top nav menu -->
       <a id="close-menu-arrow" href="javascript:void(0)" onclick="closeNav(0)" title="Fechar">&#10005;</a>
-      % if not course:
-        <div class="nav-icon"></div>
-        <ul id="about-categories-entities" class="main-menu">
-          % for parent_header in header_menu:
-            <% item_link = parent_header["link"] %>
-            <% html_link = parent_header["html"] %>
-            <% children = parent_header.get("itens", {}) %>
-            <% has_children = len(children) > 0 %>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page ${'menu-item-has-children' if has_children else ''}">
-              <a href="${item_link}">${html_link}</a>
-              % if has_children:
-                <ul class="sub-nav menu-depth-0">
-                % for sub_item in children:
-                  <% sub_item_link = sub_item["link"] %>
-                  <% sub_item_html = sub_item["html"] %>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${sub_item_link}">${sub_item_html}</a></li>
-                %endfor
-                </ul>
-              % endif
-            </li>
-          % endfor
-        </ul>
-      % endif
-
       <!-- starts top nav action container -->
       <div id="actions_container"> 
-        % if not course and strtobool(static.get_value('NAU_HEADER_SEARCH_COURSES', 'False')):
-          <!-- starts top nav search bar -->          
-          <form id="search-form" action="${www_pt}" role="search" method="get">
-            <input id="search-input" name="s" type="search" placeholder="${_("Search courses...")}" value="">
-            <input name="submit-search" type="submit">
-          </form>
-          <!-- ends top nav search bar -->
-        % endif
-
-        <!-- starts menu languages --> 
-        % if nau_lang_menu:
-          <ul class="nau-menu-languages">
-          % if LANGUAGE_CODE == "pt-pt":
-            <li><a hreflang="en" lang="en" onclick="$('#settings-language-value').val('en').trigger('change');">English</a></li>
-          % else:
-            <li><a hreflang="pt" lang="pt" onclick="$('#settings-language-value').val('pt-pt').trigger('change');">Portuguese</a></li>
+        % if header_language_selector_is_enabled():
+          <% languages = released_languages() %>
+          % if len(languages) > 1:
+            <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
+              <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
+              % if user.is_authenticated:
+                <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
+              % else:
+                <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
+              % endif            
+              <label><span class="sr">${_("Choose Language")}</span>
+              <select class="input select language-selector" id="settings-language-value" name="language">
+                % for language in languages:
+                  % if language[0] == LANGUAGE_CODE:
+                    <option value="${language[0]}" selected="selected">${language[1]}</option>
+                  % else:
+                    <option value="${language[0]}" >${language[1]}</option>
+                  % endif
+                % endfor
+              </select>
+              </label>
+            </form>
           % endif
-          </ul>
-          <style>
-            /* Hide the open edx platform top language switcher form if tablet or PC viewports, $breakpoint-medium breakpoints */
-            @media screen and (min-width: 768px) { 
-              #language-settings-form {
-                display: none;
-              }
-            }
-            @media screen and (max-width: 768px) {
-              .nau-menu-languages {
-                display: none !important;
-              }
-            }
-          </style>
         % endif
       
         % if user.is_authenticated:
