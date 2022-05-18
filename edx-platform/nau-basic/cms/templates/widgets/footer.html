@@ -99,7 +99,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
 ## Jira Service Desk Widget
 <%
-  jira_service_desk = static.get_value('NAU_STUDIO_JIRA_SERVICE_DESK_KEY')
+  jira_service_desk = static.get_value('NAU_STUDIO_JIRA_SERVICE_DESK_KEY', getattr(settings, 'NAU_STUDIO_JIRA_SERVICE_DESK_KEY', None))
 %>
 % if jira_service_desk:
   <script data-jsd-embedded data-key="${jira_service_desk}" data-base-url="https://jsd-widget.atlassian.com" src="https://jsd-widget.atlassian.com/assets/embed.js"></script>
@@ -108,7 +108,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
 ## Chatbot
 <%
-  chatbox_startup_js_url = static.get_value('NAU_STUDIO_CHATBOT_JS_URL')
+  chatbox_startup_js_url = static.get_value('NAU_STUDIO_CHATBOT_JS_URL', getattr(settings, 'NAU_STUDIO_CHATBOT_JS_URL', None))
 %>
 % if chatbox_startup_js_url:
   <script>
