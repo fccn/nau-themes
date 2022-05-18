@@ -92,9 +92,6 @@
   </section>
 </footer>
 
-## Service Desk Widget
-<script data-jsd-embedded data-key="c19e6a24-a1f6-4a84-aa46-89e82b94b809" data-base-url="https://jsd-widget.atlassian.com" src="https://jsd-widget.atlassian.com/assets/embed.js"></script>
-
 % if include_dependencies:
   <%static:js group='base_vendor'/>
   <%static:css group='style-vendor'/>
@@ -109,3 +106,40 @@
 
 <%include file="modal-update-terms-of-service.html" />
 
+
+## Jira Service Desk Widget
+<%
+  jira_service_desk = static.get_value('NAU_LMS_JIRA_SERVICE_DESK_KEY')
+%>
+% if jira_service_desk:
+  <script data-jsd-embedded data-key="${jira_service_desk}" data-base-url="https://jsd-widget.atlassian.com" src="https://jsd-widget.atlassian.com/assets/embed.js"></script>
+% endif
+
+
+## Chatbot
+<%
+  chatbox_startup_js_url = static.get_value('NAU_LMS_CHATBOT_JS_URL')
+%>
+% if chatbox_startup_js_url:
+  <script>
+    function loadScript(src, callback) {
+      var s,
+          r,
+          t;
+      r = false;
+      s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.src = src;
+      s.onload = s.onreadystatechange = function () {
+        if (!r && (!this.readyState || this.readyState == 'complete')) {
+            r = true;
+            callback();
+        }
+      };
+      t = document.getElementsByTagName('script')[0];
+      t.parentNode.insertBefore(s, t);
+    }
+    loadScript("${chatbox_startup_js_url}", function () {
+    });
+  </script>
+% endif
