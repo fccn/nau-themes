@@ -16,8 +16,8 @@
     footer_menu = static.get_value('NAU_FOOTER_MENU', {}).get(LANGUAGE_CODE, {})
     nau_social_media = static.get_value('NAU_SOCIAL_MEDIA', [])
 %>
-<footer> 
-  <section id="footer-nav">      
+<footer>
+  <section id="footer-nav">
     % if len(footer_menu)>0 or len(nau_social_media)>0:
       <div id="quick-links-section">
         % if len(footer_menu)>0:
@@ -44,7 +44,7 @@
                 <ul>
                   % for social_media in nau_social_media:
                     <li>
-                      <a 
+                      <a
                         href="${social_media.get('url','')}"
                         target="${social_media.get('target','_blank')}"
                         class="social-links external"
@@ -121,6 +121,16 @@
   chatbox_startup_js_url = static.get_value('NAU_LMS_CHATBOT_JS_URL', getattr(settings, 'NAU_LMS_CHATBOT_JS_URL', None))
 %>
 % if chatbox_startup_js_url:
+  <%
+    chatbot_user_email = ""
+    if user.is_authenticated:
+      chatbot_user_email = user.email
+    endif
+    chatbot_user_course = ""
+    if course:
+      chatbot_user_course = course.display_name_with_default + "-" + course.display_org_with_default +  "-" + course.display_number_with_default
+    endif
+  %>
   <script>
     function loadScript(src, callback) {
       var s,
@@ -130,6 +140,9 @@
       s = document.createElement('script');
       s.type = 'text/javascript';
       s.src = src;
+      s.id = 'botscriptpass';
+      s.setAttribute("param_curso", "${chatbot_user_course}");
+      s.setAttribute("param_email", "${chatbot_user_email}");
       s.onload = s.onreadystatechange = function () {
         if (!r && (!this.readyState || this.readyState == 'complete')) {
             r = true;
