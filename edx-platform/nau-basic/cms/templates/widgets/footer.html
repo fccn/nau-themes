@@ -108,7 +108,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
 ## Chatbot
 <%
-  chatbox_startup_js_url = static.get_value('NAU_LMS_CHATBOT_JS_URL', getattr(settings, 'NAU_LMS_CHATBOT_JS_URL', None))
+  chatbox_startup_js_url = static.get_value('NAU_STUDIO_CHATBOT_JS_URL', getattr(settings, 'NAU_STUDIO_CHATBOT_JS_URL', None))
 %>
 % if chatbox_startup_js_url:
   <%
