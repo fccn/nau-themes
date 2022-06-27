@@ -33,7 +33,15 @@
         .logo {
             display: inline-block;
             max-height: 80px;
-            margin-left: 50px;
+            @media screen and (min-width: $breakpoint-large) {
+                margin-left: 50px;
+            }
+            @media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+                margin-left: 40px;
+            }
+            @media screen and (max-width: $breakpoint-medium) {
+                margin-left: 20px;
+            }
             max-width: -webkit-calc(100% - 50px);
             max-width:    -moz-calc(100% - 50px);
             max-width:         calc(100% - 50px);
