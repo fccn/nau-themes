@@ -60,10 +60,10 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
                     % if facebook_share_enabled:
                       <button class="action action-share-facebook btn-inverse btn-small icon-only" id="action-share-facebook"
                          onclick="FaceBook.share({
-                          share_text: '${facebook_share_text | n, js_escaped_string}',
-                          share_link: '${share_url | n, js_escaped_string}',
-                          picture_link: '${full_course_image_url | n, js_escaped_string}',
-                          description: '${_('Click the link to see my certificate.') | n, js_escaped_string}'
+                          share_text: '${facebook_share_text | n, js_escaped_string}', ## xss-lint: disable=mako-invalid-html-filter
+                          share_link: '${share_url | n, js_escaped_string}', ## xss-lint: disable=mako-invalid-html-filter
+                          picture_link: '${full_course_image_url | n, js_escaped_string}', ## xss-lint: disable=mako-invalid-html-filter
+                          description: '${_('Click the link to see my certificate.') | n, js_escaped_string}' ## xss-lint: disable=mako-invalid-html-filter
                           });">
                           <span class="icon fa fa-facebook-official" aria-hidden="true"></span>
                           <span class="action-label">${_("Post on Facebook")}</span>
@@ -73,6 +73,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
                       <button data-tooltip="${_('Share on Twitter')}"
                         class="action action-share-twitter btn-inverse btn-small icon-only"
                         title="${_('Share on Twitter')}"
+                        ## xss-lint: disable=mako-invalid-html-filter
                         onclick="popupWindow('${twitter_url | n, js_escaped_string}', 'tweetWindow', 640, 480); return false;">
                           <span class="icon fa fa-twitter" aria-hidden="true"></span>
                           <span class="action-label">${_("Tweet this Accomplishment. Pop up window.")}</span>

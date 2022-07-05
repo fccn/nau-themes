@@ -1,12 +1,13 @@
+<%page expression_filter="h"/>
 <%namespace name='static' file='../static_content.html'/>
 <%!
 from django.utils.translation import ugettext as _
 from django.utils.translation import pgettext
 from django.urls import reverse
-from courseware.courses import get_course_about_section
+from lms.djangoapps.courseware.courses import get_course_about_section
 from django.conf import settings
 from six import text_type
-from edxmako.shortcuts import marketing_link
+from common.djangoapps.edxmako.shortcuts import marketing_link
 from openedx.core.djangolib.markup import HTML
 from openedx.core.lib.courses import course_image_url
 from six import string_types
@@ -242,7 +243,7 @@ except:
               %>
             <li class="important-dates-item">
               <span class="icon fa fa-calendar" aria-hidden="true"></span>
-              <p class="important-dates-item-title">${_("Course Begins")}</p>
+              <p class="important-dates-item-title">${_("Classes Start")}</p>
               % if isinstance(course_start_date, string_types):
                   <span class="important-dates-item-text start-date">${course_start_date}</span>
               % else:
@@ -262,7 +263,7 @@ except:
 
             <li class="important-dates-item">
                 <span class="icon fa fa-calendar" aria-hidden="true"></span>
-                <p class="important-dates-item-title">${_("Course Ends")}</p>
+                <p class="important-dates-item-title">${_("Classes Ends")}</p>
                   % if isinstance(course_end_date, string_types):
                       <span class="important-dates-item-text final-date">${course_end_date}</span>
                   % else:
