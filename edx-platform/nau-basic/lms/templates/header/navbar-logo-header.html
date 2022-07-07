@@ -76,6 +76,8 @@ from lms.djangoapps.branding import api as branding_api
           logo_image_style_value = ''
           logo_image_title = ''
           logo_image_src = logo_image_url
+          logo_width = ''
+          logo_height = ''
           if isinstance(logo_image_url, dict):
             logo_image_src = logo_image_url.get('src', '')
             if isinstance(logo_image_src, dict):
@@ -89,14 +91,16 @@ from lms.djangoapps.branding import api as branding_api
             logo_image_max_width = 'max-width: ' + logo_image_url.get('max-width', '') + '; ' if 'max-width' in logo_image_url else ''
             logo_image_max_height = 'max-height: ' + logo_image_url.get('max-height', '') + '; ' if 'max-height' in logo_image_url else ''
             logo_image_style_value = logo_image_max_width + logo_image_max_height
+            logo_width = logo_image_url.get('width', '')
+            logo_height = logo_image_url.get('height', '')
         %>
         <img 
           class="logo" 
           src="${logo_image_src}"
           alt="${logo_image_alt}"
           title="${logo_image_title}"
-          width="${logo_image_url.get('width', '')}"
-          height="${logo_image_url.get('height', '')}"
+          width="${logo_width}"
+          height="${logo_height}"
           style="${logo_image_style_value}" />
       </picture>
     </a>
