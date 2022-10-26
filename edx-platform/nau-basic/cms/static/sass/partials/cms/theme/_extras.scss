@@ -8,41 +8,145 @@ body {
     margin: auto;
 
     .wrapper {
-    
-        &.wrapper-r .user-language-selector {   
-                position: absolute;    
-                height: 0;
-                overflow: visible;
-                right: 10px;
-                top: 85px;
+
+        section.content {
+            max-width: unset;
         }
     
-        &.wrapper-view {
-            border-top: solid 0.2em $nau_blue;
-            margin-bottom: 10px;
-        }
+        // &.wrapper-r .user-language-selector {   
+        //         position: absolute;    
+        //         height: 0;
+        //         overflow: visible;
+        //         right: 10px;
+        //         top: 85px;
+        // }
+    
+        // &.wrapper-view {
+        //     border-top: solid 0.2em $nau_blue;
+        //     margin-bottom: 10px;
+        // }
         
+        // Add heigth        
         #view-top.wrapper-header.wrapper {
-            
             header.primary {
                 div.wrapper {
                     h1.branding {
                         img.brand-image {
-                            height: 35px;
+                            min-height: 2.8rem;
+                        }
+                    }
+                }
+                .wrapper-l {
+                    width: 63%;
+
+                    h2.info-course {
+                        width: unset;
+                    }
+                    nav.nav-course {
+                        width: unset;
+                    }
+                }
+                .wrapper-r {
+                    width: 37%;
+                    // Increase width of the change language combo box
+                    nav.user-language-selector {
+                        width: 14rem;
+                        #language-settings-form.settings-language-form{
+                            label{
+                                #settings-language-value.language-selector{
+                                    width: 14rem;
+                                }
+                            }
                         }
                     }
                 }
             }
-            
-            box-shadow: 0 1px 5px 0;
-            &wrapper-1 {
-                background: green;
-            }
-
         }
-        
+        main#main {
+            #content {
+                .wrapper {
+                    header {
+                        nav.nav-actions {
+                            // do not make the buttons overflow
+                            bottom: 0;
+                        }
+                    }
+                    .button { // any button inside the content or header div, this won't match the studio home
+                        border-radius: 50px;
+                        padding: 0.8em 2em 0.8em 2em;
+                        border-width: 1px;
+                        background: $nau_blue;
+                        border-color: $nau_blue;
+                        color: white;
+
+                        &:hover {
+                            border-width: 1px;      
+                            border-color: $nau_blue;
+                            color: $nau_blue;
+                            background-color: white;
+                        }
+                
+                        &.button-new {
+                            background-color: $nau_blue;
+                            border-color: $nau_blue;
+                            color: white;
+                
+                            &:hover {
+                                color: $nau_blue;
+                                background-color: white;
+                            }    
+                        }
+                
+                        &.external-help-button {
+                            background-color: white;
+                            color: $nau_blue;
+                            border-color: $nau_blue;
+                            border-width: 1px;
+                            &:hover {
+                                color: white;
+                                background-color: $nau_blue;
+                            }
+                        }
+                    }    
+                    ol.list-sections {
+                        li {
+                            border-radius: 10px 10px 20px 20px;
+                        }                
+                    }
+                }
+
+                // edit the home content
+                section.content {
+                    article.content-primary{
+                        .courses {
+                            #react-course-listing {
+                                .list-courses {
+                                    li.course-item {
+                                        ul.course-actions {
+                                            li {
+                                                a.button {
+                                                    // Remove custom NAU button style and make them as normal anchor
+                                                    border-radius: unset;
+                                                    padding: unset;
+                                                    border-width: unset;
+                                                    background: unset;
+                                                    border-color: unset;
+                                                    color: $nau_blue;
+                                                    &:hover {
+                                                        color: $button-hover;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-    
 }
 
 .wrapper-mast .mast.has-actions .nav-actions {
@@ -82,57 +186,18 @@ body {
     }
 }
 
-.is-signedin.course .wrapper-header {    
-    .info-course {
-       float: right;
-       width: 220px;
-       border-right: none;        
-    }
+// .is-signedin.course .wrapper-header {    
+//     .info-course {
+//        float: right;
+//        width: 220px;
+//        border-right: none;        
+//     }
     
-    .nav-account {
-        width: 350px;
-        float: right;
-    }
-}
-
-#content .button {
-    
-        border-radius: 50px;
-        padding: 0.8em 2em 0.8em 2em;            
-        border-width: 1px;
-        border-color: $nau_blue;
-        
-        &:hover {
-          box-shadow: 2px 2px 4px gray;    
-          border-width: 1px;      
-        }
-    
-        &.button-new {
-          background-color: $nau_blue;
-          color: white;
-            
-          &:hover {
-            color: $nau_blue;
-            background-color: white;
-          }    
-        }
-    
-        &.external-help-button {
-          background-color: white;
-          color: $nau_blue;
-          border-color: $nau_blue;
-          border-width: 1px;
-        }
-}
-
-#content {
-    
-    ol.list-sections {
-        li {            
-            border-radius: 10px 10px 20px 20px;
-        }                
-    }   
-}
+//     .nav-account {
+//         width: 350px;
+//         float: right;
+//     }
+// }
 
 // GN-140 Fix modal drag and drop editor was hidding some last button.
 [class*="view-"] .modal-window .editor-with-buttons {
