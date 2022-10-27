@@ -12,20 +12,7 @@ body {
         section.content {
             max-width: unset;
         }
-    
-        // &.wrapper-r .user-language-selector {   
-        //         position: absolute;    
-        //         height: 0;
-        //         overflow: visible;
-        //         right: 10px;
-        //         top: 85px;
-        // }
-    
-        // &.wrapper-view {
-        //     border-top: solid 0.2em $nau_blue;
-        //     margin-bottom: 10px;
-        // }
-        
+
         // Add heigth        
         #view-top.wrapper-header.wrapper {
             header.primary {
@@ -159,7 +146,6 @@ body {
     display: none;    
 }
 
-
 .wrapper-footer.wrapper {
     margin: 0px;
     padding: 0px;
@@ -173,11 +159,7 @@ body {
     .footer-content-secondary {
         margin: 0px 20px 0px 20px;
     }
-    
-   
 }
-
-
 
 .view-dashboard {
     .list-courses {
@@ -185,19 +167,6 @@ body {
         overflow: hidden;
     }
 }
-
-// .is-signedin.course .wrapper-header {    
-//     .info-course {
-//        float: right;
-//        width: 220px;
-//        border-right: none;        
-//     }
-    
-//     .nav-account {
-//         width: 350px;
-//         float: right;
-//     }
-// }
 
 // GN-140 Fix modal drag and drop editor was hidding some last button.
 [class*="view-"] .modal-window .editor-with-buttons {
