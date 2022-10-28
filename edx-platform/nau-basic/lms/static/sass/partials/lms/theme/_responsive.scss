@@ -95,29 +95,19 @@
     }
   }
 
-  .content-wrapper .course-info {
+  .content-wrapper /*.course-info*/ {
     .course-sidebar {
       width: 100%;
+
+      @media (max-width: 767.98px) {
+        padding-left: 20px;
+      }
     }
 
     header.course-profile {
       height: auto;
     }
   }  
-
-    //Dashboard
-  .dashboard .main-container .my-courses .course .details .wrapper-course-image {
-    display: block;
-    width: 100%;
-
-    .cover {
-      max-width: 184px;
-    }
-
-    img {
-      height: 120px;
-    }
-  }
 
   .find-courses {
     .title-courses,
