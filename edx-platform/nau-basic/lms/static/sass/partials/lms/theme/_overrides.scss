@@ -207,7 +207,9 @@ body {
         }
         .search-form {
             .search-input, .search-button {
-                z-index: unset !important;
+                // the search button on course home should only round corners on right but not on the left.
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
             }
         }
     }
