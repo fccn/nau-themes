@@ -20,25 +20,22 @@ from six import text_type
   restrict_enroll_for_course = course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain
   allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION'))
 %>
-
-<ul id="menu_login_register" class="login_menu" aria-label=${_("Supplemental Links")}>
-    % if restrict_enroll_for_course:
-        <li>
-            <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link register_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-register_openedx sign-in" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}">${_("Sign in")}</a>
-        </li>
-        <li>
-            <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link login_or_dash_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-login_openedx register" href="${reverse('course-specific-register', args=[text_type(course.id)])}">${_("Register")}</a>
-        </li>
-    % else:
-      % if allow_public_account_creation:
-        <li>
-            <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link register_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-register_openedx sign-in" href="/login${login_query()}">${_("Sign in")}</a>
-        </li>
-        <li>
-            <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link login_or_dash_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-login_openedx register" href="/register${login_query()}">${_("Register")}</a>
-        </li>
-      % endif  
-    % endif
-
-</ul>
-
+<nav class="login-menu" aria-label="${_('Supplemental Links')}">
+% if restrict_enroll_for_course:
+  <div class="mobile-nav-item hidden-mobile nav-item">
+    <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link register_openedx sign-in" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}">${_("Sign in")}</a>
+  </div>
+  <div class="mobile-nav-item hidden-mobile nav-item">
+    <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link menu-item-object-login_openedx register" href="${reverse('course-specific-register', args=[text_type(course.id)])}">${_("Register")}</a>
+  </div>
+% else :
+  % if allow_public_account_creation:
+      <div class="mobile-nav-item hidden-mobile nav-item">
+          <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link register_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-register_openedx sign-in" href="/login${login_query()}">${_("Sign in")}</a>
+      </div>
+      <div class="mobile-nav-item hidden-mobile nav-item">
+          <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link login_or_dash_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-login_openedx register" href="/register${login_query()}">${_("Register")}</a>
+      </div>
+  % endif
+% endif
+</nav>

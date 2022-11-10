@@ -105,8 +105,6 @@ from lms.djangoapps.branding import api as branding_api
       </picture>
     </a>
 
-    <a id="open-menu-arrow" href="javascript:void(0)" onclick="openNav(0)" title="Abrir">&#9776;</a>
-
     % if course:
       <% 
         org_logo_dict = static.get_value('NAU_HEADER_ORGANIZATION_LOGOS', {}).get(course.display_org_with_default)
@@ -155,34 +153,10 @@ from lms.djangoapps.branding import api as branding_api
 
     <!-- starts menu container -->
     <div class="menu-container">
-      <!-- starts top nav menu -->
-      <a id="close-menu-arrow" href="javascript:void(0)" onclick="closeNav(0)" title="Fechar">&#10005;</a>
       <!-- starts top nav action container -->
-      <div id="actions_container"> 
-        % if header_language_selector_is_enabled():
-          <% languages = released_languages() %>
-          % if len(languages) > 1:
-            <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
-              <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
-              % if user.is_authenticated:
-                <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
-              % else:
-                <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
-              % endif            
-              <label><span class="sr">${_("Choose Language")}</span>
-              <select class="input select language-selector" id="settings-language-value" name="language">
-                % for language in languages:
-                  % if language[0] == LANGUAGE_CODE:
-                    <option value="${language[0]}" selected="selected">${language[1]}</option>
-                  % else:
-                    <option value="${language[0]}" >${language[1]}</option>
-                  % endif
-                % endfor
-              </select>
-              </label>
-            </form>
-          % endif
-        % endif
+      <div id="actions-container" class="secondary">
+
+        <%include file="language-selector.html"/>
       
         % if user.is_authenticated:
               <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
@@ -195,7 +169,9 @@ from lms.djangoapps.branding import api as branding_api
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
-        </div>        
+        </div>
+
+        <div class="mobile-menu hidden" aria-label=${_("More Options")} role="menu" id="mobile-menu"></div>     
         
       <!-- ends login and register -->     
       </div>        
@@ -206,7 +182,6 @@ from lms.djangoapps.branding import api as branding_api
 
 
 <!-- ends branding container -->
-<div class="menu-overlay" onclick="closeNav(0)"></div>
 
   % if course:
     <div class="course-header">
@@ -222,27 +197,3 @@ from lms.djangoapps.branding import api as branding_api
       <span class="course-name">${display_name}</span>
     </div>
   % endif
-
-
-<script>
-// starts menu opening and closing button for menu: cross
-const menuContainer = document.querySelector(".menu-container");
-const bodyOverlay = document.getElementsByTagName("body")[0];
-const openMenu = document.getElementById("open-menu-arrow");
-
-function openNav() {
-  menuContainer.style.cssText = "display: block";
-  openMenu.style.cssText = "display:none;"; 
-  document.getElementById("close-menu-arrow").style.cssText = "display:block";
-  document.querySelector(".menu-overlay").style.cssText = "display:block;"; 
-  bodyOverlay.classList.add("enable-overlay");
-}
-function closeNav() {
-  menuContainer.style.cssText = "display: none";
-  openMenu.style.cssText = "display:block;";
-  document.getElementById("close-menu-arrow").style.cssText = "display:none";  
-  document.querySelector(".menu-overlay").style.cssText = "display:none;";
-  bodyOverlay.classList.remove("enable-overlay");
-}
-// ends menu opening and closing button for menu: cross
-</script>

@@ -4,12 +4,10 @@ $nau_blue : $primary;
 $nau_button_focus: lighten($primary, 25%);
 
 @mixin nau-button-style() {
-    padding: 0.8em 2em 0.8em 2em;
+    padding: 0.6rem 1.6rem;
     border-radius: 50px;
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid $nau_blue !important;
     background: $nau_blue !important;
-    border-color: $nau_blue !important;
     color: white !important;
     box-shadow: unset;
     &:hover, &:active, &:focus {
@@ -29,7 +27,7 @@ $nau_button_focus: lighten($primary, 25%);
 }
 
 @mixin nau-button-alt-style() {
-    padding: 0.8em 2em 0.8em 2em;
+    padding: 0.6rem 1.6rem;
     border-radius: 50px;
     border-width: 1px;
     border-style: solid;
@@ -374,7 +372,6 @@ main#main {
 
 /* FIM DE FORM */
 
-
 .wrapper-preview-menu {
     position: fixed;
     bottom: 0px;
@@ -412,16 +409,11 @@ main#main {
 }
 
 .course-header {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;    
-    text-align: right;
+    padding: 10px 50px; 
+    text-align: center;
     background-color: #f0f0f0;
     color: $gray-smalltext-color;
-    // position: absolute;
-    // width: 100%;
-    // bottom: -44px;
+
     @media screen and (min-width: $breakpoint-xlarge) {
         display: none;
     }
@@ -448,7 +440,7 @@ div.window-wrap {
 }
 
 div.main-header {
-    background-color: #666;
+    background-color: white;
 }
 
 
