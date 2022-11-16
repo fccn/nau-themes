@@ -378,6 +378,10 @@ main#main {
     z-index: 10;
     width: 100%;
     opacity: 0.85;
+
+    .preview-menu a.btn.view-in-studio {
+        margin-right: 4rem;
+    }
 }
 
 .page-header {
