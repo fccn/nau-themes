@@ -1,83 +1,10 @@
+// Grab the mixins
+@import 'utils';
+
 $black : #000;
 $white : #FFF;
 $nau_blue : $primary;
 $nau_button_focus: lighten($primary, 25%);
-
-@mixin nau-button-style($fontSize: inherit) {
-    padding: 0.3rem 1.3rem;
-    border-radius: 50px;
-    border: 1px solid $nau_blue !important;
-    background: $nau_blue !important;
-    color: white !important;
-    box-shadow: unset;
-    font-size: $fontSize;
-
-    &:hover,
-    &:active,
-    &:focus {
-        border-width: 1px;
-        border-color: $nau_blue !important;
-        color: $nau_blue !important;
-        background-color: white !important;
-        text-shadow: unset;
-        background-image: unset;
-    }
-
-    &:hover,
-    &:active {
-        box-shadow: unset;
-    }
-
-    &:focus {
-        box-shadow: 0 0 0 0.2rem $nau_button_focus;
-    }
-}
-
-@mixin nau-button-alt-style() {
-    padding: 0.6rem 1.6rem;
-    border-radius: 50px;
-    border-width: 1px;
-    border-style: solid;
-    background: white !important;
-    border-color: $nau_blue !important;
-    color: $nau_blue !important;
-    box-shadow: unset;
-
-    &:hover,
-    &:active,
-    &:focus {
-        border-width: 1px;
-        // Realy need the next !important 's to force overwrite some discussion module !important 's.
-        border-color: $nau_blue !important;
-        color: white !important;
-        background-color: $nau_blue !important;
-        text-shadow: unset;
-        background-image: unset;
-    }
-
-    &:hover,
-    &:active {
-        box-shadow: unset;
-    }
-
-    &:focus {
-        box-shadow: 0 0 0 0.2rem $nau_button_focus;
-    }
-}
-
-@mixin nau-color-change-alt() {
-    background: white;
-    border-color: $nau_blue;
-    color: $nau_blue;
-
-    &:hover,
-    &:active,
-    &:focus {
-        border-color: $nau_blue;
-        color: white;
-        background-color: $nau_blue;
-    }
-}
 
 * {
     outline: #818181 !important;
@@ -874,15 +801,6 @@ footer section#entities-quick-links ul.flex-row {
 
 aside.page-content-secondary a {
     color: #0553ff;
-}
-
-.breadcrumbs .nav-item.nav-item-course,
-.breadcrumbs .fa-angle-right {
-    vertical-align: top;
-}
-
-.breadcrumbs .fa-angle-right {
-    margin-top: 3px;
 }
 
 .wrapper-course-details h3 a {

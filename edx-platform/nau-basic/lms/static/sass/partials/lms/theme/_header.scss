@@ -8,8 +8,9 @@
 
     @media screen and (max-width: $breakpoint-large) {
         .hamburger-menu {
-            right: 20px;
-            top: 8px;
+            left: unset !important;
+            right: 5px;
+            top: 2px !important;
             left: inherit;
         }
     }
