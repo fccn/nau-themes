@@ -43,7 +43,7 @@
 
     a.nau-header-logo-link {
         display: inline-block;
-    
+
 
         .logo {
             display: inline-block;
@@ -146,10 +146,21 @@
             }
         }
 
+        .menu-title {
+            span.username {
+                display: inline-block;
+                max-width: 150px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                vertical-align: middle;
+            }
+        }
+
         .mobile-menu {
             @media screen and (max-width: $breakpoint-large) {
                 width: 100%;
-                margin:30px 0 10px;
+                margin: 30px 0 10px;
             }
 
             .mobile-nav-link a::after {
