@@ -1,15 +1,11 @@
 footer {
-    ul,
-    ol {
+    ul {
         padding: 0;
         list-style: none;
     }
 
     #quick-links-section {
-        padding-top: 20px;
-        padding-right: 50px;
-        padding-bottom: 0px;
-        padding-left: 50px;
+        padding: 50px 65px 30px;
         background-color: $footer-bg-color;
         display: flex;
 
@@ -30,8 +26,8 @@ footer {
     .footer-title {
         font-weight: bold;
         display: block;
-        font-size: 15px;
-        padding-bottom: 4px;
+        font-size: 1.15rem;
+        padding-bottom: 8px;
         color: $footer-header-color;
     }
 
@@ -44,8 +40,8 @@ footer {
         a, a:visited {
             color: $footer-link-color;
             text-transform: inherit;
-            line-height: 1.7em;
-            font-size: 0.81rem;
+            line-height: 1.8rem;
+            font-size: 0.95rem;
 
             &:hover {
                 color: inherit;
@@ -94,11 +90,8 @@ footer {
         background-color: white;
         display: flex;
         justify-content: space-between;
-        padding-top: 20px;
-        padding-right: 50px;
-        padding-bottom: 20px;
-        padding-left: 50px;
-        max-width: 1920px;
+        padding: 20px 50px;
+        max-width: $breakpoint-xlarge;
         flex-wrap: wrap;
 
         @media screen and (max-width: $breakpoint-medium) {
