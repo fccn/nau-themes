@@ -1,0 +1,26 @@
+.instructor-dashboard-content-2 {
+
+    // remove the double underline in the instructor view
+    .btn-link {
+
+        &:hover,
+        &:focus {
+            text-decoration: none !important;
+        }
+    }
+}
+
+.wrap-instructor-info {
+
+    .instructor-info-action {
+        color: $primary !important;
+        text-decoration: none;
+
+        &:hover {
+            color: white !important;
+            background-color: $primary !important;
+            text-decoration: none;
+        }
+    }
+
+}

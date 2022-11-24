@@ -5,11 +5,11 @@
 $primary: #074CE1;
 //$blue-pr: #074CE1;
 // Primary blue
-$blue: #074CE1;
+$blue: $primary;
 // button hover color hover account settings
-$m-blue-d3: #074CE1;
+$m-blue-d3: $primary;
 // Some box borders like tabs on account settings
-$courseware-border-bottom-color: #074CE1;
+$courseware-border-bottom-color: $primary;
 // Change the hover buttons
 $uxpl-blue-hover-active: #063eb6;
 
