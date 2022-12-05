@@ -85,7 +85,7 @@ body {
 
 
 /**** Courses ***/
-
+/*
 .course-content .xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-list-wrapper {
     overflow: inherit;
 }
@@ -93,6 +93,7 @@ body {
 .xmodule_display.xmodule_SequenceModule .sequence-nav {
     margin: 0 auto 35px !important;
 }
+*/
 
 .find-courses {
     background: #fff;
@@ -153,9 +154,17 @@ body {
 
     #course-container {
         .page-header {
-            .page-header-secondary {
+            &-secondary {
                 @media (max-width: 767.98px) {
                     padding-left: 20px;
+                }
+            }
+
+            &-search {
+                input#search {
+                    border-top-left-radius: 50px;
+                    border-bottom-left-radius: 50px;
+                    padding-left: 20px !important;                
                 }
             }
         }
@@ -573,8 +582,6 @@ button.submit,
 
 
 @mixin nav-tab-sequence {
-    background: white;
-    background-color: white;
 
     // color: $nau_blue;
     &:hover,
@@ -617,7 +624,10 @@ button.submit,
 
             button.active {
                 background: $nau_blue;
-                color: white;
+                
+                .icon {
+                    color: white;
+                }
             }
         }
 
@@ -627,11 +637,13 @@ button.submit,
                     li {
                         button {
                             @include nav-tab-sequence;
+                            overflow:hidden;
                         }
                     }
                 }
             }
         }
+
 
         .sequence-bottom {
             button.button-next {
