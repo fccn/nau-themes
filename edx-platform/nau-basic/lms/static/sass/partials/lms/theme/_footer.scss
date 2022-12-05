@@ -87,11 +87,9 @@ footer {
     }
 
     section#entities-quick-links {
-        background-color: white;
         display: flex;
         justify-content: space-between;
-        padding: 20px 50px;
-        max-width: $breakpoint-xlarge;
+        padding: 25px 65px;
         flex-wrap: wrap;
 
         @media screen and (max-width: $breakpoint-medium) {
