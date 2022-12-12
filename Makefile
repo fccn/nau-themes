@@ -13,12 +13,12 @@
 
 # include *.mk
 
-_venv: _venv/touchfile
-	
-_venv/touchfile: requirements.txt
+virtual_environment: requirements.txt
 	test -d venv || virtualenv venv --python=python3
 	. venv/bin/activate && python -m pip install -Ur requirements.txt
 	touch venv/touchfile
+	@echo "Run on your shell to activate the new virtual environment:"
+	@echo "  . venv/bin/activate"
 
 clean: ## clean
 	rm -rf venv
@@ -30,29 +30,32 @@ COMPOSE_PROJECT_NAME= nau-juniper-devstack
 # TODO: define somewhere else
 lang_targets = en pt_PT
 
-create_translations_catalogs: _venv | extract_translations
+create_translations_catalogs: | extract_translations
 	for lang in $(lang_targets) ; do \
-        . venv/bin/activate && pybabel init -i $(theme)/conf/locale/django.pot -D django -d $(theme)/conf/locale/ -l $$lang ; \
-		. venv/bin/activate && pybabel init -i $(theme)/conf/locale/djangojs.pot -D djangojs -d $(theme)/conf/locale/ -l $$lang ; \
+        pybabel init -i $(theme)/conf/locale/django.pot -D django -d $(theme)/conf/locale/ -l $$lang ; \
+		pybabel init -i $(theme)/conf/locale/djangojs.pot -D djangojs -d $(theme)/conf/locale/ -l $$lang ; \
     done
 
-extract_translations: _venv
-	. venv/bin/activate && pybabel extract -F $(theme)/conf/locale/babel_mako.cfg -o $(theme)/conf/locale/django.pot --msgid-bugs-address=ajuda@nau.edu.pt --copyright-holder=FCT-FCCN -c Translators $(theme)/*
-	. venv/bin/activate && pybabel extract -F $(theme)/conf/locale/babel_underscore.cfg -o $(theme)/conf/locale/djangojs.pot --msgid-bugs-address=ajuda@nau.edu.pt --copyright-holder=FCT-FCCN -c Translators $(theme)/*
+extract_translations:
+	pybabel extract -F $(theme)/conf/locale/babel_mako.cfg -o $(theme)/conf/locale/django.pot --msgid-bugs-address=ajuda@nau.edu.pt --copyright-holder=FCT-FCCN -c Translators $(theme)/*
+	pybabel extract -F $(theme)/conf/locale/babel_underscore.cfg -o $(theme)/conf/locale/djangojs.pot --msgid-bugs-address=ajuda@nau.edu.pt --copyright-holder=FCT-FCCN -c Translators $(theme)/*
 
-update_translations: _venv| extract_translations update_translations_po_files clean_translations_intermediate compile_translations ## update strings to be translated
+update_translations: | extract_translations update_translations_po_files clean_translations_intermediate compile_translations ## update strings to be translated
 
 clean_translations_intermediate:
 	rm -f $(theme)/conf/locale/django.pot
 	rm -f $(theme)/conf/locale/djangojs.pot
 
-update_translations_po_files: _venv
-	. venv/bin/activate && pybabel update -N -D django -i $(theme)/conf/locale/django.pot -d $(theme)/conf/locale/
-	. venv/bin/activate && pybabel update -N -D djangojs -i $(theme)/conf/locale/djangojs.pot -d $(theme)/conf/locale/
+update_translations_po_files:
+	pybabel update -N -D django -i $(theme)/conf/locale/django.pot -d $(theme)/conf/locale/
+	pybabel update -N -D djangojs -i $(theme)/conf/locale/djangojs.pot -d $(theme)/conf/locale/
 
-compile_translations: _venv
-	. venv/bin/activate && pybabel compile -f -D django -d $(theme)/conf/locale/
-	. venv/bin/activate && pybabel compile -f -D djangojs -d $(theme)/conf/locale/
+compile_translations:
+	pybabel compile -f -D django -d $(theme)/conf/locale/
+	pybabel compile -f -D djangojs -d $(theme)/conf/locale/
+
+check_miss_run_update_translations: | extract_translations update_translations_po_files clean_translations_intermediate ## Check if `make update_translations` should be run
+	git diff --numstat *.po | awk '{if ($$1>1 || $$2>1) { exit 1 } else { exit 0 }}'
 
 publish_lms_devstack: | update_translations ## Publish changes to LMS devstack
 	@echo "Running compilejsi18n && collectstatic at lms"
