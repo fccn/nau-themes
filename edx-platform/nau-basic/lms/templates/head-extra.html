@@ -15,11 +15,11 @@ from lms.djangoapps.ccx.overrides import get_current_ccx
 
   ga('create', '${nau_ga_acct | n, js_escaped_string}', 'auto');
   % if course:
-  var googleAnalyticsCourseIdArray='${course.id | n, js_escaped_string}'.split(':')[1].split('+');
+  <% google_universal_analytics_course_id_array = str(course.id).split(':')[1].split('+') %>
   ga('set', {
-    'dimension1': googleAnalyticsCourseIdArray[0],
-    'dimension2': googleAnalyticsCourseIdArray[1],
-    'dimension3': googleAnalyticsCourseIdArray[2],
+    'dimension1': '${google_universal_analytics_course_id_array[0]}',
+    'dimension2': '${google_universal_analytics_course_id_array[1]}',
+    'dimension3': '${google_universal_analytics_course_id_array[2]}',
     'dimension4': '${course.id}',
   <%
     display_name = course.display_name_with_default
@@ -38,11 +38,25 @@ from lms.djangoapps.ccx.overrides import get_current_ccx
 
 <% nau_gtm_tracking_id = static.get_value('NAU_GOOGLE_TAG_MANAGER_ID', getattr(settings, 'NAU_GOOGLE_TAG_MANAGER_ID', None)) %>
 % if nau_gtm_tracking_id:
+  <% nau_gtm_tracking_enrironment = static.get_value('NAU_GOOGLE_TAG_MANAGER_ENVIRONMENT', getattr(settings, 'NAU_GOOGLE_TAG_MANAGER_ENVIRONMENT', None)) %>
   <!-- Google Tag Manager -->
+  % if course:
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      <% google_tag_manager_course_id_array = str(course.id).split(':')[1].split('+') %>
+      window.dataLayer.push({
+      'event' : 'pageview',
+      'organizations_codes': '${google_tag_manager_course_id_array[0]}',
+      'course_code': '${ google_tag_manager_course_id_array[1]}',
+      'course_run': '${ google_tag_manager_course_id_array[2]}',
+      'course_id': '${course.id}',
+      });
+  </script>
+  % endif
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl+'${nau_gtm_tracking_enrironment}';f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','${nau_gtm_tracking_id}');</script>
   <!-- End Google Tag Manager -->
 % endif
