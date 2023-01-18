@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2022-12-12 11:48+0000\n"
+"POT-Creation-Date: 2023-01-18 11:16+0000\n"
 "PO-Revision-Date: 2021-03-12 12:49+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: pt_PT\n"
@@ -1455,13 +1455,13 @@ msgstr "A carregar"
 msgid "Refine Your Search"
 msgstr "Refinar a sua Pesquisa"
 
-#: edx-platform/nau-basic/lms/templates/header/header.html:45
+#: edx-platform/nau-basic/lms/templates/header/header.html:56
 #: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:174
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:40
 msgid "More Options"
 msgstr "Mais Opções"
 
-#: edx-platform/nau-basic/lms/templates/header/header.html:50
+#: edx-platform/nau-basic/lms/templates/header/header.html:61
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. "
 "We strongly recommend using {chrome_link} or {ff_link}."
