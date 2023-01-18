@@ -1,0 +1,99 @@
+<%page expression_filter="h"/>
+<%! from openedx.core.djangolib.js_utils import js_escaped_string %>
+
+% if context_course:
+<%
+    locator = context_course.id
+%>
+% endif
+
+% if settings.CMS_SEGMENT_KEY:
+<!-- begin Segment -->
+<script type="text/javascript">
+  // if inside course, inject the course location into the JS namespace
+  %if context_course:
+      var course_location_analytics = "${ locator | n, js_escaped_string }";
+  %endif
+
+  // Asynchronously load Segment's analytics.js library
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+  analytics.load("${ settings.CMS_SEGMENT_KEY | n, js_escaped_string }");
+  analytics.page();
+  }}();
+  // Note: user tracking moved to segment-io-footer.html
+</script>
+<!-- end Segment -->
+% else:
+<!-- dummy Segment -->
+<script type="text/javascript">
+  %if context_course:
+  var course_location_analytics = "${ locator | n, js_escaped_string }";
+  %endif
+  var analytics = {
+    "track": function() {}
+  };
+</script>
+<!-- end dummy Segment -->
+% endif
+
+
+<%namespace name='static' file='../static_content.html'/>
+<%!
+from lms.djangoapps.ccx.overrides import get_current_ccx
+%>
+<% nau_ga_acct = static.get_value("NAU_GOOGLE_ANALYTICS_ACCOUNT", False) %>
+% if nau_ga_acct:
+  <!-- NAU theme Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '${nau_ga_acct | n, js_escaped_string}', 'auto');
+  % if context_course:
+  <% google_universal_analytics_course_id_array = str(context_course.id).split(':')[1].split('+') %>
+  ga('set', {
+    'dimension1': '${google_universal_analytics_course_id_array[0]}',
+    'dimension2': '${google_universal_analytics_course_id_array[1]}',
+    'dimension3': '${google_universal_analytics_course_id_array[2]}',
+    'dimension4': '${context_course.id}',
+  <%
+    display_name = context_course.display_name_with_default
+    if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+      ccx = get_current_ccx(context_course.id)
+      if ccx:
+        display_name = ccx.display_name
+  %>
+    'dimension5': '${display_name}',
+  });
+  % endif
+  ga('send', 'pageview');
+  </script>
+  <!-- End NAU theme Google Analytics -->
+% endif
+
+<% nau_gtm_tracking_id = static.get_value('NAU_GOOGLE_TAG_MANAGER_ID', getattr(settings, 'NAU_GOOGLE_TAG_MANAGER_ID', None)) %>
+% if nau_gtm_tracking_id:
+  <% nau_gtm_tracking_enrironment = static.get_value('NAU_GOOGLE_TAG_MANAGER_ENVIRONMENT', getattr(settings, 'NAU_GOOGLE_TAG_MANAGER_ENVIRONMENT', None)) %>
+  <!-- Google Tag Manager -->
+  % if context_course:
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      <% google_tag_manager_course_id_array = str(context_course.id).split(':')[1].split('+') %>
+      window.dataLayer.push({
+      'event' : 'pageview',
+      'organizations_codes': '${google_tag_manager_course_id_array[0]}',
+      'course_code': '${ google_tag_manager_course_id_array[1]}',
+      'course_run': '${ google_tag_manager_course_id_array[2]}',
+      'course_id': '${context_course.id}',
+      });
+  </script>
+  % endif
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl+'${nau_gtm_tracking_enrironment}';f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','${nau_gtm_tracking_id}');</script>
+  <!-- End Google Tag Manager -->
+% endif
