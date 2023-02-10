@@ -207,8 +207,13 @@ body {
             .table {
                 .intro {
                     .main-cta {
-                        .register {
-                            @include nau-button-style;
+                        a {
+                            .register:not(.disabled) {
+                                @include nau-button-style;
+                            }
+                            strong {
+                                @include nau-button-style;
+                            }
                         }
                     }
                 }
