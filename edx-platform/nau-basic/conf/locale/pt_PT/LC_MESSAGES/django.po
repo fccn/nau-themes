@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2023-01-18 11:16+0000\n"
+"POT-Creation-Date: 2023-02-10 17:31+0000\n"
 "PO-Revision-Date: 2021-03-12 12:49+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: pt_PT\n"
@@ -700,7 +700,6 @@ msgid "Unscheduled"
 msgstr "Não calendarizado"
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:25
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:239
 msgid "Course Number"
 msgstr "Número do Curso"
 
@@ -1324,107 +1323,6 @@ msgstr ""
 #: edx-platform/nau-basic/lms/templates/course_experience/course-dates-fragment.html:18
 msgid "View all course dates"
 msgstr "Ver todas as datas dos cursos"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:45
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:83
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:102
-msgid "An error occurred. Please try again later."
-msgstr "Ocorreu um erro. Por favor tente novamente."
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:67
-msgid ""
-"The currently logged-in user account does not have permission to enroll "
-"in this course. You may need to {start_logout_tag}log out{end_tag} then "
-"try the enroll button again. Please visit the {start_help_tag}help "
-"page{end_tag} for a possible solution."
-msgstr ""
-"A conta de utilizador utilizada de momento não possui permissão para se "
-"inscrever neste curso. Talvez seja necessário "
-"{start_logout_tag}sair{end_tag} e, em seguida, tentar novamente o botão "
-"de inscrição. Visite a {start_help_tag}página de ajuda{end_tag} para "
-"obter uma possível solução."
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:138
-msgid "You are enrolled in this course"
-msgstr "Está matriculado neste curso"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:141
-msgid "View Course"
-msgstr "Ver Curso"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:147
-msgid "This course is in your <a href=\"{cart_link}\">cart</a>."
-msgstr "Este curso encontra-se no seu <a href=\"{cart_link}\">carrinho</a>."
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:151
-msgid "Course is full"
-msgstr "O curso está cheio"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:154
-msgid "Enrollment in this course is by invitation only"
-msgstr "A matrícula neste curso é apenas por convite"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:159
-msgid "Enrollment is Closed"
-msgstr "Matrícula Encerrada"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:174
-msgid "Add {course_name} to Cart <span>({price} {currency})</span>"
-msgstr "Adicionar {course_name} ao Carrinho <span>({price} {currency})</span>"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:190
-msgid "Enroll in {course_name}"
-msgstr "Matricular em {course_name}"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:222
-msgid "View About Page in studio"
-msgstr "Visualizar página Sobre em studio"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:246
-msgid "Classes Start"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:266
-msgid "Classes Ends"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:279
-msgid "Estimated Effort"
-msgstr "Esforço estimado"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:287
-msgid "Price"
-msgstr "Preço"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:296
-msgid "Prerequisites"
-msgstr "Pré-requisitos"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:300
-msgid ""
-"You must successfully complete {link_start}{prc_display}{link_end} before"
-" you begin this course."
-msgstr ""
-"Deve concluir com sucesso {link_start}{prc_display}{link_end} antes de "
-"iniciar este curso."
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:310
-msgid "Requirements"
-msgstr "Requisitos"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:327
-msgid "Additional Resources"
-msgstr "Recursos adicionais"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:357
-msgctxt "self"
-msgid "Enroll"
-msgstr "Matricular"
-
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:362
-msgctxt "self"
-msgid "enroll"
-msgstr "matricular"
 
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:32
 msgid "Courses"
