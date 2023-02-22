@@ -183,4 +183,14 @@ header.mast,
     max-width: unset !important;
 }
 
+/* Fix component height */
+
+.add-xblock-component .new-component .new-component-type {
+	display: inline-flex;
+
+	.add-xblock-component-button {
+		height: 120px !important;
+	}
+}
+
 @import "footer"

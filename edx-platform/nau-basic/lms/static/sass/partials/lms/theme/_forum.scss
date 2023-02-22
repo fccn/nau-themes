@@ -1,0 +1,21 @@
+.forum-search {
+  .search-input {
+    border-radius: 50px 0 0 50px;
+    padding-left: 1.25rem !important;
+  }
+
+  .search-button {
+    border-radius: 0 50px 50px 0 !important;
+  }
+
+  input:not(:placeholder-shown) ~ label {
+    padding-top: .01rem !important;
+    font-size: .5rem !important;
+  }
+
+  &>label {
+    font-size: 0.8rem;
+    padding-left: 1.25rem !important;
+    padding-top: 7px !important;
+  }
+}
