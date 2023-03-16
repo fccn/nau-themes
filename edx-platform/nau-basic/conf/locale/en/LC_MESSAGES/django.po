@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2023-02-10 17:31+0000\n"
+"POT-Creation-Date: 2023-03-16 14:59+0000\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -557,6 +557,7 @@ msgid "View Archived Course"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:12
+#: edx-platform/nau-basic/lms/templates/dashboard.html:276
 msgid "Search Your Courses"
 msgstr ""
 
@@ -566,6 +567,7 @@ msgid "Resume your last course"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:14
+#: edx-platform/nau-basic/lms/templates/dashboard.html:30
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:45
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:47
 msgid "Dashboard"
@@ -1056,6 +1058,98 @@ msgstr ""
 msgid "Sign In"
 msgstr ""
 
+#: edx-platform/nau-basic/lms/templates/_other_sites_dashboard_course_listing.html:41
+msgid "Course details"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/_other_sites_dashboard_course_listing.html:46
+msgid "{course_number} {course_name} Home Page"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/_other_sites_dashboard_course_listing.html:50
+#: edx-platform/nau-basic/lms/templates/_other_sites_dashboard_course_listing.html:55
+msgid "{course_number} {course_name} Cover Image"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/_other_sites_dashboard_course_listing.html:83
+msgid "Go to my {org_code} courses"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:223
+msgid "results successfully populated,"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:225
+msgid "Click to load all enrolled courses"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:232
+msgid "You are not enrolled in any courses yet."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:238
+msgid "Explore courses"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:242
+msgid "Activate your account!"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:250
+msgid "Course-loading errors"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/courseware/courses.html:63
+#: edx-platform/nau-basic/lms/templates/dashboard.html:279
+msgid "Search"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:282
+msgid "Clear search"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:293
+msgid "Skip to list of announcements"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:303
+msgid "Account Status Info"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:322
+msgid "Courses from other sites"
+msgstr ""
+
+#. Translators: this is a control to allow users to exit out of this modal
+#. interface (a menu or piece of UI that takes the full focus of the screen)
+#: edx-platform/nau-basic/lms/templates/dashboard.html:376
+#: edx-platform/nau-basic/lms/templates/dashboard.html:407
+msgid "Close"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:382
+msgid "Email Settings for {course_number}"
+msgstr ""
+
+#. Translators: this text gives status on if the modal interface (a menu or
+#. piece of UI that takes the full focus of the screen) is open or not
+#: edx-platform/nau-basic/lms/templates/dashboard.html:385
+#: edx-platform/nau-basic/lms/templates/dashboard.html:417
+msgid "window open"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:393
+msgid "Receive course emails"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:395
+msgid "Save Settings"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:427
+msgid "Unenroll"
+msgstr ""
+
 #: edx-platform/nau-basic/lms/templates/footer.html:60
 msgid "Visit OpenEdx website"
 msgstr ""
@@ -1203,10 +1297,6 @@ msgstr ""
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:61
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:62
 msgid "Search for a course"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/courseware/courses.html:63
-msgid "Search"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:68
