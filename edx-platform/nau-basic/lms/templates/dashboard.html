@@ -323,6 +323,12 @@ from common.djangoapps.student.models import CourseEnrollment
               </header>
 
               <ul class="listing-courses">
+              <%
+                share_settings = configuration_helpers.get_value(
+                    'SOCIAL_SHARING_SETTINGS',
+                    getattr(settings, 'SOCIAL_SHARING_SETTINGS', {})
+                )
+              %>
               % for dashboard_index, enrollment in enumerate(plugins["nau_openedx_extensions"]["other_sites_enrollments"]):
                 <%
                   # Check if the course run is an entitlement and if it has an associated session
@@ -337,25 +343,23 @@ from common.djangoapps.student.models import CourseEnrollment
                   is_unfulfilled_entitlement = True if entitlement and not entitlement_session else False
 
                   entitlement_available_sessions = []
-                  show_email_settings = (enrollment.course_id in show_email_settings_for)
                   course_overview = CourseOverview.get_from_id(enrollment.course_id)
 
                   session_id = enrollment.course_id
                   show_courseware_link = show_courseware_links_for.get(session_id, True)
                   cert_status = cert_statuses.get(session_id)
+                  can_refund_entitlement = entitlement and entitlement.is_entitlement_refundable()
                   partner_managed_enrollment = enrollment.mode == 'masters'
-                  credit_status = credit_statuses.get(session_id)
                   course_mode_info = all_course_modes.get(session_id)
-                  course_verification_status = verification_status_by_course.get(session_id, {})
-                  course_requirements = courses_requirements_not_met.get(session_id)
-                  resume_button_url = resume_button_urls[dashboard_index]
+                  lms_root_url = plugins["nau_openedx_extensions"]["lms_root_urls"][enrollment.course_id]
                 %>
-                <%include file='_other_sites_dashboard_course_listing.html' args='course_overview=course_overview, course_card_index=dashboard_index, enrollment=enrollment, is_unfulfilled_entitlement=is_unfulfilled_entitlement, is_fulfilled_entitlement=is_fulfilled_entitlement, entitlement=entitlement, entitlement_session=entitlement_session, entitlement_available_sessions=entitlement_available_sessions, entitlement_expiration_date=entitlement_expiration_date, entitlement_expired_at=entitlement_expired_at, show_courseware_link=show_courseware_link, cert_status=cert_status, can_refund_entitlement=can_refund_entitlement, can_unenroll=False, credit_status=credit_status, show_email_settings=show_email_settings, course_mode_info=course_mode_info, is_paid_course=is_paid_course, verification_status=course_verification_status, course_requirements=course_requirements, dashboard_index=dashboard_index, share_settings=share_settings, user=user, related_programs=related_programs, display_course_modes_on_dashboard=display_course_modes_on_dashboard, show_consent_link=False, enterprise_customer_name=enterprise_customer_name, resume_button_url=resume_button_url, partner_managed_enrollment=False' />
+                <%include file='_other_sites_dashboard_course_listing.html' args='course_overview=course_overview, course_card_index=dashboard_index, enrollment=enrollment, is_unfulfilled_entitlement=is_unfulfilled_entitlement, is_fulfilled_entitlement=is_fulfilled_entitlement, entitlement=entitlement, entitlement_session=entitlement_session, entitlement_available_sessions=entitlement_available_sessions, entitlement_expiration_date=entitlement_expiration_date, entitlement_expired_at=entitlement_expired_at, show_courseware_link=show_courseware_link, cert_status=cert_status, user=user, lms_root_url=lms_root_url' />
 
               % endfor
               </ul>
           </div>
         </div>
+        <div class="side-container" role="complementary" aria-label="messages"></div>
       </div>
     % endif
 
