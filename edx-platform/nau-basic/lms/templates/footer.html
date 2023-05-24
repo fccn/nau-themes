@@ -13,8 +13,8 @@
 <%
     www_pt = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("pt-pt", "")
     www_en = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("en", "")
-    footer_menu = static.get_value('NAU_FOOTER_MENU', {}).get(LANGUAGE_CODE, {})
-    nau_social_media = static.get_value('NAU_SOCIAL_MEDIA', [])
+    footer_menu = static.get_value('NAU_FOOTER_MENU', getattr(settings, 'NAU_FOOTER_MENU', {})).get(LANGUAGE_CODE, {})
+    nau_social_media = static.get_value('NAU_SOCIAL_MEDIA', getattr(settings, 'NAU_FOOTER_MENU', []))
 %>
 <footer>
   <section id="footer-nav">
