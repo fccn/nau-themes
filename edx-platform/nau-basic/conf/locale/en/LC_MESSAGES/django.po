@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2023-03-16 14:59+0000\n"
+"POT-Creation-Date: 2023-05-29 21:53+0000\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -866,14 +866,10 @@ msgid "Policies"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:26
-#: edx-platform/nau-basic/lms/templates/static_templates/tos.html:5
-#: edx-platform/nau-basic/lms/templates/static_templates/tos.html:10
 msgid "Terms of Service"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:31
-#: edx-platform/nau-basic/lms/templates/static_templates/privacy.html:7
-#: edx-platform/nau-basic/lms/templates/static_templates/privacy.html:12
 msgid "Privacy Policy"
 msgstr ""
 
@@ -1044,8 +1040,6 @@ msgstr ""
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:231
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:247
 #: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:32
-#: edx-platform/nau-basic/lms/templates/static_templates/help.html:7
-#: edx-platform/nau-basic/lms/templates/static_templates/help.html:12
 msgid "Help"
 msgstr ""
 
@@ -1351,64 +1345,6 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:55
 msgid "Sign Out"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/about.html:5
-#: edx-platform/nau-basic/lms/templates/static_templates/about.html:10
-msgid "About"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/about.html:13
-msgid ""
-"NAU - Always Learning is a technical infrastructure which publishes  and "
-"provides support to Massive Open courses aimed at public administration "
-"and Higher Education."
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/about.html:16
-msgid ""
-"This platform was created within the scope of NAU Project launched in "
-"October 1st 2017 with the following partners:"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/about.html:27
-msgid "NAU Project"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/about.html:29
-msgid ""
-"A national iniciative, led by the Foundation for Science and Technology, "
-"to build and operate a technical infrastructure which supports and "
-"operates a platform that publishes content to big audiences, such as MOOC"
-" courses. This initiative, cross-sectional to several ministries and open"
-" to society, will facilitate training to a larger number of civil "
-"servants and citizens."
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/about.html:31
-msgid "Explore the NAU Project at: "
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/contact.html:7
-#: edx-platform/nau-basic/lms/templates/static_templates/contact.html:12
-msgid "Contact"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/contact.html:14
-#: edx-platform/nau-basic/lms/templates/static_templates/help.html:14
-msgid ""
-"The NAU team is always available to help you. Use our "
-"{link_start}knowledge base{link_end} if you need help."
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/faq.html:5
-#: edx-platform/nau-basic/lms/templates/static_templates/faq.html:10
-msgid "FAQ"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/static_templates/honor.html:6
-#: edx-platform/nau-basic/lms/templates/static_templates/honor.html:11
-msgid "Honor Code"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:24
