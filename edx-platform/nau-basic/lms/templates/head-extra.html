@@ -4,7 +4,7 @@
 from openedx.core.djangolib.js_utils import js_escaped_string
 from lms.djangoapps.ccx.overrides import get_current_ccx
 %>
-<% nau_ga_acct = static.get_value("NAU_GOOGLE_ANALYTICS_ACCOUNT", False) %>
+<% nau_ga_acct = static.get_value("NAU_GOOGLE_ANALYTICS_ACCOUNT", getattr(settings, 'NAU_GOOGLE_ANALYTICS_ACCOUNT', False)) %>
 % if nau_ga_acct:
   <!-- NAU theme Google Analytics -->
   <script>
