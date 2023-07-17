@@ -135,7 +135,7 @@
         chatbot_user_course = course.display_name_with_default + "-" + course.display_org_with_default +  "-" + course.display_number_with_default
       endif
     %>
-    <script>
+    <script defer>
       function loadScript(src, callback) {
         var s,
             r,
@@ -153,6 +153,7 @@
               callback();
           }
         };
+        s.defer = true;
         t = document.getElementsByTagName('script')[0];
         t.parentNode.insertBefore(s, t);
       }
