@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2023-05-29 21:53+0000\n"
+"POT-Creation-Date: 2023-07-17 17:51+0100\n"
 "PO-Revision-Date: 2021-03-12 12:49+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: pt_PT\n"
@@ -668,7 +668,7 @@ msgid "View Archived Course"
 msgstr "Ver Arquivo"
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:12
-#: edx-platform/nau-basic/lms/templates/dashboard.html:276
+#: edx-platform/nau-basic/lms/templates/dashboard.html:277
 msgid "Search Your Courses"
 msgstr "Pesquise dentro dos seus cursos"
 
@@ -1195,78 +1195,78 @@ msgstr "Imagem de Capa do {course_number} {course_name}"
 msgid "Go to my {org_code} courses"
 msgstr "Ir para os seus cursos de {org_code}"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:223
+#: edx-platform/nau-basic/lms/templates/dashboard.html:224
 msgid "results successfully populated,"
 msgstr "resultados preenchidos com sucesso,"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:225
+#: edx-platform/nau-basic/lms/templates/dashboard.html:226
 msgid "Click to load all enrolled courses"
 msgstr "Clique para carregar todos os cursos em que está inscrito"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:232
+#: edx-platform/nau-basic/lms/templates/dashboard.html:233
 msgid "You are not enrolled in any courses yet."
 msgstr "Ainda não está inscrito em nenhum curso."
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:238
+#: edx-platform/nau-basic/lms/templates/dashboard.html:239
 msgid "Explore courses"
 msgstr "Explorar Cursos"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:242
+#: edx-platform/nau-basic/lms/templates/dashboard.html:243
 msgid "Activate your account!"
 msgstr "Ativar a sua conta!"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:250
+#: edx-platform/nau-basic/lms/templates/dashboard.html:251
 msgid "Course-loading errors"
 msgstr "Erros de carregamento do curso"
 
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:63
-#: edx-platform/nau-basic/lms/templates/dashboard.html:279
+#: edx-platform/nau-basic/lms/templates/dashboard.html:280
 msgid "Search"
 msgstr "Procurar"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:282
+#: edx-platform/nau-basic/lms/templates/dashboard.html:283
 msgid "Clear search"
 msgstr "Limpar pesquisa"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:293
+#: edx-platform/nau-basic/lms/templates/dashboard.html:294
 msgid "Skip to list of announcements"
 msgstr "Ir para a lista de anúncios"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:303
+#: edx-platform/nau-basic/lms/templates/dashboard.html:304
 msgid "Account Status Info"
 msgstr "Informação de Estado da Conta"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:322
+#: edx-platform/nau-basic/lms/templates/dashboard.html:323
 msgid "Courses from other sites"
 msgstr "Cursos de outros sites"
 
 #. Translators: this is a control to allow users to exit out of this modal
 #. interface (a menu or piece of UI that takes the full focus of the screen)
-#: edx-platform/nau-basic/lms/templates/dashboard.html:376
-#: edx-platform/nau-basic/lms/templates/dashboard.html:407
+#: edx-platform/nau-basic/lms/templates/dashboard.html:377
+#: edx-platform/nau-basic/lms/templates/dashboard.html:408
 msgid "Close"
 msgstr "Fechar"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:382
+#: edx-platform/nau-basic/lms/templates/dashboard.html:383
 msgid "Email Settings for {course_number}"
 msgstr "Configurações de e-mail para {course_number}"
 
 #. Translators: this text gives status on if the modal interface (a menu or
 #. piece of UI that takes the full focus of the screen) is open or not
-#: edx-platform/nau-basic/lms/templates/dashboard.html:385
-#: edx-platform/nau-basic/lms/templates/dashboard.html:417
+#: edx-platform/nau-basic/lms/templates/dashboard.html:386
+#: edx-platform/nau-basic/lms/templates/dashboard.html:418
 msgid "window open"
 msgstr "janela aberta"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:393
+#: edx-platform/nau-basic/lms/templates/dashboard.html:394
 msgid "Receive course emails"
 msgstr "Receber emails do curso"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:395
+#: edx-platform/nau-basic/lms/templates/dashboard.html:396
 msgid "Save Settings"
 msgstr "Guardar Configurações"
 
-#: edx-platform/nau-basic/lms/templates/dashboard.html:427
+#: edx-platform/nau-basic/lms/templates/dashboard.html:428
 msgid "Unenroll"
 msgstr "Cancelar matrícula"
 
