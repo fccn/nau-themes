@@ -343,10 +343,18 @@ main#main {
                     padding-top: 0px;
                     padding-bottom: 0px;
                 }
+            }
+            .login-providers {
+                .button-saml-cccmd {
+                    background-image: url('#{$static-path}/images/autenticacaogov.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
 
-                .login-providers {
-                    .register-saml-cccmd {
-                        background-color: grey;
+                    .icon {
+                        display: none;
+                    }
+                    span {
+                        display: none;
                     }
                 }
             }
