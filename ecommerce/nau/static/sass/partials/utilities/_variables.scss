@@ -1,0 +1,21 @@
+@import 'ecommerce/static/sass/partials/utilities/variables';
+
+// Make a new primary color
+$brand-primary: #074CE1;
+
+.navbar {
+    border-bottom-color: $brand-primary !important;
+}
+
+.receipt {
+    .order-headers {
+        color: $brand-primary !important;
+    }
+    h2 {
+        color: $brand-primary !important;
+    }
+    .nav-link, a {
+        color: $brand-primary !important;
+    }
+}
+
