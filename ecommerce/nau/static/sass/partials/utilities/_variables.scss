@@ -3,8 +3,26 @@
 // Make a new primary color
 $brand-primary: #074CE1;
 
+.navbar-default {
+    .navbar-nav {
+        nav-link, li > a {
+            &:hover,
+            &:focus {
+                background-color: $brand-primary !important;
+            }
+        }
+    }
+}
+
 .navbar {
     border-bottom-color: $brand-primary !important;
+    .navbar-toggle {
+        &:hover,
+        &:focus {
+            border-color: $brand-primary !important;
+            background-color: $brand-primary !important;
+        }
+    }
 }
 
 .receipt {
