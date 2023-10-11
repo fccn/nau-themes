@@ -23,6 +23,11 @@ $brand-primary: #074CE1;
             background-color: $brand-primary !important;
         }
     }
+    .navbar-brand {
+        .navbar-brand-app {
+            color: $brand-primary !important;
+        }
+    } 
 }
 
 .receipt {
@@ -37,3 +42,14 @@ $brand-primary: #074CE1;
     }
 }
 
+.administration-navbar {
+    div a {
+        color: $brand-primary !important;
+        &.selected,
+        &:active,
+        &:focus,
+        &:hover {
+            border-bottom-color: $brand-primary !important;
+        }
+    }
+}
