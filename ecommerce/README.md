@@ -1,22 +1,52 @@
-# NAU Ecommerce theme
+NAU Themes for Ecommerce
+=============================
 
-## Configuration
-To configure the Open edX Devstack add this settings on the file `ecommerce/settings/private.py`.
+This directory contains a NAU theme for the Open edX Ecommerce.
 
+The full documentation about theming the Open edX Ecommerce can be found directly on Ecommerce
+repository, link:
+https://github.com/openedx/ecommerce/blob/open-release/nutmeg.master/docs/theming.rst
+
+This file contains further instructions or specific information related to NAU theme.
+
+## Settings
+To configure nau theme you need to do this configuration.
+
+Configure the settings: 
+- `ENABLE_COMPREHENSIVE_THEMING`
+- `COMPREHENSIVE_THEME_DIRS`
+- `DEFAULT_SITE_THEME`
+
+Example:
 ```python
 ENABLE_COMPREHENSIVE_THEMING = True
 COMPREHENSIVE_THEME_DIRS = ['/edx/app/edx-themes/ecommerce/']
 DEFAULT_SITE_THEME = 'nau'
 ```
 
-## Build theme
-To build the nau theme of ecommerce, run this command inside the `ecommerce` container.
+### Devstack
+If you are using the Open edX devstack to development, you need to:
+
+Clone this repository to the edx-themes folder on the devstack.
+
+The configure the previous settings on the ecommerce repository on the file
+`ecommerce/settings/private.py`.
+
+
+## Compiling Theme Sass
+To build the NAU theme on ecommerce, you need to run this command inside the `ecommerce` container.
 
 ```bash
 python manage.py update_assets --themes nau
 ```
 
-## Theming problem on Devstack
+## Troubleshooting
+
+
+### Theming problem on Devstack
+
+This has been commited to the fccn fork of `ecommerce` https://github.com/fccn/ecommerce on
+`nau/nutmeg.master` branch.
 
 Error:
 ```
