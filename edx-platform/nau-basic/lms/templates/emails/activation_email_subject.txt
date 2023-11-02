@@ -1,2 +1,2 @@
-<%! from django.utils.translation import ugettext as _ %>
+<%! from django.utils.translation import gettext as _ %>
 ${_("Action Required: Activate your {platform_name} account").format(platform_name=platform_name)}

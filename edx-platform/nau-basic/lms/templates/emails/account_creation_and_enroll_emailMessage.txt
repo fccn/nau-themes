@@ -1,4 +1,4 @@
-<%! from django.utils.translation import ugettext as _ %>
+<%! from django.utils.translation import gettext as _ %>
 
 ${_("Welcome to {course_name}").format(course_name=course.display_name_with_default_escaped)}
 
