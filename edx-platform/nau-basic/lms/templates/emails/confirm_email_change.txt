@@ -1,5 +1,5 @@
 <%! from django.urls import reverse %>
-<%! from django.utils.translation import ugettext as _ %>
+<%! from django.utils.translation import gettext as _ %>
 <%! from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers %>
 <%! from edxmako.shortcuts import render_to_string, marketing_link %>
 ${_("This is to confirm that you changed the e-mail associated with "
