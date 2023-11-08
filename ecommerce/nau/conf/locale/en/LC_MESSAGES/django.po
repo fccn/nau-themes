@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-08 15:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:23
+msgid "Earn a valuable certificate to showcase the skills you learn in"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:39
+msgid "Item Price"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:43
+msgid "Quantity"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:57
+msgid "Updating..."
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:57
+msgid "Update"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:63
+msgid "Price"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:70
+#, python-format
+msgid ""
+"\n"
+"                                            %(benefit_value)s off\n"
+"                                        "
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:101
+#, python-format
+msgid ""
+"\n"
+"                                            Coupon code %(voucher_code)s "
+"applied\n"
+"                                        "
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:118
+msgid "Apply a coupon code"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:129
+msgid "Total:"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:148
+msgid "Cancel Checkout"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:149
+msgid "or"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:156
+msgid "Place Order"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:168
+#, python-format
+msgid "Checkout with %(title)s"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:170
+msgid "Checkout"
+msgstr ""
+
+#. Translators: <strong></strong> tags will bold the text within. Keep the tags and translate the text within.
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:183
+#, python-brace-format
+msgid ""
+"{strong_start}Note:{strong_end} To complete your enrollment, select Checkout "
+"or Checkout with PayPal."
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:189
+msgid "Have questions?"
+msgstr ""
+
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:190
+msgid "Please read our FAQs to view common questions about our certificates."
+msgstr ""
