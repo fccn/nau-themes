@@ -145,6 +145,8 @@
             {% endif %}
 
             <div class="pull-right payment-buttons" data-basket-id="{{ basket.id }}">
+                <a class="nav-link" href="{{ lms_dashboard_url }}">{% trans "Cancel Checkout" as tmsg %}{{ tmsg | force_escape }}</a>
+                {% trans "or" as tmsg %}{{ tmsg | force_escape }}
                 {% if free_basket %}
                     <a href="{% url 'checkout:free-checkout' %}"
                        data-track-type="click"
