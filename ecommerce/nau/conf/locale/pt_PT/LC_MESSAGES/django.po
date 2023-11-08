@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-08 15:33+0000\n"
+"POT-Creation-Date: 2023-11-08 16:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,11 +99,10 @@ msgstr "Finalizar compra"
 #: templates/oscar/basket/partials/hosted_checkout_basket.html:183
 #, python-brace-format
 msgid ""
-"{strong_start}Note:{strong_end} To complete your enrollment, select Checkout "
-"or Checkout with PayPal."
+"{strong_start}Note:{strong_end} To complete your enrollment, select Checkout."
 msgstr ""
 "{strong_start}Observação:{strong_end} Para concluir sua inscrição, selecione "
-"Finalizar compra ou Finalizar compra com PayPal."
+"Finalizar compra."
 
 #: templates/oscar/basket/partials/hosted_checkout_basket.html:189
 msgid "Have questions?"
