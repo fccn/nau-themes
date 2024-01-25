@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-28 22:36+0000\n"
+"POT-Creation-Date: 2024-01-25 11:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,98 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: templates/force_translations.html:3
+#: templates/force_translations.html:4
 msgid "Price (in EUR)"
 msgstr ""
+
+#: templates/force_translations.html:7
+msgid "The edX team"
+msgstr "The NAU team"
+
+#: templates/force_translations.html:10
+msgid "Welcome to edX"
+msgstr "Welcom to NAU"
+
+#: templates/force_translations.html:13
+msgid ""
+"This coupon is not valid for purchasing a program. Try using this on an "
+"individual course in the program. If you need assistance, contact edX "
+"support."
+msgstr ""
+"This coupon is not valid for purchasing a program. Try using this on an "
+"individual course in the program. If you need assistance, contact NAU "
+"support."
+
+#: templates/force_translations.html:16
+#, python-brace-format
+msgid ""
+"{paragraph_start}By purchasing, you and your organization agree to the "
+"following terms:{paragraph_end} {ul_start} {li_start}Each code is valid for "
+"the one course covered and can be used only one time.{li_end} {li_start}You "
+"are responsible for distributing codes to your learners in your organization."
+"{li_end} {li_start}Each code will expire in one year from date of purchase "
+"or, if earlier, once the course is closed.{li_end} {li_start}If a course is "
+"not designated as self-paced, you should confirm that a course run is "
+"available before expiration. {li_end} {li_start}You may not resell codes to "
+"third parties.{li_end} {li_start}All edX for Business Sales are final and "
+"not eligible for refunds.{li_end}{ul_end} {paragraph_start}You will receive "
+"an email at {user_email} with your enrollment code(s). {paragraph_end}"
+msgstr ""
+"{paragraph_start}By purchasing, you and your organization agree to the "
+"following terms:{paragraph_end} {ul_start} {li_start}Each code is valid for "
+"the one course covered and can be used only one time.{li_end} {li_start}You "
+"are responsible for distributing codes to your learners in your organization."
+"{li_end} {li_start}Each code will expire in one year from date of purchase "
+"or, if earlier, once the course is closed.{li_end} {li_start}If a course is "
+"not designated as self-paced, you should confirm that a course run is "
+"available before expiration. {li_end} {li_start}You may not resell codes to "
+"third parties.{li_end} {li_start}All NAU for Business Sales are final and "
+"not eligible for refunds.{li_end}{ul_end} {paragraph_start}You will receive "
+"an email at {user_email} with your enrollment code(s). {paragraph_end}"
+
+#: templates/force_translations.html:19
+msgid ""
+"A verified certificate (digital) confirming that a user has completed the "
+"course on a specified date. The certificate includes edX's logo and the "
+"university's logo, as well as signatures from faculty members involved with "
+"the course. There is also a URL that can be used to verify the authenticity "
+"of the certificate."
+msgstr ""
+"A verified certificate (digital) confirming that a user has completed the "
+"course on a specified date. The certificate includes NAU's logo and the "
+"university's logo, as well as signatures from faculty members involved with "
+"the course. There is also a URL that can be used to verify the authenticity "
+"of the certificate."
+
+#: templates/force_translations.html:22
+msgid ""
+"The credit offered through edX generally costs less than the same credit at "
+"most institutions."
+msgstr ""
+"The credit offered through NAU generally costs less than the same credit at "
+"most institutions."
+
+#: templates/force_translations.html:25
+msgid "If you need assistance, contact edX support."
+msgstr "If you need assistance, contact NAU support."
+
+#: templates/force_translations.html:29
+#, fuzzy, python-format
+#| msgid ""
+#| "Thank you for purchasing access to %(course_name)s. Let's get your group "
+#| "ready to learn with edX:"
+msgid "Thank you for purchasing access to %%(course_name)s. Let"
+msgstr ""
+"Thank you for purchasing access to %(course_name)s. Let's get your group "
+"ready to learn with NAU:"
+
+#: templates/force_translations.html:33
+msgid "Learners sign-in/register with edX and enroll for the course."
+msgstr "Learners sign-in/register with NAU and enroll for the course."
+
+#: templates/force_translations.html:36
+msgid "For more information and assistance, contact ajuda@nau.edu.pt."
+msgstr "For more information and assistance, contact ajuda@nau.edu.pt."
 
 #: templates/oscar/basket/partials/hosted_checkout_basket.html:23
 msgid "Earn a valuable certificate to showcase the skills you learn in"
