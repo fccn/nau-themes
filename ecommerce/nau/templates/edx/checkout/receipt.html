@@ -49,20 +49,31 @@
               {% captureas link_start %}
                 <a data-hj-suppress href="mailto:{{ order.user.email }}">
               {% endcaptureas %}
+              
+              {% comment %}
+                NAU custom messages
+              {% endcomment %}
               {% if has_enrollment_code_product %}
                   {% blocktrans trimmed asvar tmsg %}
-                      Your order is complete. You will receive a confirmation message and your enrollment code(s) at
-                      {link_start}{email}{link_end}. If you need a receipt, you can print this page.
+                      Your order is complete.
+                      You will receive a confirmation message and your enrollment code(s) at
+                      {link_start}{email}{link_end}.
                   {% endblocktrans %}
                   {% interpolate_html tmsg email=order.user.email|safe link_end="</a>"|safe link_start=link_start|safe %}
               {% else %}
                   {% blocktrans trimmed asvar tmsg %}
-                      Your order is complete. If you need a receipt, you can print this page.
-                      You will also receive a confirmation message with this information at
+                      Your order is complete.
+                      You will receive a confirmation message with this information at
                       {link_start}{email}{link_end}.
                   {% endblocktrans %}
                 {% interpolate_html tmsg email=order.user.email|safe link_end="</a>"|safe link_start=link_start|safe %}
               {% endif %}
+              {% trans "When the receipt is issued, you can download it from this page." as tmsg %}{{ tmsg | force_escape }}
+              {% trans "To return to this page you can use the order history from main menu." as tmsg %}{{ tmsg | force_escape }}
+              {% comment %}
+                end NAU custom messages
+              {% endcomment %}
+
             </div>
 
             {% if order.billing_address %}
