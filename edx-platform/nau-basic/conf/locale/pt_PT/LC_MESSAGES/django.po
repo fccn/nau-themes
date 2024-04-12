@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2023-07-17 17:51+0100\n"
+"POT-Creation-Date: 2024-04-12 17:01+0100\n"
 "PO-Revision-Date: 2021-03-12 12:49+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: pt_PT\n"
@@ -797,6 +797,39 @@ msgstr "Resposta"
 msgid "Answers are displayed within the problem"
 msgstr "As respostas corretas encontram-se marcadas diretamente no problema"
 
+#. Translators: Change Terms of Service to Terms and Conditions
+#. https://github.com/fccn/nau-technical/issues/83
+#: edx-platform/nau-basic/cms/templates/force-translations.html:73
+#: edx-platform/nau-basic/cms/templates/widgets/footer.html:26
+msgid "Terms of Service"
+msgstr "Termos e Condições"
+
+#. Translators: Change from a simply agree to I've read and agree, used by
+#. Honor Code
+#: edx-platform/nau-basic/cms/templates/force-translations.html:76
+msgid ""
+"I agree to the {platform_name} "
+"{terms_of_service_link_start}{terms_of_service}{terms_of_service_link_end}"
+msgstr ""
+"Li e compreendi o "
+"{terms_of_service_link_start}{terms_of_service}{terms_of_service_link_end}"
+
+#. Translators: Change from a simply agree to I've read and agree, used by
+#. Honor Code
+#: edx-platform/nau-basic/cms/templates/force-translations.html:79
+msgid "You must agree to the {platform_name} {terms_of_service}"
+msgstr "Deverá ler e compreender o {terms_of_service}"
+
+#. Translators:Change from a simply agree to I've read and agree, used by Terms
+#. of Service
+#: edx-platform/nau-basic/cms/templates/force-translations.html:82
+msgid ""
+"I agree to the {platform_name} "
+"{tos_link_start}{terms_of_service}{tos_link_end}"
+msgstr ""
+"Li, compreendi e aceito os "
+"{tos_link_start}{terms_of_service}{tos_link_end}"
+
 #: edx-platform/nau-basic/cms/templates/howitworks.html:11
 msgid "Welcome"
 msgstr "Bem vindo"
@@ -990,10 +1023,6 @@ msgstr ""
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:22
 msgid "Policies"
 msgstr "Painel"
-
-#: edx-platform/nau-basic/cms/templates/widgets/footer.html:26
-msgid "Terms of Service"
-msgstr "Termos de Serviço"
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:31
 msgid "Privacy Policy"
