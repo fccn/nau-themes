@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2023-07-17 17:51+0100\n"
+"POT-Creation-Date: 2024-04-12 17:01+0100\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: pt_PT\n"
@@ -247,45 +247,4 @@ msgstr ""
 #: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:307
 msgid "New Unit"
 msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/student_account/register.underscore:6
-msgid "Already have an {platformName} account?"
-msgstr "Já tem uma conta {platformName}?"
-
-#: edx-platform/nau-basic/lms/templates/student_account/register.underscore:7
-msgid "Sign in."
-msgstr "Iniciar sessão."
-
-#: edx-platform/nau-basic/lms/templates/student_account/register.underscore:18
-msgid "Create an account using"
-msgstr "Criar uma conta utilizando"
-
-#: edx-platform/nau-basic/lms/templates/student_account/register.underscore:31
-#, python-format
-msgid "Create account using %(providerName)s."
-msgstr "Criar conta utilizando %(providerName)s."
-
-#: edx-platform/nau-basic/lms/templates/student_account/register.underscore:38
-msgid "Use my institution/campus credentials"
-msgstr "Utilize as minhas credenciais da instituição/campus"
-
-#: edx-platform/nau-basic/lms/templates/student_account/register.underscore:44
-msgid "or create a new one here"
-msgstr "ou criar uma nova aqui"
-
-#: edx-platform/nau-basic/lms/templates/student_account/register.underscore:48
-msgid "Create an Account"
-msgstr "Criar uma Conta"
-
-#: edx-platform/nau-basic/lms/templates/student_account/register.underscore:60
-msgid "Support education research by providing additional information"
-msgstr "Apoiar a investigação em educação, fornecendo informações adicionais"
-
-#: edx-platform/nau-basic/lms/templates/student_account/register.underscore:67
-msgid "Create Account"
-msgstr "Criar Conta"
-
-#: edx-platform/nau-basic/lms/templates/student_account/register.underscore:78
-msgid "Find out how to associate your Portuguese Citizen Card to your NAU account"
-msgstr "Descubra como associar o seu Cartão de Cidadão Português à sua conta NAU"
 
