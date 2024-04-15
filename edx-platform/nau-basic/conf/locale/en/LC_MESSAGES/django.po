@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2024-04-12 17:01+0100\n"
+"POT-Creation-Date: 2024-04-15 14:52+0100\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -675,12 +675,14 @@ msgstr ""
 #. https://github.com/fccn/nau-technical/issues/83
 #: edx-platform/nau-basic/cms/templates/force-translations.html:73
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:26
+#: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:60
 msgid "Terms of Service"
 msgstr "Terms and Conditions"
 
 #. Translators: Change from a simply agree to I've read and agree, used by
 #. Honor Code
 #: edx-platform/nau-basic/cms/templates/force-translations.html:76
+#: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:73
 msgid ""
 "I agree to the {platform_name} "
 "{terms_of_service_link_start}{terms_of_service}{terms_of_service_link_end}"
@@ -697,6 +699,7 @@ msgstr "You must read and understood the {terms_of_service}"
 #. Translators:Change from a simply agree to I've read and agree, used by Terms
 #. of Service
 #: edx-platform/nau-basic/cms/templates/force-translations.html:82
+#: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:58
 msgid ""
 "I agree to the {platform_name} "
 "{tos_link_start}{terms_of_service}{tos_link_end}"
@@ -899,6 +902,7 @@ msgid "Policies"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:31
+#: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:45
 msgid "Privacy Policy"
 msgstr ""
 
@@ -1189,7 +1193,23 @@ msgstr ""
 msgid "All in Portuguese, Portugal in all languages."
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:23
+#: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:15
+msgid ""
+"We have updated our legal information to continue using the NAU website, "
+"you will have to do so using the new terms"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:43
+msgid ""
+"I have read and understood the "
+"{privacy_policy_link_start}{privacy_policy}{privacy_policy_link_end}"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:75
+msgid "Honor Code"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:85
 msgid "Accept new terms of service"
 msgstr ""
 

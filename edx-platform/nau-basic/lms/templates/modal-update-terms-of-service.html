@@ -1,26 +1,88 @@
 ## mako
 
-## Pop up / modal that opens when the user needs to give this consent to the new terms of service of the platform.
-
 <%page expression_filter="h"/>
 <%namespace name='static' file='static_content.html'/>
 <%!
 from openedx.core.djangoapps.user_api.preferences.api import get_user_preference
 from django.utils.translation import gettext as _
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from openedx.core.djangolib.markup import HTML, Text
+from common.djangoapps.edxmako.shortcuts import marketing_link
 %>
 <%
 options_modal = configuration_helpers.get_value("MODAL_UPDATE_TERMS_OF_SERVICE", {})
 modal_tos_date = options_modal.get("date_iso_8601", None)
-modal_tos_text = options_modal.get("text", {}).get(LANGUAGE_CODE, "We have updated our terms of service")
+modal_tos_text = options_modal.get("text", {}).get(LANGUAGE_CODE, _("We have updated our legal information to continue using the NAU website, you will have to do so using the new terms"))
 %>
+
+<%doc>
+Pop up / modal that opens when the user needs to give this consent to the new terms of service of the platform.
+
+To configure this you have to include a similar snippet on your site configuration.
+
+"MODAL_UPDATE_TERMS_OF_SERVICE": {
+  "date_iso_8601": "2021-06-08",
+  "text": {
+      "pt-pt": "<h2>Atualizamos os <a href='https://www.nau.edu.pt/sobre/tos-privacidade-honra/' target='_blank'>termos de serviço</a>. Recomendamos que os analise cuidadosamente. Se continuar a usar o site da NAU, você o fará de acordo com os novos termos.</h2>",
+      "en": "<h2>We have updated our <a href='https://www.nau.edu.pt/sobre/tos-privacidade-honra/' target='_blank'>terms of service</a>. We recommend that you review them carefully. If you continue to use the main Nau site, you do so under the new terms.</h2>"
+  }
+},
+</%doc>
 
 %if modal_tos_date is not None:
 ## The javascript code bellow displays the modal if need
 <div class="modal-update-terms-of-service-container" style="display: none;"> 
   <div class="modal-update-terms-of-service-content">
     ${modal_tos_text | n}
-    <button class="btn btn-primary button-modal">${_('Accept new terms of service')}</button>
+    <div class="modal-update-terms-of-service-checks">
+
+      % if settings.REGISTRATION_EXTRA_FIELDS.get('data_authorization', 'hidden') != 'hidden':
+      <p>
+        <label>
+          <input type="checkbox" id="data_authorization" name="data_authorization" />
+          ${_("I have read and understood the {privacy_policy_link_start}{privacy_policy}{privacy_policy_link_end}").format(
+            platform_name=configuration_helpers.get_value("PLATFORM_NAME", settings.PLATFORM_NAME),
+            privacy_policy=_("Privacy Policy"),
+            privacy_policy_link_start=HTML("<a href='{terms_link}' rel='noopener' target='_blank'>").format(
+                terms_link=marketing_link("PRIVACY")
+            ),
+            privacy_policy_link_end=HTML("</a>") ) | n }
+        </label>
+      </p>
+      % endif
+
+      % if settings.REGISTRATION_EXTRA_FIELDS.get('terms_of_service', 'hidden') != 'hidden':
+      <p>
+        <label>
+          <input type="checkbox" id="terms_of_service" name="terms_of_service" />
+          ${_("I agree to the {platform_name} {tos_link_start}{terms_of_service}{tos_link_end}").format(
+            platform_name=configuration_helpers.get_value("PLATFORM_NAME", settings.PLATFORM_NAME),
+            terms_of_service=_("Terms of Service"),
+            tos_link_start=HTML("<a href='{terms_link}' rel='noopener' target='_blank'>").format(
+                terms_link=marketing_link("TOS")
+            ),
+            tos_link_end=HTML("</a>") ) | n }
+        </label>
+      </p>
+      % endif
+
+      % if settings.REGISTRATION_EXTRA_FIELDS.get('honor_code', 'hidden') != 'hidden':
+      <p>
+        <label>
+          <input type="checkbox" id="honor_code" name="honor_code" />
+          ${_("I agree to the {platform_name} {terms_of_service_link_start}{terms_of_service}{terms_of_service_link_end}").format(
+            platform_name=configuration_helpers.get_value("PLATFORM_NAME", settings.PLATFORM_NAME),
+            terms_of_service=_("Honor Code"),
+            terms_of_service_link_start=HTML("<a href='{terms_link}' rel='noopener' target='_blank'>").format(
+                terms_link=marketing_link("HONOR")
+            ),
+            terms_of_service_link_end=HTML("</a>") ) | n }
+        </label>
+      </p>
+      % endif
+
+    </div>
+    <button class="btn btn-primary button-modal" disabled>${_('Accept new terms of service')}</button>
   </div>
 </div>
 
@@ -67,7 +129,18 @@ modal_tos_text = options_modal.get("text", {}).get(LANGUAGE_CODE, "We have updat
         events();
       }
 
+      function checkAllInputChecksClicked() {
+        var all_checked = true;
+        $('.modal-update-terms-of-service-container input:checkbox').each(function() {
+          if (!$(this).is(':checked')) {
+            all_checked = false;
+          }
+        });
+        $('.button-modal').attr('disabled', !all_checked);
+      }
+
       function events() {
+        $('.modal-update-terms-of-service-container input:checkbox').on('click', checkAllInputChecksClicked);
         $('.button-modal').on('click', function(){
           hideModal();
           updatePreference();
