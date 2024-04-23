@@ -12,7 +12,7 @@ from common.djangoapps.edxmako.shortcuts import marketing_link
 <%
 options_modal = configuration_helpers.get_value("MODAL_UPDATE_TERMS_OF_SERVICE", {})
 modal_tos_date = options_modal.get("date_iso_8601", None)
-modal_tos_text = options_modal.get("text", {}).get(LANGUAGE_CODE, _("We have updated our legal information to continue using the NAU website, you will have to do so using the new terms"))
+modal_tos_text = options_modal.get("text", {}).get(LANGUAGE_CODE, _("Attention: The legal information for using the service has been updated. We recommend that you review them carefully. If you continue to use the main Nau site, you do so under the new terms."))
 %>
 
 <%doc>
@@ -23,8 +23,8 @@ To configure this you have to include a similar snippet on your site configurati
 "MODAL_UPDATE_TERMS_OF_SERVICE": {
   "date_iso_8601": "2021-06-08",
   "text": {
-      "pt-pt": "<h2>Atualizamos os <a href='https://www.nau.edu.pt/sobre/tos-privacidade-honra/' target='_blank'>termos de serviço</a>. Recomendamos que os analise cuidadosamente. Se continuar a usar o site da NAU, você o fará de acordo com os novos termos.</h2>",
-      "en": "<h2>We have updated our <a href='https://www.nau.edu.pt/sobre/tos-privacidade-honra/' target='_blank'>terms of service</a>. We recommend that you review them carefully. If you continue to use the main Nau site, you do so under the new terms.</h2>"
+      "pt-pt": "<h2>Atenção: A informação legal para uso do serviço foi atualizada. Recomendamos que os analise cuidadosamente. Se continuar a usar o site da NAU, estará a fazê-lo de acordo com os novos termos.</h2>",
+      "en": "<h2>Attention: The legal information for using the service has been updated. We recommend that you review them carefully. If you continue to use the main Nau site, you do so under the new terms.</h2>"
   }
 },
 </%doc>
