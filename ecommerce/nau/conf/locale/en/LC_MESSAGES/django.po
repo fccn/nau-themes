@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 17:33+0000\n"
+"POT-Creation-Date: 2024-04-26 15:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -157,7 +157,7 @@ msgstr "The NAU team"
 
 #: templates/force_translations.html:10
 msgid "Welcome to edX"
-msgstr "Welcom to NAU"
+msgstr "Welcome to NAU"
 
 #: templates/force_translations.html:13
 msgid ""
@@ -223,23 +223,31 @@ msgid "If you need assistance, contact edX support."
 msgstr "If you need assistance, contact NAU support."
 
 #: templates/force_translations.html:29
+msgid "Learners sign-in/register with edX and enroll for the course."
+msgstr "Learners sign-in/register with NAU and enroll for the course."
+
+#: templates/force_translations.html:32
+msgid "For more information and assistance, contact ajuda@nau.edu.pt."
+msgstr "For more information and assistance, contact ajuda@nau.edu.pt."
+
+#: templates/force_translations.html:35
+msgid "Root URL of this site's LMS (e.g. https://courses.stage.edx.org)"
+msgstr "Root URL of this site's LMS (e.g. https://lms.stage.nau.fccn.pt)"
+
+#: templates/force_translations.html:38
 #, fuzzy, python-format
 #| msgid ""
-#| "Thank you for purchasing access to %(course_name)s. Let's get your group "
+#| "Thank you for purchasing access to %%(course_name)s. Let's get your group "
 #| "ready to learn with edX:"
 msgid ""
-"Thank you for purchasing access to %%(course_name). Let's get your group "
+"Thank you for purchasing access to %%(course_name)s. Let's get your group "
 "ready to learn with edX:"
 msgstr ""
 "Thank you for purchasing access to %(course_name)s. Let's get your group "
 "ready to learn with NAU:"
 
-#: templates/force_translations.html:33
-msgid "Learners sign-in/register with edX and enroll for the course."
-msgstr "Learners sign-in/register with NAU and enroll for the course."
-
-#: templates/force_translations.html:36
-msgid "For more information and assistance, contact ajuda@nau.edu.pt."
+#: templates/force_translations.html:41
+msgid "For more information and assistance, contact info@edx.org."
 msgstr "For more information and assistance, contact ajuda@nau.edu.pt."
 
 #: templates/oscar/basket/partials/hosted_checkout_basket.html:23
