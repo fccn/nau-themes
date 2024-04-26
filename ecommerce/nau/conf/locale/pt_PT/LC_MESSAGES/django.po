@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 17:33+0000\n"
+"POT-Creation-Date: 2024-04-26 15:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -238,23 +238,31 @@ msgid "If you need assistance, contact edX support."
 msgstr "Se precisar de assistência, contacte o apoio da NAU."
 
 #: templates/force_translations.html:29
+msgid "Learners sign-in/register with edX and enroll for the course."
+msgstr "Os estudantes assinam/registam-se na NAU e inscrevem-se no curso."
+
+#: templates/force_translations.html:32
+msgid "For more information and assistance, contact ajuda@nau.edu.pt."
+msgstr "Para mais informação e assistência, contacte ajuda@nau.edu.pt."
+
+#: templates/force_translations.html:35
+msgid "Root URL of this site's LMS (e.g. https://courses.stage.edx.org)"
+msgstr "Raiz do URL do site do LMS (e.g. https://lms.stage.nau.fccn.pt)"
+
+#: templates/force_translations.html:38
 #, fuzzy, python-format
 #| msgid ""
-#| "Thank you for purchasing access to %(course_name)s. Let's get your group "
+#| "Thank you for purchasing access to %%(course_name)s. Let's get your group "
 #| "ready to learn with edX:"
 msgid ""
-"Thank you for purchasing access to %%(course_name). Let's get your group "
+"Thank you for purchasing access to %%(course_name)s. Let's get your group "
 "ready to learn with edX:"
 msgstr ""
 "Obrigado por adquirir acesso a %(course_name)s. Vamos preparar o seu grupo "
 "para começar a aprender com a NAU:"
 
-#: templates/force_translations.html:33
-msgid "Learners sign-in/register with edX and enroll for the course."
-msgstr "Os estudantes assinam/registam-se na NAU e inscrevem-se no curso."
-
-#: templates/force_translations.html:36
-msgid "For more information and assistance, contact ajuda@nau.edu.pt."
+#: templates/force_translations.html:41
+msgid "For more information and assistance, contact info@edx.org."
 msgstr "Para mais informação e assistência, contacte ajuda@nau.edu.pt."
 
 #: templates/oscar/basket/partials/hosted_checkout_basket.html:23
