@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-26 15:39+0100\n"
+"POT-Creation-Date: 2024-05-23 14:58+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -152,14 +152,10 @@ msgid "Price (in EUR)"
 msgstr ""
 
 #: templates/force_translations.html:7
-msgid "The edX team"
-msgstr "The NAU team"
-
-#: templates/force_translations.html:10
 msgid "Welcome to edX"
 msgstr "Welcome to NAU"
 
-#: templates/force_translations.html:13
+#: templates/force_translations.html:10
 msgid ""
 "This coupon is not valid for purchasing a program. Try using this on an "
 "individual course in the program. If you need assistance, contact edX "
@@ -169,7 +165,7 @@ msgstr ""
 "individual course in the program. If you need assistance, contact NAU "
 "support."
 
-#: templates/force_translations.html:16
+#: templates/force_translations.html:13
 #, python-brace-format
 msgid ""
 "{paragraph_start}By purchasing, you and your organization agree to the "
@@ -196,7 +192,7 @@ msgstr ""
 "not eligible for refunds.{li_end}{ul_end} {paragraph_start}You will receive "
 "an email at {user_email} with your enrollment code(s). {paragraph_end}"
 
-#: templates/force_translations.html:19
+#: templates/force_translations.html:16
 msgid ""
 "A verified certificate (digital) confirming that a user has completed the "
 "course on a specified date. The certificate includes edX's logo and the "
@@ -210,7 +206,7 @@ msgstr ""
 "the course. There is also a URL that can be used to verify the authenticity "
 "of the certificate."
 
-#: templates/force_translations.html:22
+#: templates/force_translations.html:19
 msgid ""
 "The credit offered through edX generally costs less than the same credit at "
 "most institutions."
@@ -218,37 +214,13 @@ msgstr ""
 "The credit offered through NAU generally costs less than the same credit at "
 "most institutions."
 
-#: templates/force_translations.html:25
+#: templates/force_translations.html:22
 msgid "If you need assistance, contact edX support."
 msgstr "If you need assistance, contact NAU support."
 
-#: templates/force_translations.html:29
-msgid "Learners sign-in/register with edX and enroll for the course."
-msgstr "Learners sign-in/register with NAU and enroll for the course."
-
-#: templates/force_translations.html:32
-msgid "For more information and assistance, contact ajuda@nau.edu.pt."
-msgstr "For more information and assistance, contact ajuda@nau.edu.pt."
-
-#: templates/force_translations.html:35
+#: templates/force_translations.html:25
 msgid "Root URL of this site's LMS (e.g. https://courses.stage.edx.org)"
 msgstr "Root URL of this site's LMS (e.g. https://lms.stage.nau.fccn.pt)"
-
-#: templates/force_translations.html:38
-#, fuzzy, python-format
-#| msgid ""
-#| "Thank you for purchasing access to %%(course_name)s. Let's get your group "
-#| "ready to learn with edX:"
-msgid ""
-"Thank you for purchasing access to %%(course_name)s. Let's get your group "
-"ready to learn with edX:"
-msgstr ""
-"Thank you for purchasing access to %(course_name)s. Let's get your group "
-"ready to learn with NAU:"
-
-#: templates/force_translations.html:41
-msgid "For more information and assistance, contact info@edx.org."
-msgstr "For more information and assistance, contact ajuda@nau.edu.pt."
 
 #: templates/oscar/basket/partials/hosted_checkout_basket.html:23
 msgid "Earn a valuable certificate to showcase the skills you learn in"
@@ -328,7 +300,270 @@ msgid "Please read our FAQs to view common questions about our certificates."
 msgstr ""
 
 #: templates/oscar/communication/email_base.html:189
-#: templates/oscar/customer/email_base.html:189
+#: templates/oscar/customer/email_base.html:195
 #, python-format
 msgid "Copyright © %(year)s %(platform_name)s. All rights reserved."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_course_purchased_body.html:9
+#: templates/oscar/communication/emails/commtype_course_purchased_body.txt:4
+#, python-format
+msgid "Hi %(full_name)s,"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_course_purchased_body.html:11
+#: templates/oscar/communication/emails/commtype_course_purchased_body.txt:6
+#, python-format
+msgid "Thank you for purchasing %(course_title)s."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_course_purchased_body.html:13
+#: templates/oscar/communication/emails/commtype_course_purchased_body.txt:8
+#, python-format
+msgid ""
+"You can access your course and complete your verification (if required) on "
+"your %(platform_name)s dashboard. "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_course_purchased_body.html:14
+#: templates/oscar/communication/emails/commtype_course_purchased_body.txt:9
+#, python-format
+msgid ""
+"To explore other great courses, visit the %(platform_name)s website. And "
+"keep up to date with all the news by subscribing to our newsletter!"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_course_purchased_body.html:17
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.html:43
+msgid "View payment and receipt information"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_course_purchased_body.html:20
+#: templates/oscar/communication/emails/commtype_course_purchased_body.txt:14
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.html:74
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.txt:15
+msgid "Thank you. We hope the course meets your expectations!"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_course_purchased_body.html:21
+#: templates/oscar/communication/emails/commtype_course_purchased_body.txt:16
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.html:75
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.txt:16
+#, python-format
+msgid "The %(platform_name)s team"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_course_purchased_body.html:31
+#, python-format
+msgid ""
+"You are receiving this email because you purchased a seat in the "
+"%(platform_name)s course %(course_title)s."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_course_purchased_body.txt:2
+msgid "Receipt Confirmation for: "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_course_purchased_body.txt:11
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.txt:12
+msgid "To view your payment information, visit the following website."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.html:13
+msgid "Payment Confirmation"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.html:27
+msgid "Payment confirmation for:"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.html:55
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.txt:4
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:25
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:5
+#, python-format
+msgid "Dear %(full_name)s,"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.html:60
+#, python-format
+msgid ""
+"\n"
+"                            Thank you for purchasing %(credit_hours)s credit "
+"hours from %(credit_provider)s for %(course_title)s.\n"
+"                        "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.html:67
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.txt:8
+#, python-format
+msgid ""
+"To receive your course credit, you must also request credit at the "
+"%(credit_provider)s website. For a link to request credit from "
+"%(credit_provider)s, or to see the status of your credit request, go to your "
+"%(platform_name)s dashboard."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.html:71
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.txt:10
+#, python-format
+msgid ""
+"To explore other credit-eligible courses, visit the %(platform_name)s "
+"website. And keep up to date with all the news by subscribing to our "
+"newsletter!"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.html:88
+#, python-format
+msgid ""
+"\n"
+"                            You received this message because you purchased "
+"credit hours for %(course_title)s, an %(platform_name)s course.\n"
+"                        "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.txt:2
+msgid "Payment confirmation for: "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.txt:6
+#, python-format
+msgid ""
+"Thank you for purchasing %(credit_hours)s credit hours from "
+"%(credit_provider)s for %(course_title)s."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_credit_receipt_body.txt:18
+#, python-format
+msgid ""
+"You received this message because you purchased credit hours for "
+"%(course_title)s, an %(platform_name)s course."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:14
+msgid "For Business"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:26
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:6
+#, fuzzy, python-format
+#| msgid ""
+#| "Thank you for purchasing access to %%(course_name)s. Let's get your group "
+#| "ready to learn with edX:"
+msgid ""
+"Thank you for purchasing access to %(course_name)s. Let's get your group "
+"ready to learn with %(platform_name)s:"
+msgstr ""
+"Thank you for purchasing access to %(course_name)s. Let's get your group "
+"ready to learn with NAU:"
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:29
+#, python-brace-format
+msgid ""
+"\n"
+"                                Download and save the {link_start}"
+"{download_csv_link}{link_middle} enrollment code file.{link_end}\n"
+"                            "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:34
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:9
+msgid "Distribute one code per learner before the expiration date."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:35
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:10
+msgid "Pro tip: Track which code is associated with which person."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:36
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:11
+msgid ""
+"Learners sign-in/register with {{platform_name}} and enroll for the course."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:39
+#, python-brace-format
+msgid ""
+"\n"
+"                            To view your payment information, log in to see "
+"your Order History, under {link_start}{order_history_url}{link_middle}"
+"Account Settings{link_end}.\n"
+"                        "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:45
+#, python-brace-format
+msgid ""
+"\n"
+"                            For more information and assistance, check our "
+"{link_start}Help Center{link_end}\n"
+"                        "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:50
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:16
+msgid "Thank You"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:61
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:18
+msgid "By purchasing, you and your organization agree to the following terms:"
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:63
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:20
+msgid ""
+"Each code is valid for the one course covered and can be used only one time."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:64
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:21
+msgid "You are responsible for distributing codes to your learners."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:65
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:22
+msgid ""
+"Each code will expire in one year from date of purchase or, if earlier, once "
+"the course is closed."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:66
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:23
+msgid ""
+"If a course is not designated as self-paced, you should confirm that a "
+"course run is available before expiration."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:67
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:24
+msgid "You may not resell codes to third parties."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.html:68
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:25
+msgid "All sales final. No refunds."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:2
+msgid "Order confirmation for: "
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:8
+#, python-format
+msgid ""
+"Please visit %(download_csv_link)s to download and save the enrollment code "
+"file."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:13
+#, python-format
+msgid ""
+"To view your payment information, log in to see your Order History, under "
+"Account Settings at %(order_history_url)s."
+msgstr ""
+
+#: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:14
+msgid "For more information and assistance, contact ajuda@nau.edu.pt."
 msgstr ""
