@@ -783,6 +783,20 @@ article.course>section.details>div.wrapper-course-details>div.course-info>span.i
     border: 2px solid $header-bar-color !important;
 }
 
+.xmodule_display.xmodule_HtmlBlock a {
+    &:link,
+    &:visited,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
+
+    &:hover,
+    &:focus {
+        color: $primary-hover !important;
+    }
+}
+
 .view-profile .wrapper-profile {
     background: none;
 }
@@ -795,4 +809,16 @@ article.course>section.details>div.wrapper-course-details>div.course-info>span.i
 // fix horizontal scroll on course page
 .course-outline .block-tree .section {
     margin-right: 0px;
+}
+
+.course-wrapper .course-content div.timed-exam button.gated-sequence,
+.course-wrapper .course-content div.proctored-exam button.gated-sequence,
+.course-wrapper .courseware-results-wrapper div.timed-exam button.gated-sequence, 
+.course-wrapper .courseware-results-wrapper div.proctored-exam button.gated-sequence {
+    text-align: center !important;
+
+    a {
+        color: white;
+        text-shadow: none !important;
+    }
 }
