@@ -64,32 +64,10 @@
     %endif
   </section>
   <%
-    entities_logos = static.get_value('NAU_ENTITIES_FOOTER', {}).get("itens", {})
     footer_logos = static.get_value('NAU_FOOTER_LOGOS', {}).get("itens", {})
   %>
-    % if entities_logos or footer_logos:
-    <section id="entities-quick-links">
-    % if len(entities_logos)>0:
-    <!-- financing entities logos -->
-      <section class="entities-quick-links__line">
-      % for line in entities_logos:
-        <div class="entities-links-logo">
-          <a href="${line.get('link','')}" class="entity-link" target="${line.get('target', '_blank')}" rel="noopener">
-            <img
-              loading="lazy"
-              src="${line.get('image', '')}"
-              alt="${line.get('alt', '')}"
-              title="${line.get('title', '')}"
-              width="${line.get('width', '')}"
-              height="${line.get('height', '')}" />
-          </a>
-        </div>
-      % endfor
-      </section>
-    <!-- end of financing entities logos -->
-    %endif
-
     % if len(footer_logos)>0:
+    <section id="entities-quick-links">
     <!-- institutional logos -->
       % for row in footer_logos:
       <section class="entities-quick-links__line">
@@ -109,9 +87,8 @@
       </section>
       % endfor
     <!-- end of institutional logos -->
-    % endif
     </section>
-  % endif
+    % endif
 
   <section class="site-copyright">
     <div class="site-copyright--nau">
