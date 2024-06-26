@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2024-06-26 08:23+0000\n"
+"POT-Creation-Date: 2024-06-26 09:27+0000\n"
 "PO-Revision-Date: 2021-03-12 12:49+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: pt_PT\n"
@@ -1053,7 +1053,7 @@ msgid ""
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:91
-#: edx-platform/nau-basic/lms/templates/footer.html:118
+#: edx-platform/nau-basic/lms/templates/footer.html:95
 msgid "All rights reserved"
 msgstr "Todos os direitos reservados"
 
