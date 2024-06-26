@@ -65,26 +65,54 @@
   </section>
   <%
     entities_logos = static.get_value('NAU_ENTITIES_FOOTER', {}).get("itens", {})
+    footer_logos = static.get_value('NAU_FOOTER_LOGOS', {}).get("itens", {})
   %>
-  % if len(entities_logos)>0:
-    <!-- corporate entities logos -->
+    % if entities_logos or footer_logos:
     <section id="entities-quick-links">
-      % for entity in static.get_value('NAU_ENTITIES_FOOTER', {}).get("itens", {}):
-      <div class="entities-links-logo">
-        <a href="${entity.get('link','')}" class="entity-link" target="${entity.get('target', '_blank')}" rel="noopener">
-          <img
-            loading="lazy"
-            src="${entity.get('image', '')}"
-            alt="${entity.get('alt', '')}"
-            title="${entity.get('title', '')}"
-            width="${entity.get('width', '')}"
-            height="${entity.get('height', '')}" />
-        </a>
-      </div>
+    % if len(entities_logos)>0:
+    <!-- financing entities logos -->
+      <section class="entities-quick-links__line">
+      % for line in entities_logos:
+        <div class="entities-links-logo">
+          <a href="${line.get('link','')}" class="entity-link" target="${line.get('target', '_blank')}" rel="noopener">
+            <img
+              loading="lazy"
+              src="${line.get('image', '')}"
+              alt="${line.get('alt', '')}"
+              title="${line.get('title', '')}"
+              width="${line.get('width', '')}"
+              height="${line.get('height', '')}" />
+          </a>
+        </div>
       % endfor
+      </section>
+    <!-- end of financing entities logos -->
+    %endif
+
+    % if len(footer_logos)>0:
+    <!-- institutional logos -->
+      % for row in footer_logos:
+      <section class="entities-quick-links__line">
+        % for item in row: 
+        <div class="entities-links-logo">
+          <a href="${item.get('link','')}" class="entity-link" target="${item.get('target', '_blank')}" rel="noopener">
+            <img
+              loading="lazy"
+              src="${item.get('image', '')}"
+              alt="${item.get('alt', '')}"
+              title="${item.get('title', '')}"
+              width="${item.get('width', '')}"
+              height="${item.get('height', '')}" />
+          </a>
+        </div>
+        % endfor
+      </section>
+      % endfor
+    <!-- end of institutional logos -->
+    % endif
     </section>
-    <!-- ends corporate entities -->
-  %endif
+  % endif
+
   <section class="site-copyright">
     <div class="site-copyright--nau">
       <span>&copy; ${datetime.now().year} - FCT|FCCN<br>${_('All rights reserved')}</span>
