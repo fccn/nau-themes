@@ -62,30 +62,33 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </div>
     </div>
-<!--
-    <section id="entities-quick-links">        
-      <ul class="flex-row">
-        <li><a href="https://nau.edu.pt"><img id="logo-nau" src="${static.url('images/nau_sempre_aprender.svg')}" alt="Logo NAU" title="NAU - Sempre a Aprender"></a>
-            <span id="copyright" >&copy; 2020 - FCT|FCCN. Todos os direitos reservados.</span>
-        </li>
-        <li><a id="logo-compete" href="https://www.fccn.pt/financiamento-projeto-nau/"><img src="${static.url('images/3logos-feder_small.png')}" alt="Logos: Compete, Portugal 2020 e União Europeia - Fundo Europeu de Desenvolvimento Regional"  title="Compete 2020, Portugal 2020 e União Europeia - Fundo Europeu de Desenvolvimento Regional"></a></li>
-        <li><a id="logo-incode2030" href="https://www.incode2030.gov.pt/" target="_blank"><img src="${static.url('images/logo_incode2030_v3.png')}" alt="Portugal - INcode2030" title="Visitar o site INcode.2030"></a></li>  
-      </ul>
-    </section>
--->
+
     <%
-  entities_logos = static.get_value('NAU_ENTITIES_FOOTER', {}).get("itens", {})
-%>
-    <!-- corporate entities logos -->
+      footer_logos = static.get_value('NAU_FOOTER_LOGOS', {}).get("itens", {})
+    %>
+    % if len(footer_logos)>0:
     <section id="entities-quick-links">
-      % for entity in entities_logos:
-      <div class="entities-links-logo">
-        <a href="${entity['link']}" class="entity-link" target="_blank" rel="noreferer noopener">
-          <img src="${entity['image']}" alt="${entity['alt'] if 'alt' in entity.keys() else ''}">
-        </a>
-      </div>
+    <!-- institutional logos -->
+      % for row in footer_logos:
+      <section class="entities-quick-links__line">
+        % for item in row: 
+        <div class="entities-links-logo">
+          <a href="${item.get('link','')}" class="entity-link" target="${item.get('target', '_blank')}" rel="noopener">
+            <img
+              loading="lazy"
+              src="${item.get('image', '')}"
+              alt="${item.get('alt', '')}"
+              title="${item.get('title', '')}"
+              width="${item.get('width', '')}"
+              height="${item.get('height', '')}" />
+          </a>
+        </div>
+        % endfor
+      </section>
       % endfor
+    <!-- end of institutional logos -->
     </section>
+    % endif
     <section class="site-copyright">
       <div class="site-copyright--nau">
         <span>&copy; ${datetime.now().year} - FCT|FCCN<br>${_('All rights reserved')}</span>
