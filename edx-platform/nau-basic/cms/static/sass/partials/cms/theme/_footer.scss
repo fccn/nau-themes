@@ -78,46 +78,50 @@ footer {
 
     section#entities-quick-links {
         background-color: white;
-        display: flex;
-        justify-content: space-between;
-        padding: 40px 50px;
-        flex-wrap: wrap;
+        padding: 25px 65px;
 
         @media screen and (max-width: $breakpoint-medium) {
             flex-direction: column;
+            padding-right: 0;
+            padding-left: 0;
         }
 
-        & > div {
-            text-align: center;
-            padding-bottom: 10px;
+        .entities-quick-links__line {
+            display:flex;
+            justify-content: center;
+            gap: 1.5rem;
+            border-block-end: 1px solid #dedede;
+            padding: 1rem 0 1.6rem 0;
 
-            img {
-                max-width: 280px;
-
-                @media screen and (max-width: $breakpoint-small) {
-                    max-width: 200px;
-                }
-            }
-
-            .wp-caption-text {
-                border: 0;
-                clip: rect(1px, 1px, 1px, 1px);
-                clip-path: inset(50%);
-                height: 1px;
-                margin: -1px;
-                overflow: hidden;
-                padding: 0;
-                position: absolute;
-                width: 1px;
-                word-wrap: normal !important;
+            &:last-child {
+                border: none;
             }
 
             @media screen and (max-width: $breakpoint-medium) {
-                padding: 10px 10px 0 10px;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .entities-links-logo { 
+            text-align: center;
+            padding-top: 10px;
+            padding-right: 5px;
+            padding-left: 5px;            
+
+            img {
+                max-width: calc(100vw - 20px);
+                max-height: 4.6rem;
+            }
+
+            @media screen and (max-width: $breakpoint-medium) {
+                margin-left: auto;
+                margin-right: auto;
             }
 
             &:first-child {
                 text-align: left;
+                padding-left: 0px;
 
                 @media screen and (max-width: $breakpoint-medium) {
                     text-align: center;
@@ -126,6 +130,7 @@ footer {
 
             &:last-child {
                 text-align: right;
+                padding-right: 0px;
 
                 @media screen and (max-width: $breakpoint-medium) {
                     text-align: center;
@@ -159,3 +164,5 @@ footer {
         }
     }
 }
+
+//aaa
