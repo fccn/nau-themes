@@ -28,6 +28,7 @@ clean: ## clean
 extract_translations:  ## Extract translations from source code
 	@for lang in $(lang_targets) ; do \
 		cd $(ROOT_DIR)/$(theme) && DJANGO_SETTINGS_MODULE="" django-admin makemessages --locale $$lang -d django ; \
+		cd $(ROOT_DIR)/$(theme) && DJANGO_SETTINGS_MODULE="" django-admin makemessages --locale $$lang -d djangojs ; \
 	done
 .PHONY: extract_translations
 
