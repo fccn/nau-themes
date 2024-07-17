@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-23 14:58+0100\n"
+"POT-Creation-Date: 2024-07-18 11:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -331,7 +331,7 @@ msgstr ""
 "certificados."
 
 #: templates/oscar/communication/email_base.html:189
-#: templates/oscar/customer/email_base.html:195
+#: templates/oscar/customer/email_base.html:189
 #, python-format
 msgid "Copyright © %(year)s %(platform_name)s. All rights reserved."
 msgstr ""
@@ -507,15 +507,12 @@ msgstr "Para Empresas"
 #: templates/oscar/communication/emails/commtype_order_with_csv_body.html:26
 #: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:6
 #, fuzzy, python-format
-#| msgid ""
-#| "Thank you for purchasing access to %%(course_name)s. Let's get your group "
-#| "ready to learn with edX:"
 msgid ""
 "Thank you for purchasing access to %(course_name)s. Let's get your group "
 "ready to learn with %(platform_name)s:"
 msgstr ""
 "Obrigado por adquirir acesso a %(course_name)s. Vamos preparar o seu grupo "
-"para começar a aprender com a NAU:"
+"para começar a aprender com %(platform_name)s:"
 
 #: templates/oscar/communication/emails/commtype_order_with_csv_body.html:29
 #, python-brace-format
@@ -543,10 +540,11 @@ msgstr "Dica: Registe qual o código associado a cada pessoa."
 #: templates/oscar/communication/emails/commtype_order_with_csv_body.html:36
 #: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:11
 #, fuzzy
-#| msgid "Learners sign-in/register with edX and enroll for the course."
 msgid ""
 "Learners sign-in/register with {{platform_name}} and enroll for the course."
-msgstr "Os estudantes assinam/registam-se na NAU e inscrevem-se no curso."
+msgstr ""
+"Os estudantes assinam/registam-se em {{platform_name}} e inscrevem-se no "
+"curso."
 
 #: templates/oscar/communication/emails/commtype_order_with_csv_body.html:39
 #, python-brace-format
