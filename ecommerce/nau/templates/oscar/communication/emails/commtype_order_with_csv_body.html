@@ -8,7 +8,7 @@
             <!-- Message header -->
             <tr align="left" class="cn-img-wrapper">
                 <td colspan="2" align="left" class="cn-img-wrapper cn-full-width" style="font-size: 20px; vertical-align: middle; padding-left: 2px; color: #074ce1;">
-                    <img src="{{ logo_url }}"
+                    <img src="{{ lms_url }}/static/nau-basic/images/logo_nau_w220.png"
                         height="30" alt="{{partner_name}} Logo" border="0" hspace="0" vspace="0"
                         class="platform-img">
                     {% trans "For Business" as tmsg %}{{ tmsg | force_escape }}
@@ -23,17 +23,18 @@
             <tr class="cn-content cn-full-width">
                 <td colspan="2" class="cn-content-msg">
                     <p>{% filter force_escape %}{% blocktrans %}Dear {{full_name}},{% endblocktrans %}{% endfilter %}</p>
-                    <p>{% filter force_escape %}{% blocktrans %}Thank you for purchasing access to {{course_name}}. Let's get your group ready to learn with {{platform_name}}:{% endblocktrans %}{% endfilter %}</p>
+                    <p>
+                        {% trans "Thank you for purchasing access to" as tmsg %}{{ tmsg | force_escape }} {{ course_name | force_escape }}.
+                        {% trans "Let's get your group ready to learn with" as tmsg %}{{ tmsg | force_escape }} {{ platform_name | force_escape }}:
+                    </p>
                     <ol>
                         <li>
-                            {% blocktrans asvar tmsg %}
-                                Download and save the {link_start}{download_csv_link}{link_middle} enrollment code file.{link_end}
-                            {% endblocktrans %}
+                            {% blocktrans asvar tmsg %}Download and save the {link_start}{download_csv_link}{link_middle} enrollment code file.{link_end}{% endblocktrans %}
                             {% interpolate_html tmsg link_start='<a href="'|safe link_middle='">'|safe link_end='</a>'|safe download_csv_link=download_csv_link|safe %}
                         </li>
                         <li>{% trans "Distribute one code per learner before the expiration date." as tmsg %}{{ tmsg | force_escape }}</li>
                         <li>{% trans "Pro tip: Track which code is associated with which person." as tmsg %}{{ tmsg | force_escape }}</li>
-                        <li>{% trans "Learners sign-in/register with {{platform_name}} and enroll for the course." as tmsg %}{{ tmsg | force_escape }}</li>
+                        <li>{% trans "Learners sign-in/register with NAU and enroll for the course." as tmsg %}{{ tmsg | force_escape }}</li>
                     </ol>
                     <p>
                         {% blocktrans asvar tmsg %}
