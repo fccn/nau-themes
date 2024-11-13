@@ -97,6 +97,8 @@ footer {
 
         .entities-quick-links__line {
             display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 1.5rem;
             border-block-end: 1px solid #dedede;
