@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2024-06-26 17:55+0100\n"
+"POT-Creation-Date: 2024-12-19 18:21-0500\n"
 "PO-Revision-Date: 2021-03-12 12:49+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: pt_PT\n"
@@ -1053,6 +1053,7 @@ msgid ""
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:94
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:180
 #: edx-platform/nau-basic/lms/templates/footer.html:95
 msgid "All rights reserved"
 msgstr "Todos os direitos reservados"
@@ -1208,6 +1209,7 @@ msgid "Help NAU"
 msgstr "Ajuda NAU"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:253
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:68
 msgid "Sign In"
 msgstr "Entrar"
 
@@ -1344,6 +1346,60 @@ msgstr ""
 #: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:85
 msgid "Accept new terms of service"
 msgstr "Aceito os novos termos de serviço"
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:65
+#, python-format
+msgid "Go to %(platform_name)s Home Page"
+msgstr "Vá para a página inicial de %(platform_name)"
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:98
+#, python-format
+msgid "%(platform_name)s on LinkedIn"
+msgstr "%(platform_name)s no LinkedIn"
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:106
+#, python-format
+msgid "%(platform_name)s on Twitter"
+msgstr "%(platform_name)s no Twitter"
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:114
+#, python-format
+msgid "%(platform_name)s on Facebook"
+msgstr "%(platform_name)s no Facebook"
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:122
+#, python-format
+msgid "%(platform_name)s on Google Plus"
+msgstr "%(platform_name)s no Google Plus"
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:130
+#, python-format
+msgid "%(platform_name)s on Reddit"
+msgstr "%(platform_name)s no Reddit"
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:144
+msgid "Download the iOS app on the Apple Store"
+msgstr "Descarregue a aplicação iOS na Apple Store"
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:151
+msgid "Download the Android app on the Google Play Store"
+msgstr "Descarregue a aplicação Android na Google Play Store"
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:171
+msgid ""
+"If you prefer not to receive automatic emails and keep only the essential"
+" ones, update your newsletter preferences in your"
+msgstr ""
+"Se preferir não receber emails automáticos e manter apenas os essenciais,"
+" atualize as suas preferências de newsletter no seu"
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:173
+msgid "Account Settings"
+msgstr "Configurações de Conta"
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:182
+msgid "Our mailing address is"
+msgstr "O nosso endereço postal é"
 
 #: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:59
 msgid "Print or share your certificate:"

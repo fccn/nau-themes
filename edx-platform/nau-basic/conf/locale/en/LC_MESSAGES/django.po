@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2024-06-26 17:55+0100\n"
+"POT-Creation-Date: 2024-12-19 18:21-0500\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -927,6 +927,7 @@ msgid ""
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:94
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:180
 #: edx-platform/nau-basic/lms/templates/footer.html:95
 msgid "All rights reserved"
 msgstr ""
@@ -1082,6 +1083,7 @@ msgid "Help NAU"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:253
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:68
 msgid "Sign In"
 msgstr ""
 
@@ -1212,6 +1214,58 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:85
 msgid "Accept new terms of service"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:65
+#, python-format
+msgid "Go to %(platform_name)s Home Page"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:98
+#, python-format
+msgid "%(platform_name)s on LinkedIn"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:106
+#, python-format
+msgid "%(platform_name)s on Twitter"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:114
+#, python-format
+msgid "%(platform_name)s on Facebook"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:122
+#, python-format
+msgid "%(platform_name)s on Google Plus"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:130
+#, python-format
+msgid "%(platform_name)s on Reddit"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:144
+msgid "Download the iOS app on the Apple Store"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:151
+msgid "Download the Android app on the Google Play Store"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:171
+msgid ""
+"If you prefer not to receive automatic emails and keep only the essential"
+" ones, update your newsletter preferences in your"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:173
+msgid "Account Settings"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:182
+msgid "Our mailing address is"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:59
