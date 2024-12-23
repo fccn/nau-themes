@@ -167,12 +167,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <span>
-                            {% trans "If you prefer not to receive automatic emails and keep only the essential ones, update your newsletter preferences in your" %}
-                            <a href="{% with_link_tracking homepage_url|add:'account/settings' %}">
-                                {% trans "Account Settings" %}
-                            </a>.
-                        </span>
+                        {% block footer_extension %}{% endblock %}
                     </tr>
                     <tr>
                         <!-- COPYRIGHT -->

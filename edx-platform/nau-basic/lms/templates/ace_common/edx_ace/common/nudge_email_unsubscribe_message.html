@@ -1,0 +1,12 @@
+{% load i18n %}
+{% load ace %}
+
+<span>
+    {% blocktrans trimmed %}
+        If you prefer not to receive automatic emails and keep only the essential ones, 
+        update your newsletter preferences in your
+    {% endblocktrans %}
+    <a href="{% with_link_tracking homepage_url|add:'account/settings' %}">
+        {% trans "Account Settings" %}
+    </a>.
+</span>
