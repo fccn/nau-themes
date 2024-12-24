@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2024-12-23 17:40-0500\n"
+"POT-Creation-Date: 2024-12-24 15:01-0500\n"
 "PO-Revision-Date: 2021-03-12 12:49+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: pt_PT\n"
@@ -1350,44 +1350,44 @@ msgstr "Aceito os novos termos de serviço"
 #: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:65
 #, python-format
 msgid "Go to %(platform_name)s Home Page"
-msgstr "Vá para a página inicial de %(platform_name)"
+msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:98
 #, python-format
 msgid "%(platform_name)s on LinkedIn"
-msgstr "%(platform_name)s no LinkedIn"
+msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:106
 #, python-format
 msgid "%(platform_name)s on Twitter"
-msgstr "%(platform_name)s no Twitter"
+msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:114
 #, python-format
 msgid "%(platform_name)s on Facebook"
-msgstr "%(platform_name)s no Facebook"
+msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:122
 #, python-format
 msgid "%(platform_name)s on Google Plus"
-msgstr "%(platform_name)s no Google Plus"
+msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:130
 #, python-format
 msgid "%(platform_name)s on Reddit"
-msgstr "%(platform_name)s no Reddit"
+msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:144
 msgid "Download the iOS app on the Apple Store"
-msgstr "Descarregue a aplicação iOS na Apple Store"
+msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:151
 msgid "Download the Android app on the Google Play Store"
-msgstr "Descarregue a aplicação Android na Google Play Store"
+msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:177
 msgid "Our mailing address is"
-msgstr "O nosso endereço postal é"
+msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/nudge_email_unsubscribe_message.html:8
 msgid ""
@@ -1399,7 +1399,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/nudge_email_unsubscribe_message.html:10
 msgid "Account Settings"
-msgstr "Configurações de Conta"
+msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:59
 msgid "Print or share your certificate:"
@@ -1595,75 +1595,6 @@ msgstr ""
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:55
 msgid "Sign Out"
 msgstr "Terminar Sessão"
-
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day10/email/body.html:11
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day10/email/body.html:35
-#, python-format
-msgid ""
-"Many %(platform_name)s learners are completing more problems every week, "
-"and participating in the discussion forums. What do you want to do to "
-"keep learning?"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day10/email/body.html:18
-#, python-format
-msgid ""
-"Many %(platform_name)s learners in %(course_name)s are completing more "
-"problems every week, and participating in the discussion forums. What do "
-"you want to do to keep learning?"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day10/email/body.html:27
-msgid "Keep up the momentum!"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day10/email/body.html:41
-msgid ""
-"Many {platform_name} learners in {start_strong}{course_name}{end_strong} "
-"are completing more problems every week, and participating in the "
-"discussion forums. What do you want to do to keep learning?"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day10/email/body.html:47
-msgid "Keep learning"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.html:11
-#, python-format
-msgid ""
-"Remember when you enrolled in %(course_name)s, and other courses on "
-"%(platform_name)s? We do, and we’re glad to have you! Come see what "
-"everyone is learning."
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.html:18
-#, python-format
-msgid ""
-"Remember when you enrolled in %(course_name)s on %(platform_name)s? We "
-"do, and we’re glad to have you! Come see what everyone is learning."
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.html:27
-msgid "Keep learning today"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.html:34
-msgid ""
-"Remember when you enrolled in {start_strong}{course_name}{end_strong}, "
-"and other courses on {platform_name}? We do, and we’re glad to have you! "
-"Come see what everyone is learning."
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.html:40
-msgid ""
-"Remember when you enrolled in {start_strong}{course_name}{end_strong} on "
-"{platform_name}? We do, and we’re glad to have you! Come see what "
-"everyone is learning."
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.html:46
-msgid "Start learning now"
-msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:24
 msgid ""
