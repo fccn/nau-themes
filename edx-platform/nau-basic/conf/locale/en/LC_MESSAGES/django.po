@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2025-01-02 11:45-0500\n"
+"POT-Creation-Date: 2025-01-07 10:54+0000\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -566,114 +566,107 @@ msgstr ""
 msgid "Resume your last course"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/force-translations.html:14
-#: edx-platform/nau-basic/lms/templates/dashboard.html:30
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:45
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:47
-msgid "Dashboard"
-msgstr ""
-
 #. Translators: This was need because the translation pull didn't come with
 #. this translated from transifex!
-#: edx-platform/nau-basic/cms/templates/force-translations.html:17
+#: edx-platform/nau-basic/cms/templates/force-translations.html:16
 msgid "Activate Your Account"
 msgstr ""
 
 #. Translators: This was need because the translation pull didn't come with
 #. this translated from transifex!
-#: edx-platform/nau-basic/cms/templates/force-translations.html:20
+#: edx-platform/nau-basic/cms/templates/force-translations.html:19
 msgid "Account Activation"
 msgstr ""
 
 #. Translators: This solves NAU-201
-#: edx-platform/nau-basic/cms/templates/force-translations.html:23
+#: edx-platform/nau-basic/cms/templates/force-translations.html:22
 msgid "Unscheduled"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/force-translations.html:25
+#: edx-platform/nau-basic/cms/templates/force-translations.html:24
 msgid "Course Number"
 msgstr ""
 
 #. Translators: NAU-252
-#: edx-platform/nau-basic/cms/templates/force-translations.html:28
+#: edx-platform/nau-basic/cms/templates/force-translations.html:27
 msgid "Forgot password?"
 msgstr ""
 
 #. Translators: NAU-219
-#: edx-platform/nau-basic/cms/templates/force-translations.html:31
+#: edx-platform/nau-basic/cms/templates/force-translations.html:30
 msgid "Enter a password with at least {requirements}."
 msgstr ""
 
 #. Translators: NAU-252
-#: edx-platform/nau-basic/cms/templates/force-translations.html:34
+#: edx-platform/nau-basic/cms/templates/force-translations.html:33
 msgid "{num} letter"
 msgstr ""
 
 #. Translators: NAU-219
-#: edx-platform/nau-basic/cms/templates/force-translations.html:37
+#: edx-platform/nau-basic/cms/templates/force-translations.html:36
 msgid "{num} uppercase letter"
 msgstr ""
 
 #. Translators: NAU-219
-#: edx-platform/nau-basic/cms/templates/force-translations.html:40
+#: edx-platform/nau-basic/cms/templates/force-translations.html:39
 msgid "{num} lowercase letter"
 msgstr ""
 
 #. Translators: NAU-219
-#: edx-platform/nau-basic/cms/templates/force-translations.html:43
+#: edx-platform/nau-basic/cms/templates/force-translations.html:42
 msgid "{num} digit"
 msgstr ""
 
 #. Translators: NAU-219
-#: edx-platform/nau-basic/cms/templates/force-translations.html:46
+#: edx-platform/nau-basic/cms/templates/force-translations.html:45
 msgid "{num} number"
 msgstr ""
 
 #. Translators: NAU-219
-#: edx-platform/nau-basic/cms/templates/force-translations.html:49
+#: edx-platform/nau-basic/cms/templates/force-translations.html:48
 msgid "{num} punctuation mark"
 msgstr ""
 
 #. Translators: NAU-219
-#: edx-platform/nau-basic/cms/templates/force-translations.html:52
+#: edx-platform/nau-basic/cms/templates/force-translations.html:51
 msgid "{num} symbol"
 msgstr ""
 
 #. Translators: NAU-219
-#: edx-platform/nau-basic/cms/templates/force-translations.html:55
+#: edx-platform/nau-basic/cms/templates/force-translations.html:54
 msgid "{num} word"
 msgstr ""
 
 #. Translators: NAU-219
-#: edx-platform/nau-basic/cms/templates/force-translations.html:58
+#: edx-platform/nau-basic/cms/templates/force-translations.html:57
 msgid ""
 "Your password must contain at least {num} character, including "
 "{requirements}."
 msgstr ""
 
 #. Translators:
-#: edx-platform/nau-basic/cms/templates/force-translations.html:61
+#: edx-platform/nau-basic/cms/templates/force-translations.html:60
 msgid "Bachelor's degree"
 msgstr ""
 
 #. Translators:
-#: edx-platform/nau-basic/cms/templates/force-translations.html:64
+#: edx-platform/nau-basic/cms/templates/force-translations.html:63
 msgid "Associate degree"
 msgstr ""
 
 #. Translators: GN-176 - the char : appears repeated in the quiz feedback field
-#: edx-platform/nau-basic/cms/templates/force-translations.html:67
+#: edx-platform/nau-basic/cms/templates/force-translations.html:66
 msgid "Answer"
 msgstr ""
 
 #. Translators: GN-206
-#: edx-platform/nau-basic/cms/templates/force-translations.html:70
+#: edx-platform/nau-basic/cms/templates/force-translations.html:69
 msgid "Answers are displayed within the problem"
 msgstr ""
 
 #. Translators: Change Terms of Service to Terms and Conditions
 #. https://github.com/fccn/nau-technical/issues/83
-#: edx-platform/nau-basic/cms/templates/force-translations.html:73
+#: edx-platform/nau-basic/cms/templates/force-translations.html:72
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:26
 #: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:60
 msgid "Terms of Service"
@@ -681,7 +674,7 @@ msgstr "Terms and Conditions"
 
 #. Translators: Change from a simply agree to I've read and agree, used by
 #. Honor Code
-#: edx-platform/nau-basic/cms/templates/force-translations.html:76
+#: edx-platform/nau-basic/cms/templates/force-translations.html:75
 #: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:73
 msgid ""
 "I agree to the {platform_name} "
@@ -692,13 +685,13 @@ msgstr ""
 
 #. Translators: Change from a simply agree to I've read and agree, used by
 #. Honor Code
-#: edx-platform/nau-basic/cms/templates/force-translations.html:79
+#: edx-platform/nau-basic/cms/templates/force-translations.html:78
 msgid "You must agree to the {platform_name} {terms_of_service}"
 msgstr "You must read and understood the {terms_of_service}"
 
 #. Translators:Change from a simply agree to I've read and agree, used by Terms
 #. of Service
-#: edx-platform/nau-basic/cms/templates/force-translations.html:82
+#: edx-platform/nau-basic/cms/templates/force-translations.html:81
 #: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:58
 msgid ""
 "I agree to the {platform_name} "
@@ -1102,6 +1095,12 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/_other_sites_dashboard_course_listing.html:83
 msgid "Go to my {org_code} courses"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/dashboard.html:30
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:45
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:47
+msgid "Dashboard"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/dashboard.html:224
