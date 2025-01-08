@@ -126,10 +126,8 @@
             }
 
             .dropdown-nav-item {
-                border-bottom: 1px solid $footer-bg-color;
-
                 &:last-child {
-                    border-bottom: none;
+                    border-top: 1px solid $header-dropdown-nav-item-color;
                 }
             }
 
