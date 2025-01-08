@@ -18,6 +18,9 @@ $uxpl-blue-hover-active: #063eb6;
 
 $font-family-sans-serif : 'Roboto', sans-serif;
 $serif : 'Roboto', sans-serif;
+$blue: #074CE1;
+// Change the hover buttons
+$uxpl-blue-hover-active: #063eb6;
 
 // Initialize the Open edX Bootstrap theme
 @import 'edx-bootstrap/sass/open-edx/theme';
@@ -41,10 +44,10 @@ $menu-bg-color: #ffffff;
 // the two shadows configs are different between LMS and WordPress
 $global-header-shadow: 0px 4px 7px 0px rgba(0, 0, 0,  0.1);
 $nau-branding-top-nav-shadow: unset;
-
-$footer-bg-color: #eeeeee;
-$footer-header-color: #060606;
-$footer-link-color: #060606;
+$aaa: #aaaa;
+$footer-bg-color: #232323;
+$footer-header-color: #d2d2d2;
+$footer-link-color: #d2d2d2;
 $footer-copyright-color: #5E5959;
 $button-hover: #063eb6;
 
