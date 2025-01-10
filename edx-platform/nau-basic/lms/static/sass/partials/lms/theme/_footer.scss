@@ -38,13 +38,16 @@ footer {
         flex-grow: 1;
 
         a, a:visited {
-            color: $footer-link-color;
+            // Important is need to force color on /course_modes/choose/<course_id> page.
+            color: $footer-link-color !important;
             text-transform: inherit;
             line-height: 1.8rem;
             font-size: 0.95rem;
 
             &:hover {
-                text-decoration: underline;
+                // Need to fix on /course_modes/choose/<course_id> page.
+                text-decoration: underline !important;
+                border-bottom-style: none;
             }
             .icon {
                 font-size: 25px;
