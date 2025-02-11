@@ -7,3 +7,17 @@
     padding-bottom: 0 !important;
     border-radius: 4px;
 }
+
+// Compact presentation of Course Messages so they don't offerflow the container and hide activities controls
+.page-banner {
+    .alert {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        br {
+            display: none;
+        }
+    }
+    .user-messages {
+        padding-top: 5px;
+    }
+}
