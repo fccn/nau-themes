@@ -58,13 +58,11 @@ body {
                             bottom: 0;
                         }
                     }
-                    .button { // any button inside the content or header div, this won't match the studio home
+                    // Apply NAU style on buttons
+                    .button {
                         border-radius: 50px;
                         padding: 0.8em 2em 0.8em 2em;
                         border-width: 1px;
-                        background: $nau_blue;
-                        border-color: $nau_blue;
-                        color: white;
 
                         &:hover {
                             border-width: 1px;      
@@ -93,6 +91,13 @@ body {
                                 color: white;
                                 background-color: $nau_blue;
                             }
+                        }
+
+                        // Apply NAU colors on buttons not disabled
+                        &:not(.is-disabled):not(.disabled) {
+                            background-color: $nau_blue;
+                            border-color: $nau_blue;
+                            color: white;
                         }
                     }    
                     ol.list-sections {
