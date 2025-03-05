@@ -64,7 +64,7 @@ from openedx.core.djangolib.markup import HTML, Text
     </div>
 
     <%
-      footer_logos = static.get_value('NAU_FOOTER_LOGOS', {}).get("itens", {})
+      footer_logos = static.get_value('NAU_FOOTER_LOGOS', getattr(settings, 'NAU_FOOTER_LOGOS', {})).get("itens", {})
     %>
     % if len(footer_logos)>0:
     <section id="entities-quick-links">
