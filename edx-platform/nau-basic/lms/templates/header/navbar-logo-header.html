@@ -25,7 +25,7 @@ from lms.djangoapps.branding import api as branding_api
   nau_marketing_base_href_current_lang = static.get_value('NAU_MARKETING_BASE_HREF', {}).get(LANGUAGE_CODE, "/")
 
   logo_image_url = static.get_value('NAU_LOGO_IMAGE_URL', static.get_value('logo_image_url', {}))
-  if isinstance(logo_image_url, str) and (logo_image_url is None or not (logo_image_url.startswith('http://') or logo_image_url.startswith('https://') or logo_image_url.startswith('//') ) ):
+  if not logo_image_url:
     logo_image_url = branding_api.get_logo_url(is_secure)
 %> 
 
