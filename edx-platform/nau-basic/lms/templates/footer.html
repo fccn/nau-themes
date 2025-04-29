@@ -17,6 +17,32 @@
     nau_social_media = static.get_value('NAU_SOCIAL_MEDIA', getattr(settings, 'NAU_FOOTER_MENU', []))
 %>
 <footer>
+  <%
+    footer_logos = static.get_value('NAU_FOOTER_LOGOS', getattr(settings, 'NAU_FOOTER_LOGOS', {})).get("itens", {})
+  %>
+    % if len(footer_logos)>0:
+    <section id="entities-quick-links">
+    <!-- institutional logos -->
+      % for row in footer_logos:
+      <section class="entities-quick-links__line">
+        % for item in row: 
+        <div class="entities-links-logo">
+          <a href="${item.get('link','')}" class="entity-link" target="${item.get('target', '_blank')}" rel="noopener">
+            <img
+              loading="lazy"
+              src="${item.get('image', '')}"
+              alt="${item.get('alt', '')}"
+              title="${item.get('title', '')}"
+              width="${item.get('width', '')}"
+              height="${item.get('height', '')}" />
+          </a>
+        </div>
+        % endfor
+      </section>
+      % endfor
+    <!-- end of institutional logos -->
+    </section>
+    % endif
   <section id="footer-nav">
     % if len(footer_menu)>0 or len(nau_social_media)>0:
       <div id="quick-links-section">
@@ -70,32 +96,6 @@
       </div>
     %endif
   </section>
-  <%
-    footer_logos = static.get_value('NAU_FOOTER_LOGOS', getattr(settings, 'NAU_FOOTER_LOGOS', {})).get("itens", {})
-  %>
-    % if len(footer_logos)>0:
-    <section id="entities-quick-links">
-    <!-- institutional logos -->
-      % for row in footer_logos:
-      <section class="entities-quick-links__line">
-        % for item in row: 
-        <div class="entities-links-logo">
-          <a href="${item.get('link','')}" class="entity-link" target="${item.get('target', '_blank')}" rel="noopener">
-            <img
-              loading="lazy"
-              src="${item.get('image', '')}"
-              alt="${item.get('alt', '')}"
-              title="${item.get('title', '')}"
-              width="${item.get('width', '')}"
-              height="${item.get('height', '')}" />
-          </a>
-        </div>
-        % endfor
-      </section>
-      % endfor
-    <!-- end of institutional logos -->
-    </section>
-    % endif
 
 </footer>
 
