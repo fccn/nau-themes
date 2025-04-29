@@ -14,10 +14,10 @@ $courseware-border-bottom-color: $primary;
 // Change the hover buttons
 $uxpl-blue-hover-active: #063eb6;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap');
 
-$font-family-sans-serif : 'Roboto', sans-serif;
-$serif : 'Roboto', sans-serif;
+$font-family-sans-serif : 'IBM Plex Sans', sans-serif;
+$serif : 'IBM Plex Sans', sans-serif;
 $blue: #074CE1;
 // Change the hover buttons
 $uxpl-blue-hover-active: #063eb6;
@@ -26,7 +26,7 @@ $uxpl-blue-hover-active: #063eb6;
 @import 'edx-bootstrap/sass/open-edx/theme';
 
 /* Fonts */
-$font-stack: "Roboto", sans-serif;
+$font-stack: "IBM Plex Sans", sans-serif;
 $font-size: 13px;
 
 /* Colors */
