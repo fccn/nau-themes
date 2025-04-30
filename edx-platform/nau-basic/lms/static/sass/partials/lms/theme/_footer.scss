@@ -6,7 +6,7 @@ footer {
 
     #quick-links-section {
         padding: 50px 60px 30px;
-        background-color: $footer-bg-color;
+        background-color: $footer-nav-bg-color;
         display: flex;
 
         div:nth-last-child(2) {
@@ -26,7 +26,7 @@ footer {
     .footer-title {
         font-weight: bold;
         display: block;
-        font-size: 1.15rem;
+        font-size: 1.25rem;
         padding-bottom: 8px;
         color: $footer-header-color;
     }
@@ -41,8 +41,10 @@ footer {
             // Important is need to force color on /course_modes/choose/<course_id> page.
             color: $footer-link-color !important;
             text-transform: inherit;
-            line-height: 1.8rem;
-            font-size: 0.95rem;
+            line-height: 1.5rem;
+            font-size: 1.1rem;
+            margin: .1rem;
+            padding: .45rem .45rem .35rem 0;
 
             &:hover {
                 // Need to fix on /course_modes/choose/<course_id> page.
@@ -158,6 +160,30 @@ footer {
                     text-align: center;
                 }
             }
+        }
+    }
+
+    section.brand-footer {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: $footer-brand-bg-color;
+        color: $footer-link-color;
+        .brand-footer__container {
+            padding: 50px 60px 30px;
+            @media screen and (max-width: $breakpoint-small) {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            .brand-footer__legal {
+                display: flex;
+                gap: 2.5rem;
+                padding: 2rem 0 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+                flex-wrap: wrap;
+            }
+            .brand-footer__copyright {
+                padding: 2rem 0 0;
+            }
+
         }
     }
 }
