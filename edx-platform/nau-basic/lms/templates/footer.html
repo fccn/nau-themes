@@ -54,9 +54,6 @@
                 height="60" alt="{{partner_name}} Logo" border="0" hspace="0" vspace="0"
                 class="platform-img" />
             </div>
-            <div class="copy">
-              <span>&copy; ${datetime.now().year} - FCT|FCCN<br>${_('All rights reserved')}</span>
-            </div>
             <div id="social-media">
               <ul>
                 % for social_media in nau_social_media:
@@ -95,6 +92,15 @@
         %endif
       </div>
     %endif
+  </section>
+  <section class="brand-footer">
+    <div class="brand-footer__container">
+      <div class="brand-footer__legal">
+      </div>
+      <div class="brand-footer__copyright">
+          <p>&copy; ${datetime.now().year} FCCN-FCT. ${_('All rights reserved')}.</p>
+      </div>
+    </div>
   </section>
 
 </footer>
