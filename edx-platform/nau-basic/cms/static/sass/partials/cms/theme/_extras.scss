@@ -1,6 +1,5 @@
 $back_body_color: gray;
 $page_color: #F5F5F5;
-$nau_blue: #0857FF;
 $new_action_color: #080432;
 
 body {
@@ -60,43 +59,43 @@ body {
                     }
                     // Apply NAU style on buttons
                     .button {
-                        border-radius: 50px;
+                        border-radius: 0.25rem;
                         padding: 0.8em 2em 0.8em 2em;
                         border-width: 1px;
 
                         &:hover {
                             border-width: 1px;      
-                            border-color: $nau_blue;
-                            color: $nau_blue;
+                            border-color: $primary;
+                            color: $primary;
                             background-color: white;
                         }
                 
                         &.button-new {
-                            background-color: $nau_blue;
-                            border-color: $nau_blue;
+                            background-color: $primary;
+                            border-color: $primary;
                             color: white;
                 
                             &:hover {
-                                color: $nau_blue;
+                                color: $primary;
                                 background-color: white;
                             }    
                         }
                 
                         &.external-help-button {
                             background-color: white;
-                            color: $nau_blue;
-                            border-color: $nau_blue;
+                            color: $primary;
+                            border-color: $primary;
                             border-width: 1px;
                             &:hover {
                                 color: white;
-                                background-color: $nau_blue;
+                                background-color: $primary;
                             }
                         }
 
                         // Apply NAU colors on buttons not disabled
                         &:not(.is-disabled):not(.disabled) {
-                            background-color: $nau_blue;
-                            border-color: $nau_blue;
+                            background-color: $primary;
+                            border-color: $primary;
                             color: white;
                         }
                     }    
@@ -123,7 +122,7 @@ body {
                                                     border-width: unset;
                                                     background: unset;
                                                     border-color: unset;
-                                                    color: $nau_blue;
+                                                    color: $primary;
                                                     &:hover {
                                                         color: $button-hover;
                                                     }
