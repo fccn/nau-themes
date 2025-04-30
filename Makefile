@@ -14,7 +14,7 @@
 # include *.mk
 
 virtual_environment: requirements.txt ## create a virtual environment to run other commands
-	test -d venv || virtualenv venv --python=python3
+	test -d venv || python3 -m venv venv
 	. venv/bin/activate && python -m pip install -Ur requirements.txt
 	touch venv/touchfile
 	@echo "Run on your shell to activate the new virtual environment:"
