@@ -12,15 +12,13 @@ $m-blue-d3: $primary;
 // Some box borders like tabs on account settings
 $courseware-border-bottom-color: $primary;
 // Change the hover buttons
-$uxpl-blue-hover-active: #4b19e6;
+$uxpl-blue-hover-active: $primary-hover;
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap');
 
 $font-family-sans-serif : 'IBM Plex Sans', sans-serif;
 $serif : 'IBM Plex Sans', sans-serif;
-$blue: #074CE1;
-// Change the hover buttons
-$uxpl-blue-hover-active: #4b19e6;
+$blue: $primary;
 
 // Initialize the Open edX Bootstrap theme
 @import 'edx-bootstrap/sass/open-edx/theme';
@@ -33,7 +31,7 @@ $font-size: 13px;
 $background-color: #eaeaea;
 $text-color: #000000;
 $page-color: #f5f5f5;
-$header-bar-color: #074CE1;
+$header-bar-color: $primary;
 $header-dropdown-nav-item-color: #eaeaea;
 $vertical-line-color:  #0958FE;
 $gray-bar-color: #cccccc;
@@ -51,7 +49,7 @@ $footer-brand-bg-color: #1f1f1f;
 $footer-header-color: #d2d2d2;
 $footer-link-color: #d2d2d2;
 $footer-copyright-color: #5E5959;
-$button-hover: #4b19e6;
+$button-hover: $primary-hover;
 
 /* breakpoints */
 $breakpoint-small: 539px;  //Mobile phones
@@ -73,7 +71,7 @@ $card-height: 160px;
 $card-minimum-size: 210px;
 $entity-radius: 5px;
 $card-content-pad: 0 15px 10px;
-$action-btn-color: #074ce1;
+$action-btn-color: $primary;
 
 /* Logos and SVG */
 

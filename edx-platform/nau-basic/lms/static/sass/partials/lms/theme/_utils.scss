@@ -1,8 +1,8 @@
 @mixin nau-button-style($fontSize: inherit) {
     padding: 0.4rem 1.4rem;
-    border-radius: 50px;
-    border: 1px solid $nau_blue !important;
-    background: $nau_blue !important;
+    border-radius: 0.25rem;
+    border: 1px solid $primary !important;
+    background: $primary !important;
     color: white !important;
     box-shadow: unset;
     font-size: $fontSize;
@@ -11,8 +11,8 @@
     &:active,
     &:focus {
         border-width: 1px;
-        border-color: $nau_blue !important;
-        color: $nau_blue !important;
+        border-color: $primary !important;
+        color: $primary !important;
         background-color: white !important;
         text-shadow: unset;
         background-image: unset;
@@ -30,12 +30,12 @@
 
 @mixin nau-button-alt-style($fontSize: inherit) {
     padding: 0.4rem 1.4rem;
-    border-radius: 50px;
+    border-radius: 0.25rem;
     border-width: 1px;
     border-style: solid;
     background: white !important;
-    border-color: $nau_blue !important;
-    color: $nau_blue !important;
+    border-color: $primary !important;
+    color: white !important;
     box-shadow: unset;
     font-size: $fontSize;
 
@@ -44,9 +44,9 @@
     &:focus {
         border-width: 1px;
         // Realy need the next !important 's to force overwrite some discussion module !important 's.
-        border-color: $nau_blue !important;
+        border-color: $primary !important;
         color: white !important;
-        background-color: $nau_blue !important;
+        background-color: $primary !important;
         text-shadow: unset;
         background-image: unset;
     }
@@ -63,14 +63,14 @@
 
 @mixin nau-color-change-alt() {
     background: white;
-    border-color: $nau_blue;
-    color: $nau_blue;
+    border-color: $primary;
+    color: $primary;
 
     &:hover,
     &:active,
     &:focus {
-        border-color: $nau_blue;
+        border-color: $primary;
         color: white;
-        background-color: $nau_blue;
+        background-color: $primary;
     }
 }
