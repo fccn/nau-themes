@@ -3,7 +3,7 @@
 
 $black : #000;
 $white : #FFF;
-$nau_blue : $primary;
+$primary : $primary;
 $nau_button_focus: lighten($primary, 25%);
 
 * {
@@ -597,13 +597,13 @@ button.submit,
 
 @mixin nav-tab-sequence {
 
-    // color: $nau_blue;
+    // color: $primary;
     &:hover,
     &:active,
     &:focus {
-        border-color: $nau_blue;
+        border-color: $primary;
         color: white;
-        background-color: $nau_blue;
+        background-color: $primary;
 
         span {
             color: white;
@@ -637,7 +637,7 @@ button.submit,
             }
 
             button.active {
-                background: $nau_blue;
+                background: $primary;
                 
                 .icon {
                     color: white;
