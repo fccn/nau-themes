@@ -8,31 +8,13 @@ on:
       - nau/*.master
 
 jobs:
-  create-virtualenv:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
-      with:
-        python-version: 3.11
-    - uses: syphar/restore-virtualenv@v1
-      id: cache-virtualenv
-
-    - uses: syphar/restore-pip-download-cache@v1
-      if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-
-    - run: pip install -r requirements.txt
-      if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-
   check_miss_run_update_translations:
-    needs: create-virtualenv
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
       with:
         python-version: 3.11
-    - uses: syphar/restore-virtualenv@v1
-      id: cache-virtualenv
-
+        cache: pip # caching pip dependencies
+    - run: pip install -r requirements.txt
     - run: make check_miss_run_update_translations
