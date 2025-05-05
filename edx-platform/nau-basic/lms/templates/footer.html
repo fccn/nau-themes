@@ -22,15 +22,15 @@
   %>
     % if len(footer_logos)>0:
     <section id="entities-quick-links">
-    <!-- institutional logos -->
+    <!-- above the footer logos -->
       % for row in footer_logos:
       <section class="entities-quick-links__line">
         % for item in row: 
         <div class="entities-links-logo">
-          <a href="${item.get('link','')}" class="entity-link" target="${item.get('target', '_blank')}" rel="noopener">
+          <a href="${item.get('link', item.get('url', ''))}" class="entity-link" target="${item.get('target', '_blank')}" rel="noopener">
             <img
               loading="lazy"
-              src="${item.get('image', '')}"
+              src="${item.get('image', item.get('src', ''))}"
               alt="${item.get('alt', '')}"
               title="${item.get('title', '')}"
               width="${item.get('width', '')}"
@@ -40,7 +40,7 @@
         % endfor
       </section>
       % endfor
-    <!-- end of institutional logos -->
+    <!-- end of above the footer logos -->
     </section>
     % endif
   <section id="footer-nav">
@@ -93,13 +93,28 @@
       </div>
     %endif
   </section>
-  <section class="brand-footer">
-    <div class="brand-footer__container">
-      <div class="brand-footer__legal">
-      </div>
-      <div class="brand-footer__copyright">
-          <p>&copy; ${datetime.now().year} FCCN-FCT. ${_('All rights reserved')}.</p>
-      </div>
+  <section class="footer-copyright">
+    <%
+    footer_institutional_logos = static.get_value('FOOTER_INSTITUTIONAL_LOGOS', getattr(settings, 'FOOTER_INSTITUTIONAL_LOGOS', []))
+    %>
+    % if len(footer_institutional_logos)>0:
+      <section class="footer-copyright__institutional-logos">
+        % for item in footer_institutional_logos:
+        <a href="${item.get('link', item.get('url', ''))}" target="${item.get('target', '_blank')}" rel="noopener">
+          <img
+            loading="lazy"
+            src="${item.get('image', item.get('src', ''))}"
+            alt="${item.get('alt', '')}"
+            title="${item.get('title', '')}"
+            width="${item.get('width', '')}"
+            height="${item.get('height', '')}" />
+        </a>
+        % endfor
+      </section>
+    <!-- end of institutional logos -->
+    % endif
+    <div class="footer-copyright__text">
+        <p>&copy; ${datetime.now().year} FCCN-FCT. ${_('All rights reserved')}.</p>
     </div>
   </section>
 
