@@ -60,10 +60,6 @@
             @media screen and (max-width: $breakpoint-medium) {
                 margin-left: 4px;
             }
-
-            max-width: -webkit-calc(100% - 50px);
-            max-width: -moz-calc(100% - 50px);
-            max-width: calc(100% - 50px);
         }
     }
 
