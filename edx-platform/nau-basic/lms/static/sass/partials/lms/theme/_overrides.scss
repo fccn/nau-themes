@@ -295,11 +295,12 @@ main#main {
         a {
             color: $header-bar-color;
         }
-
+        h1 {
+            color: $primary
+        }
         h2 {
             color: black;
         }
-
         .login-register {
             max-width: unset;
 
@@ -310,7 +311,7 @@ main#main {
                 }
 
                 input {
-                    border-color: blue;
+                    border-color: $primary;
                     border-left: none;
                     border-top: none;
                     border-right: none;
@@ -320,11 +321,11 @@ main#main {
                 select {
                     outline: none;
                     border: none;
-                    border-bottom: solid 1px #0553FF;
+                    border-bottom: solid 1px $primary;
                     box-shadow: none;
 
                     :focus {
-                        border-bottom: solid 4px #0553FF;
+                        border-bottom: solid 4px $primary;
                     }
                 }
 
@@ -536,15 +537,15 @@ button.submit,
 }
 
 .chapters a {
-    color: #0553ff !important;
+    color: $primary !important;
 }
 
 .wrapper-msg.wrapper-auto-cert .auto-cert-message {
-    border-left-color: #0553ff !important;
+    border-left-color: $primary !important;
 }
 
 .course-tabs a {
-    color: #0553ff !important;
+    color: $primary !important;
     font-weight: bold !important;
     font-size: 18px !important;
 }
@@ -553,12 +554,12 @@ button.submit,
 .wrapper-course-material .course-tabs .tab a:visited,
 .content-wrapper .course-tabs .nav-item.active .nav-link,
 .content-wrapper .course-tabs .nav-item:hover .nav-link {
-    border-bottom-color: #0553ff !important;
+    border-bottom-color: $primary !important;
 }
 
 #course-outline-block-tree a,
 .article-functions a {
-    color: #0553ff !important;
+    color: $primary !important;
 }
 
 .wiki-wrapper section.wiki .nav-tabs li.active a {
@@ -569,7 +570,7 @@ button.submit,
     border: 0 !important;
     background-color: transparent !important;
     cursor: pointer;
-    color: #0553ff !important;
+    color: $primary !important;
     text-transform: uppercase !important;
     font-weight: bold !important;
 }
@@ -581,7 +582,7 @@ button.submit,
 }
 
 .has-breadcrumbs .breadcrumbs a {
-    color: #0553ff !important;
+    color: $primary !important;
 }
 
 .has-breadcrumbs .breadcrumbs a:hover,
@@ -669,7 +670,7 @@ button.submit,
 }
 
 .wrapper-downloads a {
-    color: #0553ff !important;
+    color: $primary !important;
     background-color: transparent !important;
     font-weight: normal !important;
 }
@@ -717,11 +718,11 @@ footer section#entities-quick-links ul.flex-row {
 }
 
 aside.page-content-secondary a {
-    color: #0553ff;
+    color: $primary;
 }
 
 .wrapper-course-details h3 a {
-    color: #0553ff !important;
+    color: $primary !important;
 }
 
 .wrapper-course-details h3 a:hover,
@@ -743,7 +744,7 @@ aside.page-content-secondary a {
 
 .wrapper-course-details .course-actions .wrapper-action-more .action-unenroll {
     background-color: transparent !important;
-    color: #0553ff !important;
+    color: $primary !important;
     text-decoration: none;
     text-align: left !important;
 }
