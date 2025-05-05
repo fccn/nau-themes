@@ -136,6 +136,7 @@ footer {
             img {
                 max-width: calc(100vw - 20px);
                 max-height: 4.6rem;
+                filter: grayscale(1);
             }
 
             @media screen and (max-width: $breakpoint-medium) {
@@ -163,27 +164,32 @@ footer {
         }
     }
 
-    section.brand-footer {
+    .footer-copyright {
         border: 1px solid rgba(0, 0, 0, 0.1);
         background-color: $footer-brand-bg-color;
         color: $footer-link-color;
-        .brand-footer__container {
-            padding: 50px 60px 30px;
-            @media screen and (max-width: $breakpoint-small) {
-                padding-right: 10px;
-                padding-left: 10px;
+        padding: 50px 60px 30px;
+        @media screen and (max-width: $breakpoint-small) {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        &__institutional-logos {
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            a {
+                border-right: 1px solid rgba(255, 255, 255, 0.25);
+                padding-right: 2.5rem;
+                &:last-child {
+                    border: none;
+                }
             }
-            .brand-footer__legal {
-                display: flex;
-                gap: 2.5rem;
-                padding: 2rem 0 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-                flex-wrap: wrap;
-            }
-            .brand-footer__copyright {
-                padding: 2rem 0 0;
-            }
-
+        }
+        &__text {
+            padding: 2rem 0 0;
         }
     }
+
 }
