@@ -11,10 +11,10 @@ make virtual_environment
 ## How to update translations
 
 To extract the strings to be translated, add them to .po files and to compile the translation .mo
-files, run the Makefile target `update_translations`.
+files, run the Makefile target `translations`.
 
 ```bash
-make update_translations
+make translations
 ```
 
 ### Devstack
