@@ -21,24 +21,27 @@ virtual_environment: ../requirements.txt ## create a virtual environment to run 
 	@echo "Run on your shell to activate the new virtual environment:"
 	@echo "  . venv/bin/activate"
 
+requirements: ## Install requirements
+	@python -m pip install -Ur ../requirements.txt
+
 clean: ## clean
 	rm -rf venv
 .PHONY: clean
 
-extract_translations:  ## Extract translations from source code
+translations_extract:  ## Extract translations from source code
 	@for lang in $(lang_targets) ; do \
 		cd $(ROOT_DIR)/$(theme) && DJANGO_SETTINGS_MODULE="" django-admin makemessages --locale $$lang -d django ; \
 		cd $(ROOT_DIR)/$(theme) && DJANGO_SETTINGS_MODULE="" django-admin makemessages --locale $$lang -d djangojs ; \
 	done
-.PHONY: extract_translations
+.PHONY: translations_extract
 
-compile_translations:  ## Compiles the extracted translations
+translations_compile:  ## Compiles the extracted translations
 	@cd $(ROOT_DIR)/$(theme) && DJANGO_SETTINGS_MODULE="" django-admin compilemessages
-.PHONY: compile_translations
+.PHONY: translations_compile
 
-detect_changed_source_translations:
+translations_detect_changed_source:
 	@test $$(git diff --exit-code -G "^(msgid|msgstr)" | wc -l) -eq 0 || ( echo "Detected a changed source translations!" ; exit 1 )
-.PHONY: detect_changed_source_translations
+.PHONY: translations_detect_changed_source
 
-translations: | extract_translations compile_translations ## Extract and compile translations
+translations: | translations_extract translations_compile ## Extract and compile translations
 .PHONY: translations

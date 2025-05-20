@@ -8,7 +8,7 @@ on:
       - nau/*.master
 
 jobs:
-  check_miss_run_update_translations:
+  translations_is_missing:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -17,4 +17,4 @@ jobs:
         python-version: 3.11
         cache: pip # caching pip dependencies
     - run: pip install -r requirements.txt
-    - run: make check_miss_run_update_translations
+    - run: make translations_is_missing
