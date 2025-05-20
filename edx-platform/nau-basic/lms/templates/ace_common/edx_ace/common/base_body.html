@@ -91,20 +91,20 @@
                               <td align="center" valign="middle" class="paddingtop_10">
                                 <table cellpadding="0" cellspacing="0">
                                   <tr>
-                                    <td align="left" valign="top" style="color: #d23228;">
+                                    <td align="left" valign="top" style="color: #693ae9;">
                                       {% if courses_url %}
-                                        <a href="{% with_link_tracking courses_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#000001;font-weight:bold;">
+                                        <a href="{% with_link_tracking courses_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#693ae9;font-weight:bold;">
                                           {% trans "Courses" as tmsg %}{{ tmsg | force_escape }}
                                         </a>
                                         &nbsp; / &nbsp;
                                       {% endif %}
                                       {% if programs_url %}
-                                        <a href="{% with_link_tracking programs_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#000001;font-weight:bold;">
+                                        <a href="{% with_link_tracking programs_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#693ae9;font-weight:bold;">
                                           {% trans "Programs" as tmsg %}{{ tmsg | force_escape }}
                                         </a>
                                         &nbsp; / &nbsp;
                                       {% endif %}
-                                      <a href="{% with_link_tracking dashboard_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#000001;font-weight:bold;">
+                                      <a href="{% with_link_tracking dashboard_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#693ae9;font-weight:bold;">
                                         {% trans "My Account" as tmsg %}{{ tmsg | force_escape }}
                                       </a>
                                     </td>
@@ -150,42 +150,50 @@
           <table role="presentation" align="{{ LANGUAGE_BIDI|yesno:"right,left" }}" border="0" border="0" cellpadding="0" cellspacing="0" width="210">
             <tr>
               {% if social_media_urls.linkedin %}
-                <td height="32" width="42">
+                <td height="16" width="32">
                   <a href="{{ social_media_urls.linkedin|safe }}">
                     <img src="{{ social_media_logo_urls.linkedin }}"
-                      width="32" height="32" alt="{% filter force_escape %}{% blocktrans %}{{ platform_name }} on LinkedIn{% endblocktrans %}{% endfilter %}"/>
+                      width="16" height="16" alt="{% filter force_escape %}{% blocktrans %}{{ platform_name }} on LinkedIn{% endblocktrans %}{% endfilter %}"/>
                   </a>
                 </td>
               {% endif %}
               {% if social_media_urls.twitter %}
-                <td height="32" width="42">
+                <td height="16" width="32">
                   <a href="{{ social_media_urls.twitter|safe }}">
                     <img src= "{{ social_media_logo_urls.twitter }}"
-                      width="32" height="32" alt="{% filter force_escape %}{% blocktrans %}{{ platform_name }} on Twitter{% endblocktrans %}{% endfilter %}"/>
+                      width="16" height="16" alt="{% filter force_escape %}{% blocktrans %}{{ platform_name }} on Twitter{% endblocktrans %}{% endfilter %}"/>
                   </a>
                 </td>
               {% endif %}
               {% if social_media_urls.facebook %}
-                <td height="32" width="42">
+                <td height="16" width="32">
                   <a href="{{ social_media_urls.facebook|safe }}">
                     <img src="{{ social_media_logo_urls.facebook }}"
-                      width="32" height="32" alt="{% filter force_escape %}{% blocktrans %}{{ platform_name }} on Facebook{% endblocktrans %}{% endfilter %}"/>
+                      width="16" height="16" alt="{% filter force_escape %}{% blocktrans %}{{ platform_name }} on Facebook{% endblocktrans %}{% endfilter %}"/>
                   </a>
                 </td>
               {% endif %}
               {% if social_media_urls.google_plus %}
-                <td height="32" width="42">
+                <td height="16" width="32">
                   <a href="{{ social_media_urls.google_plus|safe }}">
                     <img src="{{ social_media_logo_urls.google_plus}}"
-                      width="32" height="32" alt="{% filter force_escape %}{% blocktrans %}{{ platform_name }} on Google Plus{% endblocktrans %}{% endfilter %}"/>
+                      width="16" height="16" alt="{% filter force_escape %}{% blocktrans %}{{ platform_name }} on Google Plus{% endblocktrans %}{% endfilter %}"/>
                   </a>
                 </td>
               {% endif %}
               {% if social_media_urls.reddit %}
-                <td height="32" width="42">
+                <td height="16" width="32">
                   <a href="{{ social_media_urls.reddit|safe }}">
                     <img src="{{ social_media_logo_urls.reddit}}"
-                      width="32" height="32" alt="{% filter force_escape %}{% blocktrans %}{{ platform_name }} on Reddit{% endblocktrans %}{% endfilter %}"/>
+                      width="16" height="16" alt="{% filter force_escape %}{% blocktrans %}{{ platform_name }} on Reddit{% endblocktrans %}{% endfilter %}"/>
+                  </a>
+                </td>
+              {% endif %}
+              {% if social_media_urls.email %}
+                <td height="16" width="32">
+                  <a href="{{ social_media_urls.email|safe }}">
+                    <img src="{{ social_media_logo_urls.email}}"
+                      width="16" height="16" alt="{% filter force_escape %}{% blocktrans %}Subscribe {{ platform_name }} newsletter{% endblocktrans %}{% endfilter %}"/>
                   </a>
                 </td>
               {% endif %}
@@ -218,8 +226,8 @@
           {% get_action_links channel omit_unsubscribe_link=omit_unsubscribe_link as action_links %}
           {% for action_link_url, action_link_text in action_links %}
             <p>
-              <a href="{{ action_link_url }}" style="color: #005686">
-                <font color="#005686"><b>{{ action_link_text }}</b></font>
+              <a href="{{ action_link_url }}" style="color: #693ae9">
+                <font color="#693ae9"><b>{{ action_link_text }}</b></font>
               </a>
             </p>
           {% endfor %}
