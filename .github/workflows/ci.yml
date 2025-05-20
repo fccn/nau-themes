@@ -16,5 +16,9 @@ jobs:
       with:
         python-version: 3.11
         cache: pip # caching pip dependencies
-    - run: pip install -r requirements.txt
-    - run: make translations_is_missing
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Check for missing translations on edx-platform
+      run: make translations_is_missing
+    - name: Check for missing translations on ecommerce
+      run: make -C ecommerce translations_is_missing
