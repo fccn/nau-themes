@@ -35,6 +35,9 @@ translations_extract:  ## Extract translations from source code
 	done
 .PHONY: translations_extract
 
+translations_is_missing: | translations_extract  ## Check if `make translations` should be run
+	@git diff --numstat *.po | awk '{if ($$1>1 || $$2>1) { exit 1 } else { exit 0 }}'
+
 translations_compile:  ## Compiles the extracted translations
 	@cd $(ROOT_DIR)/$(theme) && DJANGO_SETTINGS_MODULE="" django-admin compilemessages
 .PHONY: translations_compile
