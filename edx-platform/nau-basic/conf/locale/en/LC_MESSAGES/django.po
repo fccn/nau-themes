@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2025-05-20 20:05+0100\n"
+"POT-Creation-Date: 2025-05-21 12:28+0100\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -920,7 +920,7 @@ msgid ""
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:94
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:239
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:237
 #: edx-platform/nau-basic/lms/templates/footer.html:117
 msgid "All rights reserved"
 msgstr ""
@@ -1214,67 +1214,63 @@ msgstr ""
 msgid "Accept new terms of service"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:82
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:81
 #, python-format
 msgid "Go to %(platform_name)s Home Page"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:97
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:96
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:32
 msgid "Courses"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:103
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:102
 msgid "Programs"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:108
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:107
 msgid "My Account"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:156
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:155
 #, python-format
 msgid "%(platform_name)s on LinkedIn"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:164
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:163
 #, python-format
 msgid "%(platform_name)s on Twitter"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:172
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:171
 #, python-format
 msgid "%(platform_name)s on Facebook"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:180
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:179
 #, python-format
 msgid "%(platform_name)s on Google Plus"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:188
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:187
 #, python-format
 msgid "%(platform_name)s on Reddit"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:196
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:194
 #, python-format
 msgid "Subscribe %(platform_name)s newsletter"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:210
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:208
 msgid "Download the iOS app on the Apple Store"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:217
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:215
 msgid "Download the Android app on the Google Play Store"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:241
-msgid "Our mailing address is:"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:248
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:243
 msgid "Unsubscribe from these emails."
 msgstr ""
 
@@ -1481,7 +1477,4 @@ msgstr ""
 #: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:26
 msgid "Learn more"
 msgstr ""
-
-#~ msgid "Our mailing address is"
-#~ msgstr ""
 

@@ -56,7 +56,6 @@
       font-size: 1em;
       line-height: 1.5;
       max-width: 600px;
-      padding: 0 20px 0 20px;
       "
     {% endblock %}
   >
@@ -71,7 +70,7 @@
                     <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#F5F5F5">
                       <tr><td height="10" style="line-height:1px;">&nbsp;</td></tr>
                       <tr>
-                        <td align="left" valign="top" style="padding:0 60px;" class="padding_none">
+                        <td align="left" valign="top" style="padding:0 20px;" class="padding_none">
                           <table cellpadding="0" cellspacing="0" align="left" class="width_100percent">
                             <tr>
                               <td align="center" valign="top">
@@ -147,7 +146,7 @@
       <tr>
         <td style="padding-bottom: 20px;">
           <!-- SOCIAL -->
-          <table role="presentation" align="{{ LANGUAGE_BIDI|yesno:"right,left" }}" border="0" border="0" cellpadding="0" cellspacing="0" width="210">
+          <table role="presentation" align="{{ LANGUAGE_BIDI|yesno:"right,left" }}" border="0" border="0" cellpadding="0" cellspacing="0">
             <tr>
               {% if social_media_urls.linkedin %}
                 <td height="16" width="32">
@@ -190,10 +189,9 @@
                 </td>
               {% endif %}
               {% if social_media_urls.email %}
-                <td height="16" width="32">
-                  <a href="{{ social_media_urls.email|safe }}">
-                    <img src="{{ social_media_logo_urls.email}}"
-                      width="16" height="16" alt="{% filter force_escape %}{% blocktrans %}Subscribe {{ platform_name }} newsletter{% endblocktrans %}{% endfilter %}"/>
+                <td>
+                  <a href="{{ social_media_urls.email|safe }}" style="color:#693ae9;">
+                    {% filter force_escape %}{% blocktrans %}Subscribe {{ platform_name }} newsletter{% endblocktrans %}{% endfilter %}
                   </a>
                 </td>
               {% endif %}
@@ -236,10 +234,7 @@
       <tr>
         <!-- COPYRIGHT -->
         <td>
-          &copy; {% now "Y" %} {{ platform_name }}, {% trans "All rights reserved" as tmsg %}{{ tmsg | force_escape }}.<br/>
-          <br/>
-          {% trans "Our mailing address is:" as tmsg %}{{ tmsg | force_escape }}<br/>
-          {{ contact_mailing_address }}
+          &copy; {% now "Y" %} {{ platform_name }}, {% trans "All rights reserved" as tmsg %}{{ tmsg | force_escape }}.
         </td>
       </tr>
       {% if unsubscribe_url %}
