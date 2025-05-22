@@ -3,6 +3,7 @@
 {% load ace %}
 <!-- These tags come from the edx_ace app within the edx_ace repository -->
 {% load acetags %}
+{% load static %}
 
 {% get_current_language as LANGUAGE_CODE %}
 {% get_current_language_bidi as LANGUAGE_BIDI %}
@@ -78,7 +79,9 @@
                                   <tr>
                                     <td align="left" valign="top">
                                       <a href="{% with_link_tracking homepage_url %}">
-                                        <img src="{{ logo_url }}" style="max-height: 65px;" height="auto" alt="{% filter force_escape %}{% blocktrans %}Go to {{ platform_name }} Home Page{% endblocktrans %}{% endfilter %}"/></a>
+                                        {# This can't use the 'logo_url' because their are ace emails without that on the context like emails sent when instructors enrolls on a course #}
+                                        <img src="{% static 'nau-basic/images/logo_nau_fct_w200.png' %}" width="100"
+                                          style="max-height: 65px;" height="auto" alt="{% filter force_escape %}{% blocktrans %}Go to {{ platform_name }} Home Page{% endblocktrans %}{% endfilter %}"/></a>
                                     </td>
                                   </tr>
                                 </table>
