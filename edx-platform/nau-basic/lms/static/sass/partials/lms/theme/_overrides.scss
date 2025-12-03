@@ -675,21 +675,35 @@ button.submit,
     font-weight: normal !important;
 }
 
-// Change video side subtitles color to increase acessibility
-.xmodule_display.xmodule_VideoBlock .video .subtitles {
-    li {
-
-        a,
-        span {
-            color: $primary;
+.xmodule_display.xmodule_VideoBlock .video {
+    // Change video player icon when not using youtube videos. Use the priary and primary-hover colors and remove opacity.
+    .video-wrapper {
+        .btn-play {
+            color: $primary !important;
+            opacity: 1 !important;
         }
     }
+    .video-wrapper:hover {
+        .btn-play {
+            color: $primary-hover !important;
+        }
+    }
+    // Change video side subtitles color to increase accessibility
+    .subtitles {
+        li {
 
-    li.current {
-        background-color: black;
+            a,
+            span {
+                color: $primary;
+            }
+        }
 
-        span {
-            color: yellow;
+        li.current {
+            background-color: black;
+
+            span {
+                color: yellow;
+            }
         }
     }
 }
