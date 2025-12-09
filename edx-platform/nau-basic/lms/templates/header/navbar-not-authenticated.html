@@ -9,7 +9,8 @@
 from django.conf import settings
 from django.urls import reverse
 from django.utils.translation import gettext as _
-from six import text_type
+
+from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_microfrontend
 %>
 
 <%
@@ -17,25 +18,25 @@ from six import text_type
   courses_are_browsable = settings.FEATURES.get('COURSES_ARE_BROWSABLE')
   allows_login = not settings.FEATURES['DISABLE_LOGIN_BUTTON'] and not combined_login_and_register
   can_discover_courses = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
-  restrict_enroll_for_course = course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain
   allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION'))
+  should_redirect_to_authn_mfe = should_redirect_to_authn_microfrontend()
 %>
 <nav class="login-menu" aria-label="${_('Supplemental Links')}">
-% if restrict_enroll_for_course:
-  <div class="mobile-nav-item hidden-mobile nav-item">
-    <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link register_openedx sign-in" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}">${_("Sign in")}</a>
-  </div>
-  <div class="mobile-nav-item hidden-mobile nav-item">
-    <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link menu-item-object-login_openedx register" href="${reverse('course-specific-register', args=[text_type(course.id)])}">${_("Register")}</a>
-  </div>
-% else :
-  % if allow_public_account_creation:
-      <div class="mobile-nav-item hidden-mobile nav-item">
-          <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link register_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-register_openedx sign-in" href="/login${login_query()}">${_("Sign in")}</a>
-      </div>
-      <div class="mobile-nav-item hidden-mobile nav-item">
-          <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link login_or_dash_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-login_openedx register" href="/register${login_query()}">${_("Register")}</a>
-      </div>
+% if allow_public_account_creation:
+  % if should_redirect_to_authn_mfe:
+    <div class="mobile-nav-item hidden-mobile nav-item">
+        <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link register_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-register_openedx sign-in" href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>
+    </div>
+    <div class="mobile-nav-item hidden-mobile nav-item">
+        <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link login_or_dash_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-login_openedx register" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
+    </div>
+  % else:
+    <div class="mobile-nav-item hidden-mobile nav-item">
+        <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link register_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-register_openedx sign-in" href="/login${login_query()}">${_("Sign in")}</a>
+    </div>
+    <div class="mobile-nav-item hidden-mobile nav-item">
+        <a class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link login_or_dash_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-login_openedx register" href="/register${login_query()}">${_("Register")}</a>
+    </div>
   % endif
 % endif
 </nav>
