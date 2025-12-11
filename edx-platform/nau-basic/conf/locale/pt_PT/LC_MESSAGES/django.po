@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2025-12-11 11:22+0000\n"
+"POT-Creation-Date: 2025-12-11 12:20+0000\n"
 "PO-Revision-Date: 2021-03-12 12:49+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: pt_PT\n"
@@ -1050,157 +1050,157 @@ msgstr ""
 msgid "All rights reserved"
 msgstr "Todos os direitos reservados"
 
-#: nau-basic/cms/templates/widgets/header.html:44
+#: nau-basic/cms/templates/widgets/header.html:71
 msgid "Current Course:"
 msgstr "Curso atual:"
 
-#: nau-basic/cms/templates/widgets/header.html:51
-#: nau-basic/cms/templates/widgets/header.html:55
-#: nau-basic/cms/templates/widgets/header.html:86
-#: nau-basic/cms/templates/widgets/header.html:162
+#: nau-basic/cms/templates/widgets/header.html:78
+#: nau-basic/cms/templates/widgets/header.html:82
+#: nau-basic/cms/templates/widgets/header.html:113
+#: nau-basic/cms/templates/widgets/header.html:189
 msgid "Course"
 msgstr "Curso"
 
-#: nau-basic/cms/templates/widgets/header.html:52
-#: nau-basic/cms/templates/widgets/header.html:163
+#: nau-basic/cms/templates/widgets/header.html:79
+#: nau-basic/cms/templates/widgets/header.html:190
 msgid "Course Navigation"
 msgstr "Navegação do Curso"
 
-#: nau-basic/cms/templates/widgets/header.html:55
+#: nau-basic/cms/templates/widgets/header.html:82
 msgid "Content"
 msgstr "Conteúdo"
 
-#: nau-basic/cms/templates/widgets/header.html:61
+#: nau-basic/cms/templates/widgets/header.html:88
 msgid "Outline"
 msgstr "Estrutura"
 
-#: nau-basic/cms/templates/widgets/header.html:64
+#: nau-basic/cms/templates/widgets/header.html:91
 msgid "Updates"
 msgstr "Atualizações"
 
-#: nau-basic/cms/templates/widgets/header.html:67
+#: nau-basic/cms/templates/widgets/header.html:94
 msgid "Pages"
 msgstr "Páginas"
 
-#: nau-basic/cms/templates/widgets/header.html:70
+#: nau-basic/cms/templates/widgets/header.html:97
 msgid "Files & Uploads"
 msgstr "Ficheiros e Uploads"
 
-#: nau-basic/cms/templates/widgets/header.html:73
+#: nau-basic/cms/templates/widgets/header.html:100
 msgid "Textbooks"
 msgstr "Manuais"
 
-#: nau-basic/cms/templates/widgets/header.html:77
+#: nau-basic/cms/templates/widgets/header.html:104
 msgid "Video Uploads"
 msgstr "Carregamentos de Vídeo"
 
-#: nau-basic/cms/templates/widgets/header.html:86
-#: nau-basic/cms/templates/widgets/header.html:167
+#: nau-basic/cms/templates/widgets/header.html:113
+#: nau-basic/cms/templates/widgets/header.html:194
 msgid "Settings"
 msgstr "Configurações"
 
-#: nau-basic/cms/templates/widgets/header.html:92
+#: nau-basic/cms/templates/widgets/header.html:119
 msgid "Schedule & Details"
 msgstr "Calendário e Detalhes"
 
-#: nau-basic/cms/templates/widgets/header.html:95
+#: nau-basic/cms/templates/widgets/header.html:122
 msgid "Grading"
 msgstr "Classificação"
 
-#: nau-basic/cms/templates/widgets/header.html:98
+#: nau-basic/cms/templates/widgets/header.html:125
 msgid "Course Team"
 msgstr "Equipe do Curso"
 
-#: nau-basic/cms/templates/widgets/header.html:101
+#: nau-basic/cms/templates/widgets/header.html:128
 msgid "Group Configurations"
 msgstr "Configurações de Grupo"
 
-#: nau-basic/cms/templates/widgets/header.html:104
+#: nau-basic/cms/templates/widgets/header.html:131
 msgid "Advanced Settings"
 msgstr "Configurações Avançadas"
 
-#: nau-basic/cms/templates/widgets/header.html:108
+#: nau-basic/cms/templates/widgets/header.html:135
 msgid "Certificates"
 msgstr "Certificados"
 
-#: nau-basic/cms/templates/widgets/header.html:113
+#: nau-basic/cms/templates/widgets/header.html:140
 msgid "Publisher"
 msgstr "Publisher"
 
-#: nau-basic/cms/templates/widgets/header.html:122
-#: nau-basic/cms/templates/widgets/header.html:179
+#: nau-basic/cms/templates/widgets/header.html:149
+#: nau-basic/cms/templates/widgets/header.html:206
 msgid "Tools"
 msgstr "Ferramentas"
 
-#: nau-basic/cms/templates/widgets/header.html:127
-#: nau-basic/cms/templates/widgets/header.html:185
+#: nau-basic/cms/templates/widgets/header.html:154
+#: nau-basic/cms/templates/widgets/header.html:212
 msgid "Import"
 msgstr "Importar"
 
-#: nau-basic/cms/templates/widgets/header.html:130
-#: nau-basic/cms/templates/widgets/header.html:188
+#: nau-basic/cms/templates/widgets/header.html:157
+#: nau-basic/cms/templates/widgets/header.html:215
 msgid "Export"
 msgstr "Exportar"
 
-#: nau-basic/cms/templates/widgets/header.html:134
+#: nau-basic/cms/templates/widgets/header.html:161
 msgid "Export to Git"
 msgstr "Exportar para o Git"
 
-#: nau-basic/cms/templates/widgets/header.html:138
+#: nau-basic/cms/templates/widgets/header.html:165
 msgid "Checklists"
 msgstr "Listas de verificação"
 
-#: nau-basic/cms/templates/widgets/header.html:155
+#: nau-basic/cms/templates/widgets/header.html:182
 msgid "Current Library:"
 msgstr "Biblioteca atual:"
 
-#: nau-basic/cms/templates/widgets/header.html:167
+#: nau-basic/cms/templates/widgets/header.html:194
 msgid "Library"
 msgstr "Biblioteca"
 
-#: nau-basic/cms/templates/widgets/header.html:172
+#: nau-basic/cms/templates/widgets/header.html:199
 msgid "User Access"
 msgstr "Acesso do Utilizador"
 
-#: nau-basic/cms/templates/widgets/header.html:203
+#: nau-basic/cms/templates/widgets/header.html:230
 msgid "Language preference"
 msgstr "Preferência de idioma"
 
-#: nau-basic/cms/templates/widgets/header.html:211
+#: nau-basic/cms/templates/widgets/header.html:238
 #: nau-basic/lms/templates/header/language-selector.html:23
 msgid "Choose Language"
 msgstr "Escolher Idioma"
 
-#: nau-basic/cms/templates/widgets/header.html:227
-#: nau-basic/cms/templates/widgets/header.html:243
+#: nau-basic/cms/templates/widgets/header.html:254
+#: nau-basic/cms/templates/widgets/header.html:270
 #: nau-basic/lms/templates/header/user_dropdown.html:48
 msgid "Account"
 msgstr "Conta"
 
-#: nau-basic/cms/templates/widgets/header.html:228
-#: nau-basic/cms/templates/widgets/header.html:244
+#: nau-basic/cms/templates/widgets/header.html:255
+#: nau-basic/cms/templates/widgets/header.html:271
 msgid "Account Navigation"
 msgstr "Navegação da Conta"
 
-#: nau-basic/cms/templates/widgets/header.html:231
-#: nau-basic/cms/templates/widgets/header.html:234
-#: nau-basic/cms/templates/widgets/header.html:247
-#: nau-basic/cms/templates/widgets/header.html:250
+#: nau-basic/cms/templates/widgets/header.html:258
+#: nau-basic/cms/templates/widgets/header.html:261
+#: nau-basic/cms/templates/widgets/header.html:274
+#: nau-basic/cms/templates/widgets/header.html:277
 msgid "Contextual Online Help"
 msgstr "Ajuda de Contexto"
 
-#: nau-basic/cms/templates/widgets/header.html:231
-#: nau-basic/cms/templates/widgets/header.html:247
+#: nau-basic/cms/templates/widgets/header.html:258
+#: nau-basic/cms/templates/widgets/header.html:274
 #: nau-basic/lms/templates/header/navbar-authenticated.html:32
 msgid "Help"
 msgstr "Ajuda"
 
-#: nau-basic/cms/templates/widgets/header.html:234
-#: nau-basic/cms/templates/widgets/header.html:250
+#: nau-basic/cms/templates/widgets/header.html:261
+#: nau-basic/cms/templates/widgets/header.html:277
 msgid "Help NAU"
 msgstr "Ajuda NAU"
 
-#: nau-basic/cms/templates/widgets/header.html:253
+#: nau-basic/cms/templates/widgets/header.html:280
 msgid "Sign In"
 msgstr "Entrar"
 
