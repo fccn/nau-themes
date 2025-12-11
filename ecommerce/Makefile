@@ -1,50 +1,104 @@
 ########################################################################################################################
-#
-# Ecommerce nau theme
-#
+# NAU Themes - Ecommerce
+# Manages translations for ecommerce themes using Django's makemessages
 ########################################################################################################################
+
+# Default target
 .DEFAULT_GOAL := help
-ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
-lang_targets = en pt_PT
-theme = nau
+# Execute everything on same shell so venv activation persists
+.ONESHELL:
 
-# Generates a help message. Borrowed from https://github.com/pydanny/cookiecutter-djangopackage.
+# Shell settings for better error handling
+SHELL := /bin/bash
+.SHELLFLAGS := -eu -o pipefail -c
+
+########################################################################################################################
+# Variables
+########################################################################################################################
+
+# Project root directory
+ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+
+# Use parent venv by default, but allow override
+VENV_DIR ?= ../venv
+VENV_BIN := $(VENV_DIR)/bin
+VENV_ACTIVATE := . $(VENV_BIN)/activate
+
+# Theme configuration
+THEME := nau
+
+# Translation languages
+LANG_TARGETS := en pt_PT
+
+# Colors for output
+COLOR_RESET := \033[0m
+COLOR_INFO := \033[36m
+COLOR_SUCCESS := \033[32m
+COLOR_WARNING := \033[33m
+COLOR_ERROR := \033[31m
+
+########################################################################################################################
+# Utility Targets
+########################################################################################################################
+
 help: ## Display this help message
-	@echo "Please use \`make <target>' where <target> is one of"
-	@perl -nle'print $& if m{^[\.a-zA-Z_-]+:.*?## .*$$}' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m  %-25s\033[0m %s\n", $$1, $$2}'
+	@printf "$(COLOR_INFO)Ecommerce Theme - Available targets:$(COLOR_RESET)\n"
+	@perl -nle'print $$& if m{^[\.a-zA-Z_-]+:.*?## .*$$}' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "$(COLOR_INFO)  %-30s$(COLOR_RESET) %s\n", $$1, $$2}'
+.PHONY: help
 
-virtual_environment: ../requirements.txt ## create a virtual environment to run other commands
-	test -d venv || virtualenv venv --python=python3
-	. venv/bin/activate && python -m pip install -Ur ../requirements.txt
-	touch venv/touchfile
-	@echo "Run on your shell to activate the new virtual environment:"
-	@echo "  . venv/bin/activate"
+check-venv: ## Verify virtual environment exists
+	@if [ ! -d "$(VENV_DIR)" ]; then \
+		printf "$(COLOR_ERROR)Error: Virtual environment not found at $(VENV_DIR)$(COLOR_RESET)\n" >&2; \
+		printf "$(COLOR_INFO)Run 'make venv' from project root first.$(COLOR_RESET)\n" >&2; \
+		exit 1; \
+	fi
+.PHONY: check-venv
 
-requirements: ## Install requirements
-	@python -m pip install -Ur ../requirements.txt
+check-gettext: ## Verify gettext tools are installed
+	@if ! command -v msgfmt >/dev/null 2>&1; then \
+		printf "$(COLOR_ERROR)Error: gettext tools not found$(COLOR_RESET)\n" >&2; \
+		printf "$(COLOR_INFO)Install with: sudo apt install gettext (Debian/Ubuntu)$(COLOR_RESET)\n" >&2; \
+		printf "$(COLOR_INFO)           or: brew install gettext (macOS)$(COLOR_RESET)\n" >&2; \
+		exit 1; \
+	fi
+	@printf "$(COLOR_SUCCESS)✓ gettext tools available$(COLOR_RESET)\n"
+.PHONY: check-gettext
 
-clean: ## clean
-	rm -rf venv
-.PHONY: clean
+########################################################################################################################
+# Translation Targets
+########################################################################################################################
 
-translations_extract:  ## Extract translations from source code
-	@for lang in $(lang_targets) ; do \
-		cd $(ROOT_DIR)/$(theme) && DJANGO_SETTINGS_MODULE="" django-admin makemessages --locale $$lang -d django ; \
-		cd $(ROOT_DIR)/$(theme) && DJANGO_SETTINGS_MODULE="" django-admin makemessages --locale $$lang -d djangojs ; \
+translations_extract: check-venv check-gettext ## Extract translations from source code
+	@printf "$(COLOR_INFO)Extracting translations from $(THEME)...$(COLOR_RESET)\n"
+	@$(VENV_ACTIVATE) && \
+	for lang in $(LANG_TARGETS); do \
+		printf "  Extracting for $$lang...\n"; \
+		cd $(ROOT_DIR)/$(THEME) && DJANGO_SETTINGS_MODULE="" django-admin makemessages --locale $$lang -d django; \
+		cd $(ROOT_DIR)/$(THEME) && DJANGO_SETTINGS_MODULE="" django-admin makemessages --locale $$lang -d djangojs; \
 	done
+	@printf "$(COLOR_SUCCESS)✓ Translations extracted$(COLOR_RESET)\n"
 .PHONY: translations_extract
 
-translations_is_missing: | translations_extract  ## Check if `make translations` should be run
-	@git diff --numstat *.po | awk '{if ($$1>1 || $$2>1) { exit 1 } else { exit 0 }}'
-
-translations_compile:  ## Compiles the extracted translations
-	@cd $(ROOT_DIR)/$(theme) && DJANGO_SETTINGS_MODULE="" django-admin compilemessages
+translations_compile: check-venv check-gettext ## Compile the extracted translations
+	@printf "$(COLOR_INFO)Compiling translations for $(THEME)...$(COLOR_RESET)\n"
+	@$(VENV_ACTIVATE) && \
+	cd $(ROOT_DIR)/$(THEME) && DJANGO_SETTINGS_MODULE="" django-admin compilemessages
+	@printf "$(COLOR_SUCCESS)✓ Translations compiled$(COLOR_RESET)\n"
 .PHONY: translations_compile
 
-translations_detect_changed_source:
-	@test $$(git diff --exit-code -G "^(msgid|msgstr)" | wc -l) -eq 0 || ( echo "Detected a changed source translations!" ; exit 1 )
+translations_detect_changed_source: ## Detect if source translations have changed
+	@printf "$(COLOR_INFO)Checking for changed source translations...$(COLOR_RESET)\n"
+	@cd $(ROOT_DIR)/$(THEME) && \
+	test $$(git diff --exit-code -G "^(msgid|msgstr)" | wc -l) -eq 0 || \
+	( printf "$(COLOR_WARNING)Detected changed source translations!$(COLOR_RESET)\n" ; exit 1 )
 .PHONY: translations_detect_changed_source
 
-translations: | translations_extract translations_compile ## Extract and compile translations
+translations_is_missing: translations_extract ## Check if translations need updating
+	@printf "$(COLOR_INFO)Checking for missing translations in $(THEME)...$(COLOR_RESET)\n"
+	@cd $(ROOT_DIR)/$(THEME) && git diff --numstat *.po | awk '{if ($$1>1 || $$2>1) { exit 1 } else { exit 0 }}'
+.PHONY: translations_is_missing
+
+translations: translations_extract translations_compile ## Full translation workflow: extract and compile
+	@printf "$(COLOR_SUCCESS)✓ Ecommerce translation workflow complete$(COLOR_RESET)\n"
 .PHONY: translations
