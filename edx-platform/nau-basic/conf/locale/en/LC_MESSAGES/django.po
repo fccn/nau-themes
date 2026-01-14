@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2025-05-22 15:42+0100\n"
+"POT-Creation-Date: 2026-01-22 22:21+0000\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -920,7 +920,7 @@ msgid ""
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:94
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:240
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:250
 #: edx-platform/nau-basic/lms/templates/footer.html:117
 msgid "All rights reserved"
 msgstr ""
@@ -1214,63 +1214,63 @@ msgstr ""
 msgid "Accept new terms of service"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:84
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:81
 #, python-format
 msgid "Go to %(platform_name)s Home Page"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:99
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:96
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:32
 msgid "Courses"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:105
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:102
 msgid "Programs"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:110
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:107
 msgid "My Account"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:158
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:168
 #, python-format
 msgid "%(platform_name)s on LinkedIn"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:166
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:176
 #, python-format
 msgid "%(platform_name)s on Twitter"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:174
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:184
 #, python-format
 msgid "%(platform_name)s on Facebook"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:182
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:192
 #, python-format
 msgid "%(platform_name)s on Google Plus"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:190
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:200
 #, python-format
 msgid "%(platform_name)s on Reddit"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:197
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:207
 #, python-format
 msgid "Subscribe %(platform_name)s newsletter"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:211
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:221
 msgid "Download the iOS app on the Apple Store"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:218
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:228
 msgid "Download the Android app on the Google Play Store"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:246
+#: edx-platform/nau-basic/lms/templates/ace_common/edx_ace/common/base_body.html:256
 msgid "Unsubscribe from these emails."
 msgstr ""
 
