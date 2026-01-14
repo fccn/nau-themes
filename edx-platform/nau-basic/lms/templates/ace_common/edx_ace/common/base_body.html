@@ -72,52 +72,62 @@
                       <tr><td height="10" style="line-height:1px;">&nbsp;</td></tr>
                       <tr>
                         <td align="left" valign="top" style="padding:0 20px;" class="padding_none">
-                          <table cellpadding="0" cellspacing="0" align="left" class="width_100percent">
+                          <table width="100%" cellpadding="0" cellspacing="0" align="left" class="width_100percent">
                             <tr>
-                              <td align="center" valign="top">
-                                <table cellpadding="0" cellspacing="0">
-                                  <tr>
-                                    <td align="left" valign="top">
-                                      <a href="{% with_link_tracking homepage_url %}">
-                                        {# This can't use the 'logo_url' because their are ace emails without that on the context like emails sent when instructors enrolls on a course #}
-                                        <img src="https://nau-prod-openedx-app-static-assets.rgw.nau.fccn.pt/static/nau-basic/images/logo_nau_fct_w200.png" width="100"
-                                          style="max-height: 65px;" height="auto" alt="{% filter force_escape %}{% blocktrans %}Go to {{ platform_name }} Home Page{% endblocktrans %}{% endfilter %}"/></a>
-                                    </td>
-                                  </tr>
-                                </table>
+                              <td align="left" valign="top">
+                                <a href="{% with_link_tracking homepage_url %}">
+                                  {# This can't use the 'logo_url' because there are ace emails without that on the context like emails sent when instructors enrolls on a course #}
+                                  <img src="https://nau-prod-openedx-app-static-assets.rgw.nau.fccn.pt/static/nau-basic/images/logo_nau_fct_w200.png" width="100"
+                                    style="border:0; outline:none; text-decoration:none; display:block; height:65px; width:auto; max-width:200px;" height="auto" alt="{% filter force_escape %}{% blocktrans %}Go to {{ platform_name }} Home Page{% endblocktrans %}{% endfilter %}"/></a>
                               </td>
-                            </tr>
-                          </table>
-                          <table height="66" cellpadding="0" cellspacing="0" align="right" class="width_100percent height_0">
-                            <tr>
-                              <td align="center" valign="middle" class="paddingtop_10">
-                                <table cellpadding="0" cellspacing="0">
-                                  <tr>
-                                    <td align="left" valign="top" style="color: #693ae9;">
-                                      {% if courses_url %}
-                                        <a href="{% with_link_tracking courses_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#693ae9;font-weight:bold;">
-                                          {% trans "Courses" as tmsg %}{{ tmsg | force_escape }}
-                                        </a>
-                                        &nbsp; / &nbsp;
-                                      {% endif %}
-                                      {% if programs_url %}
-                                        <a href="{% with_link_tracking programs_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#693ae9;font-weight:bold;">
-                                          {% trans "Programs" as tmsg %}{{ tmsg | force_escape }}
-                                        </a>
-                                        &nbsp; / &nbsp;
-                                      {% endif %}
-                                      <a href="{% with_link_tracking dashboard_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#693ae9;font-weight:bold;">
-                                        {% trans "My Account" as tmsg %}{{ tmsg | force_escape }}
-                                      </a>
-                                    </td>
-                                  </tr>
-                                </table>
+                              <td align="middle" valign="middle">
+                                {% if organization_logo %}
+                                  <img {% if organization_name %}alt="{{ organization_name }}"{% endif %} height="auto" style="border:0; outline:none; text-decoration:none; display:block; max-height:65px; width:auto; max-width:150px;" width="150" src="{{ organization_logo }}" />
+                                {% endif %}
                               </td>
-                            </tr>
+                              {% if course_image_url %}
+                                <td align="right" valign="middle">
+                                  <img src="{{ course_image_url }}" width="100" height="auto" style="border:0; outline:none; text-decoration:none; display:block; max-height:65px; width:auto; max-width:150px;" />
+                                </td>
+                              {% else %}
+                                <td align="right" valign="middle" style="color: #693ae9;">
+                                  {% if courses_url %}
+                                    <a href="{% with_link_tracking courses_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#693ae9;font-weight:bold;">
+                                      {% trans "Courses" as tmsg %}{{ tmsg | force_escape }}
+                                    </a>
+                                    &nbsp; / &nbsp;
+                                  {% endif %}
+                                  {% if programs_url %}
+                                    <a href="{% with_link_tracking programs_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#693ae9;font-weight:bold;">
+                                      {% trans "Programs" as tmsg %}{{ tmsg | force_escape }}
+                                    </a>
+                                    &nbsp; / &nbsp;
+                                  {% endif %}
+                                  <a href="{% with_link_tracking dashboard_url %}" target="_blank" style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;text-decoration:none;color:#693ae9;font-weight:bold;">
+                                    {% trans "My Account" as tmsg %}{{ tmsg | force_escape }}
+                                  </a>
+                                </td>
+                              {% endif %}
                           </table>
                         </td>
                       </tr>
                       <tr><td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td></tr>
+                      {% if course_title %}
+                        <tr>
+                          <td>
+                            <table width="100%" cellpadding="0" cellspacing="0" align="left" class="width_100percent">
+                              <tr>
+                                <td align="left" valign="top" style="padding:0 20px;" class="padding_none">
+                                  <h2 style="margin:0; font-size:18px; line-height:22px; color:#333333; font-weight:bold;">
+                                    {% filter force_escape %}{{ course_title }}{% endfilter %}
+                                  </h2>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr><td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td></tr>
+                      {% endif %}
                     </table>
                   </td>
                 </tr>
