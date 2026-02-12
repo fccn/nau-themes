@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2026-02-12 10:35+0000\n"
+"POT-Creation-Date: 2026-02-12 11:40+0000\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -1086,7 +1086,7 @@ msgstr ""
 
 #: nau-basic/cms/templates/widgets/header.html:254
 #: nau-basic/cms/templates/widgets/header.html:270
-#: nau-basic/lms/templates/header/user_dropdown.html:48
+#: nau-basic/lms/templates/header/user_dropdown.html:55
 msgid "Account"
 msgstr ""
 
@@ -1117,6 +1117,29 @@ msgstr ""
 msgid "Sign In"
 msgstr ""
 
+#: nau-basic/cms/templates/widgets/user_dropdown.html:13
+msgid "Currently signed in as:"
+msgstr ""
+
+#: nau-basic/cms/templates/widgets/user_dropdown.html:22
+#, python-brace-format
+msgid "{studio_name} Home"
+msgstr ""
+
+#: nau-basic/cms/templates/widgets/user_dropdown.html:26
+msgid "Maintenance"
+msgstr ""
+
+#: nau-basic/cms/templates/widgets/user_dropdown.html:30
+#: nau-basic/lms/templates/header/user_dropdown.html:51
+msgid "Gamification Settings"
+msgstr ""
+
+#: nau-basic/cms/templates/widgets/user_dropdown.html:35
+#: nau-basic/lms/templates/header/user_dropdown.html:59
+msgid "Sign Out"
+msgstr ""
+
 #: nau-basic/lms/templates/_other_sites_dashboard_course_listing.html:41
 msgid "Course details"
 msgstr ""
@@ -1138,8 +1161,8 @@ msgid "Go to my {org_code} courses"
 msgstr ""
 
 #: nau-basic/lms/templates/dashboard.html:30
-#: nau-basic/lms/templates/header/user_dropdown.html:42
-#: nau-basic/lms/templates/header/user_dropdown.html:44
+#: nau-basic/lms/templates/header/user_dropdown.html:43
+#: nau-basic/lms/templates/header/user_dropdown.html:45
 msgid "Dashboard"
 msgstr ""
 
@@ -1465,7 +1488,7 @@ msgstr ""
 
 #: nau-basic/lms/templates/header/header.html:56
 #: nau-basic/lms/templates/header/navbar-logo-header.html:174
-#: nau-basic/lms/templates/header/user_dropdown.html:40
+#: nau-basic/lms/templates/header/user_dropdown.html:41
 msgid "More Options"
 msgstr ""
 
@@ -1482,7 +1505,7 @@ msgid "{platform_name} Home Page"
 msgstr ""
 
 #: nau-basic/lms/templates/header/navbar-logo-header.html:167
-#: nau-basic/lms/templates/header/user_dropdown.html:37
+#: nau-basic/lms/templates/header/user_dropdown.html:38
 msgid "Options Menu"
 msgstr ""
 
@@ -1495,20 +1518,24 @@ msgstr ""
 msgid "Sign in"
 msgstr ""
 
-#: nau-basic/lms/templates/header/user_dropdown.html:32
+#: nau-basic/lms/templates/header/user_dropdown.html:33
 msgid "Dashboard for:"
 msgstr ""
 
-#: nau-basic/lms/templates/header/user_dropdown.html:47
+#: nau-basic/lms/templates/header/user_dropdown.html:48
+msgid "Performance"
+msgstr ""
+
+#: nau-basic/lms/templates/header/user_dropdown.html:49
+msgid "Leaderboard"
+msgstr ""
+
+#: nau-basic/lms/templates/header/user_dropdown.html:54
 msgid "Profile"
 msgstr ""
 
-#: nau-basic/lms/templates/header/user_dropdown.html:50
+#: nau-basic/lms/templates/header/user_dropdown.html:57
 msgid "Order History"
-msgstr ""
-
-#: nau-basic/lms/templates/header/user_dropdown.html:52
-msgid "Sign Out"
 msgstr ""
 
 #: nau-basic/lms/templates/widgets/cookie-consent.html:24
