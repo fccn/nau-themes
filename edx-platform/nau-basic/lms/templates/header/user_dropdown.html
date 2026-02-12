@@ -47,6 +47,9 @@ show_gamification = settings.FEATURES.get('RG_GAMIFICATION', {}).get('ENABLED')
       % if show_gamification:
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('gamma_dashboard:gamma-dashboard')}" role="menuitem">${_("Performance")}</a></div>
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('gamma_dashboard:gamma-leaderboard')}" role="menuitem">${_("Leaderboard")}</a></div>
+        % if hasattr(settings, 'GAMMA_SETTINGS_URL') and settings.GAMMA_SETTINGS_URL and user.is_active and user.is_staff:
+          <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${settings.GAMMA_SETTINGS_URL}" role="menuitem">${_("Gamification Settings")}</a></div>
+        % endif
       % endif
       <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${urljoin(settings.PROFILE_MICROFRONTEND_URL, f'/u/{username}')}" role="menuitem">${_("Profile")}</a></div>
       <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${settings.ACCOUNT_MICROFRONTEND_URL}" role="menuitem">${_("Account")}</a></div>
