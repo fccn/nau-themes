@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2026-01-30 11:02+0000\n"
+"POT-Creation-Date: 2026-02-12 10:35+0000\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -16,9 +16,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: nau-basic/cms/templates/edx-translations.html:2
+#, python-brace-format
 msgid "© 2012–{year} edX Inc. "
 msgstr ""
 
@@ -52,6 +53,7 @@ msgid "Access the Open edX Portal"
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:9
+#, python-brace-format
 msgid ""
 "Add the key/value pair for any custom parameters, such as the page your "
 "e-book should open to or the background color for this component.<br "
@@ -88,6 +90,7 @@ msgid ""
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:14
+#, python-brace-format
 msgid ""
 "{b_start}Support our Mission: {b_end} EdX, a non-profit, relies on "
 "verified certificates to help fund free education for everyone globally"
@@ -194,12 +197,14 @@ msgid "EdX, Open edX, and MicroMasters are registered trademarks of edX Inc. "
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:34
+#, python-brace-format
 msgid ""
 "EdX, Open edX, and the edX and Open edX logos are registered trademarks "
 "or trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:35
+#, python-brace-format
 msgid ""
 "EdX, Open edX, Studio, and the edX and Open edX logos are registered "
 "trademarks or trademarks of {link_start}edX Inc.{link_end}"
@@ -226,6 +231,7 @@ msgid "Enroll in StudioX: Creating a Course with edX Studio"
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:41
+#, python-brace-format
 msgid ""
 "Enter the LTI ID for the external LTI provider.  This value must be the "
 "same LTI ID that you entered in the LTI Passports setting on the Advanced"
@@ -244,6 +250,7 @@ msgid "Enter the unique identifier for your course's video files provided by edX
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:44
+#, python-brace-format
 msgid ""
 "Enter the URL of the external tool that this component launches. This "
 "setting is only used when Hide External Tool is set to False.<br />See "
@@ -265,6 +272,7 @@ msgid ""
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:47
+#, python-brace-format
 msgid ""
 "For detailed information, see {math_link_start}Entering Mathematical and "
 "Scientific Expressions{math_link_end} in the {guide_link_start}edX Guide "
@@ -324,10 +332,12 @@ msgid "It works! This is the default homepage for this Open edX instance."
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:55
+#, python-brace-format
 msgid "{learner_name}, edX Learner"
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:56
+#, python-brace-format
 msgid ""
 "{link_start}edX{link_end} offers interactive online classes and MOOCs "
 "from the world's best universities, including MIT, Harvard, Berkeley, "
@@ -390,6 +400,7 @@ msgid ""
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:67
+#, python-brace-format
 msgid ""
 "© {org_name}.  All rights reserved except where noted.  EdX, Open edX and"
 " their respective logos are trademarks or registered trademarks of edX "
@@ -447,6 +458,7 @@ msgid ""
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:76
+#, python-brace-format
 msgid ""
 "This course uses automatic cohorting for verified track learners. You "
 "cannot disable cohorts, and you cannot rename the manual cohort named "
@@ -461,6 +473,7 @@ msgid ""
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:78
+#, python-brace-format
 msgid "Welcome to the Open edX{registered_trademark} platform!"
 msgstr ""
 
@@ -469,6 +482,7 @@ msgid "Yes, replace the edX transcript with the YouTube transcript"
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:80
+#, python-brace-format
 msgid "You already have an edX account with your {enterprise_name} email address."
 msgstr ""
 
@@ -503,6 +517,7 @@ msgid ""
 msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:86
+#, python-brace-format
 msgid ""
 "Your profile settings are managed by {enterprise_name}. Contact your "
 "administrator or {link_start}edX Support{link_end} for help."
@@ -593,51 +608,61 @@ msgstr ""
 
 #. Translators: NAU-219
 #: nau-basic/cms/templates/force-translations.html:30
+#, python-brace-format
 msgid "Enter a password with at least {requirements}."
 msgstr ""
 
 #. Translators: NAU-252
 #: nau-basic/cms/templates/force-translations.html:33
+#, python-brace-format
 msgid "{num} letter"
 msgstr ""
 
 #. Translators: NAU-219
 #: nau-basic/cms/templates/force-translations.html:36
+#, python-brace-format
 msgid "{num} uppercase letter"
 msgstr ""
 
 #. Translators: NAU-219
 #: nau-basic/cms/templates/force-translations.html:39
+#, python-brace-format
 msgid "{num} lowercase letter"
 msgstr ""
 
 #. Translators: NAU-219
 #: nau-basic/cms/templates/force-translations.html:42
+#, python-brace-format
 msgid "{num} digit"
 msgstr ""
 
 #. Translators: NAU-219
 #: nau-basic/cms/templates/force-translations.html:45
+#, python-brace-format
 msgid "{num} number"
 msgstr ""
 
 #. Translators: NAU-219
 #: nau-basic/cms/templates/force-translations.html:48
+#, python-brace-format
 msgid "{num} punctuation mark"
 msgstr ""
 
 #. Translators: NAU-219
 #: nau-basic/cms/templates/force-translations.html:51
+#, python-brace-format
 msgid "{num} symbol"
 msgstr ""
 
 #. Translators: NAU-219
 #: nau-basic/cms/templates/force-translations.html:54
+#, python-brace-format
 msgid "{num} word"
 msgstr ""
 
 #. Translators: NAU-219
 #: nau-basic/cms/templates/force-translations.html:57
+#, python-brace-format
 msgid ""
 "Your password must contain at least {num} character, including "
 "{requirements}."
@@ -675,6 +700,7 @@ msgstr "Terms and Conditions"
 #. Honor Code
 #: nau-basic/cms/templates/force-translations.html:75
 #: nau-basic/lms/templates/modal-update-terms-of-service.html:73
+#, python-brace-format
 msgid ""
 "I agree to the {platform_name} "
 "{terms_of_service_link_start}{terms_of_service}{terms_of_service_link_end}"
@@ -685,6 +711,7 @@ msgstr ""
 #. Translators: Change from a simply agree to I've read and agree, used by
 #. Honor Code
 #: nau-basic/cms/templates/force-translations.html:78
+#, python-brace-format
 msgid "You must agree to the {platform_name} {terms_of_service}"
 msgstr "You must read and understood the {terms_of_service}"
 
@@ -692,6 +719,7 @@ msgstr "You must read and understood the {terms_of_service}"
 #. of Service
 #: nau-basic/cms/templates/force-translations.html:81
 #: nau-basic/lms/templates/modal-update-terms-of-service.html:58
+#, python-brace-format
 msgid ""
 "I agree to the {platform_name} "
 "{tos_link_start}{terms_of_service}{tos_link_end}"
@@ -709,6 +737,7 @@ msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:26
 #: nau-basic/cms/templates/howitworks.html:27
+#, python-brace-format
 msgid "{studio_name} Helps You Keep Your Courses Organized"
 msgstr ""
 
@@ -723,6 +752,7 @@ msgid "Keeping Your Course Organized"
 msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:36
+#, python-brace-format
 msgid ""
 "The backbone of your course is how it is organized. {studio_name} offers "
 "an {strong_start}Outline{strong_end} editor, providing a simple hierarchy"
@@ -734,6 +764,7 @@ msgid "Simple Organization For Content"
 msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:45
+#, python-brace-format
 msgid ""
 "{studio_name} uses a simple hierarchy of "
 "{strong_start}sections{strong_end} and "
@@ -755,6 +786,7 @@ msgid "Go A Week Or A Semester At A Time"
 msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:59
+#, python-brace-format
 msgid ""
 "Build and release {strong_start}sections{strong_end} to your students "
 "incrementally. You don't have to have it all done at once."
@@ -767,6 +799,7 @@ msgid "Learning is More than Just Lectures"
 msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:81
+#, python-brace-format
 msgid ""
 "{studio_name} lets you weave your content together in a way that "
 "reinforces learning. Insert videos, discussions, and a wide variety of "
@@ -798,6 +831,7 @@ msgid "A Broad Library of Problem Types"
 msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:96
+#, python-brace-format
 msgid ""
 "It's more than just multiple choice. {studio_name} supports more than a "
 "dozen types of problems to challenge your learners."
@@ -805,6 +839,7 @@ msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:105
 #: nau-basic/cms/templates/howitworks.html:106
+#, python-brace-format
 msgid ""
 "{studio_name} Gives You Simple, Fast, and Incremental Publishing. With "
 "Friends."
@@ -815,6 +850,7 @@ msgid "Simple, Fast, and Incremental Publishing. With Friends."
 msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:115
+#, python-brace-format
 msgid ""
 "{studio_name} works like web applications you already know, yet "
 "understands how you build curriculum. Instant publishing to the web when "
@@ -837,6 +873,7 @@ msgid "Release-On Date Publishing"
 msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:125
+#, python-brace-format
 msgid ""
 "When you've finished a {strong_start}section{strong_end}, pick when you "
 "want it to go live and {studio_name} takes care of the rest. Build your "
@@ -884,6 +921,7 @@ msgid "Publishing on Date"
 msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:174
+#, python-brace-format
 msgid ""
 "Simply set the date of a section or subsection, and {studio_name} will "
 "publish it to your students for you."
@@ -913,6 +951,7 @@ msgstr ""
 #. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
 #. Inc.'. Please do not translate any of these trademarks and company names.
 #: nau-basic/cms/templates/widgets/footer.html:51
+#, python-brace-format
 msgid ""
 "edX, Open edX, Studio, and the edX and Open edX logos are registered "
 "trademarks or trademarks of {link_start}edX Inc.{link_end}"
@@ -1083,15 +1122,18 @@ msgid "Course details"
 msgstr ""
 
 #: nau-basic/lms/templates/_other_sites_dashboard_course_listing.html:46
+#, python-brace-format
 msgid "{course_number} {course_name} Home Page"
 msgstr ""
 
 #: nau-basic/lms/templates/_other_sites_dashboard_course_listing.html:50
 #: nau-basic/lms/templates/_other_sites_dashboard_course_listing.html:55
+#, python-brace-format
 msgid "{course_number} {course_name} Cover Image"
 msgstr ""
 
 #: nau-basic/lms/templates/_other_sites_dashboard_course_listing.html:83
+#, python-brace-format
 msgid "Go to my {org_code} courses"
 msgstr ""
 
@@ -1154,6 +1196,7 @@ msgid "Close"
 msgstr ""
 
 #: nau-basic/lms/templates/dashboard.html:383
+#, python-brace-format
 msgid "Email Settings for {course_number}"
 msgstr ""
 
@@ -1200,6 +1243,7 @@ msgid ""
 msgstr ""
 
 #: nau-basic/lms/templates/modal-update-terms-of-service.html:43
+#, python-brace-format
 msgid ""
 "I have read and understood the "
 "{privacy_policy_link_start}{privacy_policy}{privacy_policy_link_end}"
@@ -1318,6 +1362,7 @@ msgid "Print Certificate"
 msgstr ""
 
 #: nau-basic/lms/templates/certificates/_accomplishment-header.html:9
+#, python-brace-format
 msgid "{platform_name} Home"
 msgstr ""
 
@@ -1334,6 +1379,7 @@ msgid "Awarded to:"
 msgstr ""
 
 #: nau-basic/lms/templates/certificates/_edx-accomplishment-print-help.html:10
+#, python-brace-format
 msgid ""
 "For tips and tricks on printing your certificate, view the "
 "{link_start}Web Certificates help documentation{link_end}."
@@ -1352,6 +1398,7 @@ msgid ""
 msgstr ""
 
 #: nau-basic/lms/templates/certificates/invalid.html:15
+#, python-brace-format
 msgid "About {platform_name} Certificates"
 msgstr ""
 
@@ -1423,12 +1470,14 @@ msgid "More Options"
 msgstr ""
 
 #: nau-basic/lms/templates/header/header.html:61
+#, python-brace-format
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. "
 "We strongly recommend using {chrome_link} or {ff_link}."
 msgstr ""
 
 #: nau-basic/lms/templates/header/navbar-logo-header.html:75
+#, python-brace-format
 msgid "{platform_name} Home Page"
 msgstr ""
 
