@@ -91,6 +91,7 @@
 
     <div class="total">
         <div class="row">
+            {% comment %}
             {% if show_voucher_form %}
                 {% block vouchers %}
                     {% if basket.contains_a_voucher %}
@@ -123,6 +124,7 @@
                     {% endif %}
                 {% endblock vouchers %}
             {% endif %}
+            {% endcomment %}
 
             <div id="basket_totals" class="col-xs-4">
                 {% block order_total %}
@@ -136,6 +138,7 @@
     <div class="row">
         <div class="col-sm-12">
             {# Switch Basket view in between single and bulk purchase items #}
+            {% comment %}
             {% if partner_sku %}
                 <div class="pull-left basket-switch-link">
                     <a href="/basket/add/?sku={{ partner_sku }}" class="btn btn-link">
@@ -143,6 +146,7 @@
                     </a>
                 </div>
             {% endif %}
+            {% endcomment %}
 
             <div class="pull-right payment-buttons" data-basket-id="{{ basket.id }}">
                 <a class="nav-link" href="{{ lms_dashboard_url }}">{% trans "Cancel Checkout" as tmsg %}{{ tmsg | force_escape }}</a>
