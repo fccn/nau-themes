@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-07 10:56+0000\n"
+"POT-Creation-Date: 2026-02-24 11:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -269,50 +269,33 @@ msgstr ""
 "                                            %(benefit_value)s de\n"
 "                                        "
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:101
-#, python-format
-msgid ""
-"\n"
-"                                            Coupon code %(voucher_code)s "
-"applied\n"
-"                                        "
-msgstr ""
-"\n"
-"                                            Código de cupom %(voucher_code)s "
-"aplicado\n"
-"                                          "
-
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:118
-msgid "Apply a coupon code"
-msgstr "Aplicar código do cupão"
-
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:129
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:132
 msgid "Total:"
 msgstr "Total:"
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:148
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:154
 msgid "Cancel Checkout"
 msgstr "Cancelar compra"
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:149
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:155
 msgid "or"
 msgstr "ou"
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:156
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:162
 msgid "Place Order"
 msgstr "Efetuar Pedido"
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:168
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:174
 #, python-format
 msgid "Checkout with %(title)s"
 msgstr "Finalizar compra com %(title)s"
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:170
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:176
 msgid "Checkout"
 msgstr "Finalizar compra"
 
 #. Translators: <strong></strong> tags will bold the text within. Keep the tags and translate the text within.
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:183
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:189
 #, python-brace-format
 msgid ""
 "{strong_start}Note:{strong_end} To complete your enrollment, select Checkout."
@@ -320,11 +303,11 @@ msgstr ""
 "{strong_start}Observação:{strong_end} Para concluir sua inscrição, selecione "
 "Finalizar compra."
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:189
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:195
 msgid "Have questions?"
 msgstr "Tem perguntas?"
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:190
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:196
 msgid "Please read our FAQs to view common questions about our certificates."
 msgstr ""
 "Por favor, leia nossas FAQs para ver perguntas comuns sobre os nossos "
@@ -642,3 +625,18 @@ msgstr ""
 #: templates/oscar/communication/emails/commtype_order_with_csv_body.txt:15
 msgid "For more information and assistance, contact ajuda@nau.edu.pt."
 msgstr "Para mais informação e assistência, contacte ajuda@nau.edu.pt."
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "                                            Coupon code %(voucher_code)s "
+#~ "applied\n"
+#~ "                                        "
+#~ msgstr ""
+#~ "\n"
+#~ "                                            Código de cupom "
+#~ "%(voucher_code)s aplicado\n"
+#~ "                                          "
+
+#~ msgid "Apply a coupon code"
+#~ msgstr "Aplicar código do cupão"

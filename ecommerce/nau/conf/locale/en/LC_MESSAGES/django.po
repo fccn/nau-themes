@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-07 10:56+0000\n"
+"POT-Creation-Date: 2026-02-24 11:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -246,56 +246,43 @@ msgid ""
 "                                        "
 msgstr ""
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:101
-#, python-format
-msgid ""
-"\n"
-"                                            Coupon code %(voucher_code)s "
-"applied\n"
-"                                        "
-msgstr ""
-
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:118
-msgid "Apply a coupon code"
-msgstr ""
-
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:129
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:132
 msgid "Total:"
 msgstr ""
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:148
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:154
 msgid "Cancel Checkout"
 msgstr ""
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:149
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:155
 msgid "or"
 msgstr ""
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:156
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:162
 msgid "Place Order"
 msgstr ""
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:168
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:174
 #, python-format
 msgid "Checkout with %(title)s"
 msgstr ""
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:170
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:176
 msgid "Checkout"
 msgstr ""
 
 #. Translators: <strong></strong> tags will bold the text within. Keep the tags and translate the text within.
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:183
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:189
 #, python-brace-format
 msgid ""
 "{strong_start}Note:{strong_end} To complete your enrollment, select Checkout."
 msgstr ""
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:189
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:195
 msgid "Have questions?"
 msgstr ""
 
-#: templates/oscar/basket/partials/hosted_checkout_basket.html:190
+#: templates/oscar/basket/partials/hosted_checkout_basket.html:196
 msgid "Please read our FAQs to view common questions about our certificates."
 msgstr ""
 
