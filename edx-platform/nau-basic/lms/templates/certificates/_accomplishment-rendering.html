@@ -16,15 +16,15 @@ if course_id and user:
     try:
         course_key = CourseKey.from_string(course_id)
 
-        # Ensure user is verified in the course
-        has_verified_enrollment = CourseEnrollment.objects.filter(
+        # Ensure user has a PAID enrollment (not audit/honor)
+        OPEN_ENROLLMENT_MODES = frozenset({"audit", "honor"})
+        has_paid_enrollment = CourseEnrollment.objects.filter(
             user=user,
             course_id=course_key,
-            mode="verified",
             is_active=True
-        )
+        ).exclude(mode__in=["none", "unknown"] + list(OPEN_ENROLLMENT_MODES)).exists()
 
-        if has_verified_enrollment:
+        if has_paid_enrollment:
             # Get catalog license (who gave the course seat)
             license = CatalogCourseEnrollment.objects.filter(
                 user=user,
