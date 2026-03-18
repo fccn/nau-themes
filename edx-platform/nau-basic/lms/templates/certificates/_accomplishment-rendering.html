@@ -1,9 +1,57 @@
 <%page expression_filter="h"/>
-<%! from django.utils.translation import gettext as _ %>
+<%!
+from django.utils.translation import gettext as _
+from opaque_keys.edx.keys import CourseKey
+from partner_catalog.models import CatalogCourseEnrollment
+from common.djangoapps.student.models import CourseEnrollment
+%>
+
 <%namespace name='static' file='../static_content.html'/>
+
 <%
 course_mode_class = course_mode if course_mode else ''
+corporate_partner_catalog_name = None
+
+if course_id and user:
+    try:
+        course_key = CourseKey.from_string(course_id)
+
+        # Ensure user has a PAID enrollment (not audit/honor)
+        OPEN_ENROLLMENT_MODES = frozenset({"audit", "honor"})
+        has_paid_enrollment = CourseEnrollment.objects.filter(
+            user=user,
+            course_id=course_key,
+            is_active=True
+        ).exclude(mode__in=["none", "unknown"] + list(OPEN_ENROLLMENT_MODES)).exists()
+
+        if has_paid_enrollment:
+            # Get catalog license (who gave the course seat)
+            license = CatalogCourseEnrollment.objects.filter(
+                user=user,
+                course_overview__id=course_key,
+                active=True
+            ).select_related(
+                "catalog_course__catalog__partner__organization"
+            ).first()
+
+            if license:
+                catalog = license.catalog_course.catalog
+                corporate_partner_catalog_name = catalog.name
+
+    except Exception:
+        pass
 %>
+
+<style>
+	.override-margin {
+		margin: auto 6rem;
+		margin-bottom: 0 !important;
+	}
+
+	.override-padding {
+		padding-bottom: 0 !important;
+	}
+</style>
 
 <main class="accomplishment accomplishment-main">
 
@@ -23,7 +71,7 @@ course_mode_class = course_mode if course_mode else ''
             </div>
 
             <div class="wrapper-statement-and-signatories">
-                <div class="accomplishment-statement">
+                <div class="accomplishment-statement override-margin override-padding">
                     <p class="accomplishment-statement-lead">
                         <strong class="accomplishment-recipient hd-1 emphasized">${accomplishment_copy_name}</strong>
                         <span class="accomplishment-summary copy copy-lead">${accomplishment_copy_description_full}</span>
@@ -33,13 +81,16 @@ course_mode_class = course_mode if course_mode else ''
                             <span class="accomplishment-course-number">${course_number}</span>:
                             <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
                         </span>
+						% if corporate_partner_catalog_name:
+						<strong class="copy copy-lead">${corporate_partner_catalog_name}</strong>
+						% endif
                     </p>
 
                     <p class="accomplishment-statement-detail copy copy-lead">${accomplishment_copy_course_description}</p>
                 </div>
 
                 % if mode != 'base':
-                <div class="accomplishment-signatories">
+                <div class="accomplishment-signatories override-padding">
                     <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
 
                     <div class="wrapper-signatories">
@@ -65,7 +116,7 @@ course_mode_class = course_mode if course_mode else ''
                 % endif
             </div>
 
-            <div class="accomplishment-orgs">
+            <div class="accomplishment-orgs override-margin">
                 <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
 
                 <ul class="wrapper-orgs list-orgs">

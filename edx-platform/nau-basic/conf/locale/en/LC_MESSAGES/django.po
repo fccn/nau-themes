@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2026-02-12 11:40+0000\n"
+"POT-Creation-Date: 2026-02-27 15:46-0500\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -1389,15 +1389,15 @@ msgstr ""
 msgid "{platform_name} Home"
 msgstr ""
 
-#: nau-basic/lms/templates/certificates/_accomplishment-rendering.html:43
+#: nau-basic/lms/templates/certificates/_accomplishment-rendering.html:94
 msgid "Noted by"
 msgstr ""
 
-#: nau-basic/lms/templates/certificates/_accomplishment-rendering.html:69
+#: nau-basic/lms/templates/certificates/_accomplishment-rendering.html:120
 msgid "Supported by the following organizations"
 msgstr ""
 
-#: nau-basic/lms/templates/certificates/_accomplishment-rendering.html:96
+#: nau-basic/lms/templates/certificates/_accomplishment-rendering.html:147
 msgid "Awarded to:"
 msgstr ""
 
