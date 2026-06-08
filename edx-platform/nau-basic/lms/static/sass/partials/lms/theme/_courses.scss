@@ -8,7 +8,7 @@
     border-radius: 4px;
 }
 
-// Compact presentation of Course Messages so they don't offerflow the container and hide activities controls
+// Compact presentation of Course Messages so they don't overflow the container and hide activities controls
 .page-banner {
     .alert {
         padding-top: 10px;
@@ -20,4 +20,13 @@
     .user-messages {
         padding-top: 5px;
     }
+}
+
+// When a page-banner is present inside an xblock iframe, the banner pushes all content
+// down by its own height (~43px). The iFrameResizer measures scrollHeight before or
+// without accounting for this shift, so the iframe ends up too short and clips the
+// bottom of the activity content. Adding padding-bottom equal to the banner height
+// pre-reserves that space, ensuring iFrameResizer reports a height that fits everything.
+body:has(.page-banner) .content-wrapper.main-container {
+    padding-bottom: 60px !important;
 }
