@@ -838,3 +838,14 @@ article.course>section.details>div.wrapper-course-details>div.course-info>span.i
         text-shadow: none !important;
     }
 }
+
+
+// make the "Allow" and "Cancel" buttons on the authorization with a SSO page consistent with each other buttons..
+.btn-authorization-allow {
+    line-height: 1.6rem !important;
+}
+.btn-authorization-cancel {
+    text-shadow: none !important;
+    line-height: 1.6rem !important;
+    font-weight: 500 !important;
+}
