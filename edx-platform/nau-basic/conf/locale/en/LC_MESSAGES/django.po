@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2026-02-12 11:40+0000\n"
+"POT-Creation-Date: 2026-06-09 00:39+0100\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -726,6 +726,21 @@ msgid ""
 msgstr ""
 "I have read, understood and accept the "
 "{tos_link_start}{terms_of_service}{tos_link_end}"
+
+#. Translators: OAuth2 scope description
+#: nau-basic/cms/templates/force-translations.html:84
+msgid "Know your email address"
+msgstr ""
+
+#. Translators: OAuth2 scope description
+#: nau-basic/cms/templates/force-translations.html:87
+msgid "Know your name and username"
+msgstr ""
+
+#. Translators: OAuth2 scope description
+#: nau-basic/cms/templates/force-translations.html:90
+msgid "Know your user identifier"
+msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:11
 msgid "Welcome"
