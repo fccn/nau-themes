@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2026-06-09 00:39+0100\n"
+"POT-Creation-Date: 2026-10-16 12:10+0100\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
+
+#: nau-basic/cms/templates/base.html:104
+msgid "Skip to main content"
+msgstr ""
 
 #: nau-basic/cms/templates/edx-translations.html:2
 #, python-brace-format
