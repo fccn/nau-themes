@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2026-06-09 00:39+0100\n"
+"POT-Creation-Date: 2026-11-24 16:33-0500\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: NAU <info@nau.edu.pt>\n"
 "Language: en\n"
@@ -740,6 +740,71 @@ msgstr ""
 #. Translators: OAuth2 scope description
 #: nau-basic/cms/templates/force-translations.html:90
 msgid "Know your user identifier"
+msgstr ""
+
+#. Translators: https://github.com/fccn/nau-technical/issues/839 Third party
+#. auth error, when the provider account (e.g. Cartão de Cidadão) is already
+#. linked to another account
+#: nau-basic/cms/templates/force-translations.html:93
+#, python-brace-format
+msgid ""
+"The {provider_name} account you selected is already linked to another "
+"{platform_name} account."
+msgstr ""
+
+#. Translators: https://github.com/fccn/nau-technical/issues/839 Third party
+#. auth error (social_core AuthAlreadyAssociated), when the provider can't be
+#. named
+#: nau-basic/cms/templates/force-translations.html:96
+msgid "This account is already in use."
+msgstr ""
+
+#. Translators: https://github.com/fccn/nau-technical/issues/839 Third party
+#. auth error (social_core AuthForbidden)
+#: nau-basic/cms/templates/force-translations.html:99
+msgid "Your credentials aren't allowed"
+msgstr ""
+
+#. Translators: https://github.com/fccn/nau-technical/issues/839 Third party
+#. auth error (social_core AuthCanceled)
+#: nau-basic/cms/templates/force-translations.html:102
+msgid "Authentication process canceled"
+msgstr ""
+
+#. Translators: https://github.com/fccn/nau-technical/issues/839 Third party
+#. auth error (social_core AuthFailed with access_denied)
+#: nau-basic/cms/templates/force-translations.html:105
+msgid "Authentication process was canceled"
+msgstr ""
+
+#. Translators: https://github.com/fccn/nau-technical/issues/839 Third party
+#. auth error (social_core AuthStateMissing)
+#: nau-basic/cms/templates/force-translations.html:108
+msgid "Session value state missing."
+msgstr ""
+
+#. Translators: https://github.com/fccn/nau-technical/issues/839 Third party
+#. auth error (social_core AuthStateForbidden)
+#: nau-basic/cms/templates/force-translations.html:111
+msgid "Wrong state parameter given."
+msgstr ""
+
+#. Translators: https://github.com/fccn/nau-technical/issues/839 Third party
+#. auth error (social_core AuthTokenRevoked)
+#: nau-basic/cms/templates/force-translations.html:114
+msgid "User revoke access to the token"
+msgstr ""
+
+#. Translators: https://github.com/fccn/nau-technical/issues/839 Third party
+#. auth error (social_core AuthUnreachableProvider)
+#: nau-basic/cms/templates/force-translations.html:117
+msgid "The authentication provider could not be reached"
+msgstr ""
+
+#. Translators: https://github.com/fccn/nau-technical/issues/839 Third party
+#. auth error (social_core InvalidEmail)
+#: nau-basic/cms/templates/force-translations.html:120
+msgid "Email couldn't be validated"
 msgstr ""
 
 #: nau-basic/cms/templates/howitworks.html:11
